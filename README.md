@@ -1,3 +1,6 @@
+
+
+
 Original App Design Project - README Template
 ===
 
@@ -68,7 +71,7 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img width="600" alt="Screen Shot 2021-03-21 at 11 37 18 PM" src="https://user-images.githubusercontent.com/69189423/111915914-85d92b00-8a9e-11eb-8ae4-f442d8c9f0f5.png">
 
 ### [BONUS] Digital Wireframes & Mockups
 
