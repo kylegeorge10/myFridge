@@ -31,37 +31,40 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 * There will be a suggested page that will show food that you may be interested in
 * To the right of the suggested page there will be a page where you can see the foods/recipes that the people you follow posted
 * The furthest screen to the right will show your profile page
+* User will have to log in/sign up
 
 **Optional Nice-to-have Stories**
 
 * A page that shows what people you're following are up to (like instagram's old feature)
-* ...
+* User can repost posts that he likes
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login screen
+   * User needs to log in/sign up
+* Home screen
+   * This page will show what the people that you follow have posted
+   * It will have a tableview setup
+   * User can repost certain posts and they will show up on their page (like twitter retweet)
+* Post screen
+   * User can post their own food/recipes
+* Suggested screen
+   * This page will show the same style of suggested posts like on instagram/pinterest 
+* Profile screen
+   * standard profile screen (similar layout to instagram)
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Used to move between the main screens (home, suggested etc)
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Suggested screen
+   * When you click on a post
+* Home screen
+   * Each post will have a small description of the post and then when they click for more details it will bring up a fully detailed screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
