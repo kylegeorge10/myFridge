@@ -1,7 +1,7 @@
 Original App Design Project - README Template
 ===
 
-# APP_NAME_HERE
+# myFridge
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -11,16 +11,16 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+myFridge takes the idea of "easy to cook" to a reality. With the idea in mind that most people aren't experienced in cooking, we made an app to make it easy for you. Our app uses Pinterest's way of displaying new foods/recipes that you may be interested in. Once you click on those foods/recipes there will be a page that will display the difficulty, cooking time, and number of ingredients.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category: Cooking**
+- **Mobile: iOS only**
+- **Story: None**
+- **Market: Everyone**
+- **Habit: Cooking**
+- **Scope: Everyone**
 
 ## Product Spec
 
@@ -28,12 +28,13 @@ Original App Design Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* There will be a suggested page that will show food that you may be interested in
+* To the right of the suggested page there will be a page where you can see the foods/recipes that the people you follow posted
+* The furthest screen to the right will show your profile page
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
+* A page that shows what people you're following are up to (like instagram's old feature)
 * ...
 
 ### 2. Screen Archetypes
