@@ -78,10 +78,42 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
+   | reviews       | String   | review by user posted to another user's post | 
+   | reviewsCount | Number   | number of reviews that has been posted to an image |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
 ### Networking
 - [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+- Home Feed
+  - ```swift
+           let query = PFQuery(className:"Post")
+           query.whereKey("author", equalTo: currentUser)
+           query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+              if let error = error { 
+                 print(error.localizedDescription)
+              } else if let posts = posts {
+                 print("Successfully retrieved \(posts.count) posts.")
+             // TODO: Do something with posts...
+              }
+           }
+           ```
+  - (Create/POST) Create a new review on the post
+  - (Delete) Delete previous review
+  - (Create/POST) Create a new post
+    - Submit new post Screen
+      - Screen where user can post a new post
+- Suggested Feed
+  - Same style as Home Feed, but of people that you aren't following (currently will only show people that you are following, but in a different style)
+- Profile Screen
+  - Shows profile picture
+  - Posts that the user has made
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+  - Might use Yelp/Pinterest for certain
