@@ -59,11 +59,11 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIP-QE-tNt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY FRIDGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-Dk-gV6">
-                                <rect key="frame" x="121" y="130" width="172" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="myFridge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-Dk-gV6">
+                                <rect key="frame" x="128" y="130" width="164" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -141,17 +141,14 @@
                         <viewLayoutGuide key="safeArea" id="lLE-mJ-qCe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="5TV-oh-HGc">
-                        <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="2Fn-cd-PNR"/>
+                    <navigationItem key="navigationItem" title="myFridge" id="2Fn-cd-PNR"/>
                     <connections>
                         <outlet property="tableView" destination="rCU-AR-oaB" id="wiQ-oe-PIQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSg-7S-jfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1972.4637681159422" y="1897.7678571428571"/>
+            <point key="canvasLocation" x="-2026" y="1898"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="fk9-i7-Sqz">
@@ -204,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibn-03-cGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1186" y="1898"/>
+            <point key="canvasLocation" x="-1271" y="1898"/>
         </scene>
         <!--SuggestedViewController-->
         <scene sceneID="fpH-fr-hA7">
@@ -244,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oW-Rb-CpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="2673"/>
+            <point key="canvasLocation" x="825" y="2612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CvO-Kn-vRz">
@@ -258,7 +255,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rqs-yH-NFc" kind="relationship" relationship="viewControllers" id="3Ss-t2-7yc"/>
+                        <segue destination="oDd-LX-w83" kind="relationship" relationship="viewControllers" id="3Ss-t2-7yc"/>
                         <segue destination="ZNW-Tt-Dnx" kind="relationship" relationship="viewControllers" id="Q3l-1J-9yz"/>
                         <segue destination="YPv-Z2-CmI" kind="relationship" relationship="viewControllers" id="fXV-jH-iUT"/>
                     </connections>
@@ -286,7 +283,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMk-U7-rDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="1898"/>
+            <point key="canvasLocation" x="825" y="1898"/>
+        </scene>
+        <!--HomeNavigationController-->
+        <scene sceneID="qcg-Lc-jvv">
+            <objects>
+                <navigationController title="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="oDd-LX-w83" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="5TV-oh-HGc">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Xh-Lg-tqx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rqs-yH-NFc" kind="relationship" relationship="rootViewController" id="DLs-AD-R8M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ap-ie-rVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2810" y="1898"/>
         </scene>
     </scenes>
     <resources>
