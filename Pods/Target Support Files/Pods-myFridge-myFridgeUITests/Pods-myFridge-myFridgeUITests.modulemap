@@ -1,0 +1,6 @@
+framework module Pods_myFridge_myFridgeUITests {
+  umbrella header "Pods-myFridge-myFridgeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
