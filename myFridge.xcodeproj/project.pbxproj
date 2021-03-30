@@ -15,6 +15,7 @@
 		C287029B2612CCBA00FC28A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28702992612CCBA00FC28A0 /* LaunchScreen.storyboard */; };
 		C28702A62612CCBA00FC28A0 /* myFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702A52612CCBA00FC28A0 /* myFridgeTests.swift */; };
 		C28702B12612CCBA00FC28A0 /* myFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */; };
+		C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D15F8D2612D1B000169C2A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C28702AC2612CCBA00FC28A0 /* myFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFridgeUITests.swift; sourceTree = "<group>"; };
 		C28702B22612CCBA00FC28A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D15F8D2612D1B000169C2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C28702972612CCBA00FC28A0 /* Assets.xcassets */,
 				C28702992612CCBA00FC28A0 /* LaunchScreen.storyboard */,
 				C287029C2612CCBA00FC28A0 /* Info.plist */,
+				C2D15F8D2612D1B000169C2A /* LoginViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
