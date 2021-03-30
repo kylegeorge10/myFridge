@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,46 +12,39 @@
         <!--LoginViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcd-Sn-woi">
-                                <rect key="frame" x="20" y="360" width="79" height="21"/>
+                                <rect key="frame" x="20" y="269" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnp-Yh-I84">
-                                <rect key="frame" x="20" y="450" width="74" height="21"/>
+                                <rect key="frame" x="20" y="343" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfO-Fm-88C">
-                                <rect key="frame" x="109" y="353" width="210" height="34"/>
+                                <rect key="frame" x="109" y="262" width="210" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9I-ox-N6I">
-                                <rect key="frame" x="109" y="443" width="210" height="34"/>
+                                <rect key="frame" x="109" y="336" width="210" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-Dk-gV6">
-                                <rect key="frame" x="186" y="176" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQg-9h-qAj">
-                                <rect key="frame" x="80" y="542" width="47" height="30"/>
+                                <rect key="frame" x="109" y="410" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
@@ -58,13 +52,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCT-zM-Udf">
-                                <rect key="frame" x="280" y="542" width="54" height="30"/>
+                                <rect key="frame" x="265" y="410" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIP-QE-tNt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY FRIDGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-Dk-gV6">
+                                <rect key="frame" x="121" y="130" width="172" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,12 +73,12 @@
                     <connections>
                         <outlet property="passwordField" destination="g9I-ox-N6I" id="dLk-eA-rNE"/>
                         <outlet property="usernameField" destination="bfO-Fm-88C" id="oyB-zX-2MC"/>
-                        <segue destination="YD7-kZ-lnZ" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="q5W-ol-4S4"/>
+                        <segue destination="Kbh-tm-0ji" kind="presentation" identifier="loginSegue" id="hGL-Mz-Upw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214.49275362318843" y="93.75"/>
+            <point key="canvasLocation" x="-214" y="339"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="99G-BB-Uwm">
@@ -89,12 +90,14 @@
                         <viewLayoutGuide key="safeArea" id="lLE-mJ-qCe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="5TV-oh-HGc"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="5TV-oh-HGc">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="2Fn-cd-PNR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSg-7S-jfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-975" y="2254"/>
+            <point key="canvasLocation" x="-1123" y="1898"/>
         </scene>
         <!--SuggestedViewController-->
         <scene sceneID="fpH-fr-hA7">
@@ -106,68 +109,83 @@
                         <viewLayoutGuide key="safeArea" id="gjP-eF-nzd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Suggested" id="QcH-an-CPq"/>
+                    <tabBarItem key="tabBarItem" title="Suggested" id="QcH-an-CPq">
+                        <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-qS-Jkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="2253"/>
+            <point key="canvasLocation" x="-214" y="1898"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="Fyy-jr-5qo">
             <objects>
-                <viewController title="ProfileViewController" id="Kty-ay-9ly" sceneMemberID="viewController">
+                <viewController title="ProfileViewController" id="Kty-ay-9ly" customClass="ProfileViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1d-xI-E5P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DHC-XS-Isj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="ADt-mY-6xY"/>
+                    <navigationItem key="navigationItem" id="uJf-vp-dg1">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="done" id="OEJ-wC-pXE">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="Kty-ay-9ly" id="uCV-9T-vlU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oW-Rb-CpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="2253"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tVV-uL-RdN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YD7-kZ-lnZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Exc-qC-EqH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Kbh-tm-0ji" kind="relationship" relationship="rootViewController" id="sSk-h4-Cg0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lFe-8w-HB7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-214" y="798"/>
+            <point key="canvasLocation" x="561" y="2673"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CvO-Kn-vRz">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Kbh-tm-0ji" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Kbh-tm-0ji" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bWr-dZ-Cd3"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZY4-q7-gg8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="rqs-yH-NFc" kind="relationship" relationship="viewControllers" id="3Ss-t2-7yc"/>
                         <segue destination="ZNW-Tt-Dnx" kind="relationship" relationship="viewControllers" id="Q3l-1J-9yz"/>
-                        <segue destination="Kty-ay-9ly" kind="relationship" relationship="viewControllers" id="fXV-jH-iUT"/>
+                        <segue destination="YPv-Z2-CmI" kind="relationship" relationship="viewControllers" id="fXV-jH-iUT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnl-Ud-17j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214.49275362318843" y="1511.3839285714284"/>
+            <point key="canvasLocation" x="-214" y="1108"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="s3M-PD-01V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YPv-Z2-CmI" customClass="ProfileNavigationController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="ADt-mY-6xY">
+                        <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zlf-JM-Rsv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kty-ay-9ly" kind="relationship" relationship="rootViewController" id="OmZ-Ch-h3P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMk-U7-rDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="1898"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

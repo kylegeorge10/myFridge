@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4DED5740AE388CBD78C3E25A /* Pods_myFridge_myFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451A5501FE8E273B5D9692B7 /* Pods_myFridge_myFridgeUITests.framework */; };
+		51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */; };
+		51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */; };
 		6F930A75656BE27C74865101 /* Pods_myFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */; };
 		C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C287028E2612CCBA00FC28A0 /* AppDelegate.swift */; };
 		C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702902612CCBA00FC28A0 /* SceneDelegate.swift */; };
@@ -42,6 +44,8 @@
 		04E39B8F5B32D16738BAAE46 /* Pods-myFridge-myFridgeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge-myFridgeUITests.release.xcconfig"; path = "Target Support Files/Pods-myFridge-myFridgeUITests/Pods-myFridge-myFridgeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		089F715EE160452419B894F6 /* Pods-myFridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-myFridgeTests/Pods-myFridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		451A5501FE8E273B5D9692B7 /* Pods_myFridge_myFridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFridge_myFridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858BAC97298403CB1F573BC6 /* Pods-myFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge.release.xcconfig"; path = "Target Support Files/Pods-myFridge/Pods-myFridge.release.xcconfig"; sourceTree = "<group>"; };
 		C287028B2612CCBA00FC28A0 /* myFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +117,6 @@
 				089F715EE160452419B894F6 /* Pods-myFridgeTests.debug.xcconfig */,
 				C83F1A165D93BD175A1FB897 /* Pods-myFridgeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +153,8 @@
 				C28702992612CCBA00FC28A0 /* LaunchScreen.storyboard */,
 				C287029C2612CCBA00FC28A0 /* Info.plist */,
 				C2D15F8D2612D1B000169C2A /* LoginViewController.swift */,
+				51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */,
+				51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
@@ -410,10 +415,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */,
 				C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
+				51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
