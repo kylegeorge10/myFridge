@@ -19,6 +19,9 @@
 		C287029B2612CCBA00FC28A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28702992612CCBA00FC28A0 /* LaunchScreen.storyboard */; };
 		C28702A62612CCBA00FC28A0 /* myFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702A52612CCBA00FC28A0 /* myFridgeTests.swift */; };
 		C28702B12612CCBA00FC28A0 /* myFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */; };
+		C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8642613B18300577E13 /* HomeViewController.swift */; };
+		C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8692613B1E400577E13 /* HomeViewCell.swift */; };
+		C2BED86F2613B31B00577E13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED86E2613B31B00577E13 /* DetailViewController.swift */; };
 		C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D15F8D2612D1B000169C2A /* LoginViewController.swift */; };
 		F038B69FBA62FF75791C2257 /* Pods_myFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9E8034CC1D6014ED017A22 /* Pods_myFridgeTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,9 @@
 		C28702AC2612CCBA00FC28A0 /* myFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFridgeUITests.swift; sourceTree = "<group>"; };
 		C28702B22612CCBA00FC28A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2BED8642613B18300577E13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C2BED8692613B1E400577E13 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		C2BED86E2613B31B00577E13 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C2D15F8D2612D1B000169C2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C57DF8AFEC423CAB8F9B41CA /* Pods-myFridge-myFridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge-myFridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-myFridge-myFridgeUITests/Pods-myFridge-myFridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C83F1A165D93BD175A1FB897 /* Pods-myFridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridgeTests.release.xcconfig"; path = "Target Support Files/Pods-myFridgeTests/Pods-myFridgeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 				C2D15F8D2612D1B000169C2A /* LoginViewController.swift */,
 				51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */,
 				51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */,
+				C2BED8642613B18300577E13 /* HomeViewController.swift */,
+				C2BED8692613B1E400577E13 /* HomeViewCell.swift */,
+				C2BED86E2613B31B00577E13 /* DetailViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
@@ -415,11 +424,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BED86F2613B31B00577E13 /* DetailViewController.swift in Sources */,
 				51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */,
+				C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */,
 				C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
+				C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */,
 				51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
