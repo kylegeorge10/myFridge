@@ -15,12 +15,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var fullRecipeLabel: UILabel!
     
-    
+    var recipe: [String:Any]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        recipeNameLabel.text = recipe["recipeName"] as? String
+        recipeNameLabel.sizeToFit()
+        fullRecipeLabel.text = recipe["recipe"] as? String
+        fullRecipeLabel.sizeToFit()
     }
     
 
