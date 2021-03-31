@@ -113,6 +113,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		514999A62614266D004E786C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C28702972612CCBA00FC28A0 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		514999B326142981004E786C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2D15F8D2612D1B000169C2A /* LoginViewController.swift */,
+				C2BED8642613B18300577E13 /* HomeViewController.swift */,
+				C2BED86E2613B31B00577E13 /* DetailViewController.swift */,
+				51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		514999B726142AA5004E786C /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */,
+			);
+			path = NavigationControllers;
+			sourceTree = "<group>";
+		};
 		A004ABF22451C94C856DE817 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,19 +178,16 @@
 		C287028D2612CCBA00FC28A0 /* myFridge */ = {
 			isa = PBXGroup;
 			children = (
+				C287029C2612CCBA00FC28A0 /* Info.plist */,
 				C287028E2612CCBA00FC28A0 /* AppDelegate.swift */,
 				C28702902612CCBA00FC28A0 /* SceneDelegate.swift */,
 				C28702922612CCBA00FC28A0 /* ViewController.swift */,
 				C28702942612CCBA00FC28A0 /* Main.storyboard */,
-				C28702972612CCBA00FC28A0 /* Assets.xcassets */,
 				C28702992612CCBA00FC28A0 /* LaunchScreen.storyboard */,
-				C287029C2612CCBA00FC28A0 /* Info.plist */,
-				C2D15F8D2612D1B000169C2A /* LoginViewController.swift */,
-				51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */,
-				51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */,
-				C2BED8642613B18300577E13 /* HomeViewController.swift */,
+				514999A62614266D004E786C /* Assets */,
+				514999B326142981004E786C /* ViewControllers */,
+				514999B726142AA5004E786C /* NavigationControllers */,
 				C2BED8692613B1E400577E13 /* HomeViewCell.swift */,
-				C2BED86E2613B31B00577E13 /* DetailViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
