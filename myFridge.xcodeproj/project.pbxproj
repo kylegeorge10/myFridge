@@ -19,6 +19,7 @@
 		C287029B2612CCBA00FC28A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28702992612CCBA00FC28A0 /* LaunchScreen.storyboard */; };
 		C28702A62612CCBA00FC28A0 /* myFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702A52612CCBA00FC28A0 /* myFridgeTests.swift */; };
 		C28702B12612CCBA00FC28A0 /* myFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */; };
+		C290F12D2614344500790F78 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290F12C2614344500790F78 /* PostViewController.swift */; };
 		C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8642613B18300577E13 /* HomeViewController.swift */; };
 		C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8692613B1E400577E13 /* HomeViewCell.swift */; };
 		C2BED86F2613B31B00577E13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED86E2613B31B00577E13 /* DetailViewController.swift */; };
@@ -65,6 +66,7 @@
 		C28702AC2612CCBA00FC28A0 /* myFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFridgeUITests.swift; sourceTree = "<group>"; };
 		C28702B22612CCBA00FC28A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C290F12C2614344500790F78 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		C2BED8642613B18300577E13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2BED8692613B1E400577E13 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		C2BED86E2613B31B00577E13 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				514999B326142981004E786C /* ViewControllers */,
 				514999B726142AA5004E786C /* NavigationControllers */,
 				C2BED8692613B1E400577E13 /* HomeViewCell.swift */,
+				C290F12C2614344500790F78 /* PostViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */,
 				C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */,
 				C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */,
+				C290F12D2614344500790F78 /* PostViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
