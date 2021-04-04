@@ -95,7 +95,7 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 - Home Feed
   - ```swift
            let query = PFQuery(className:"Post")
-           query.whereKey("author", equalTo: currentUser)
+           query.whereKey("author", equalTo: PFUser.current())
            query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
               if let error = error { 
                  print(error.localizedDescription)
