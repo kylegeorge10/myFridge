@@ -53,6 +53,20 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+//    @IBAction func onCameraButton(_ sender: Any) {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            picker.sourceType = .camera
+//        }else{
+//            picker.sourceType = .photoLibrary
+//        }
+//        present(picker, animated: true, completion: nil)
+//    }
+    
+    
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -65,6 +79,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         present(picker, animated: true, completion: nil)
     }
+    
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage

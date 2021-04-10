@@ -182,12 +182,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.app" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zuu-M0-ngx">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.app" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zuu-M0-ngx">
                                 <rect key="frame" x="0.0" y="89" width="414" height="312.5"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="315" id="dUT-hS-XBd"/>
                                     <constraint firstAttribute="width" constant="414" id="nUP-mO-SrD"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vbz-dw-uuw" appends="YES" id="4yd-Dl-C8Z"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of recipe..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CiK-Kf-ZlH">
                                 <rect key="frame" x="20" y="411" width="374" height="34"/>
@@ -220,7 +224,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny5-vf-3XS">
-                                <rect key="frame" x="191.5" y="730" width="31" height="30"/>
+                                <rect key="frame" x="151" y="730" width="115" height="30"/>
                                 <state key="normal" title="Post">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -235,7 +239,7 @@
                             <constraint firstItem="sRS-Tl-Ko2" firstAttribute="top" secondItem="qoc-r7-coC" secondAttribute="bottom" constant="8" symbolic="YES" id="2Xe-mn-eAu"/>
                             <constraint firstItem="uzf-IT-6rG" firstAttribute="top" secondItem="9SM-fJ-60n" secondAttribute="bottom" constant="8" symbolic="YES" id="4D1-vH-Sg3"/>
                             <constraint firstItem="qoc-r7-coC" firstAttribute="top" secondItem="CiK-Kf-ZlH" secondAttribute="bottom" constant="8" id="5H8-0L-Y1F"/>
-                            <constraint firstItem="ny5-vf-3XS" firstAttribute="leading" secondItem="ms5-oD-Bga" secondAttribute="leading" constant="191.5" id="82r-5V-XPq"/>
+                            <constraint firstItem="ny5-vf-3XS" firstAttribute="leading" secondItem="ms5-oD-Bga" secondAttribute="leading" constant="151" id="82r-5V-XPq"/>
                             <constraint firstItem="zuu-M0-ngx" firstAttribute="trailing" secondItem="ms5-oD-Bga" secondAttribute="trailing" id="Ach-Yi-DKG"/>
                             <constraint firstItem="uzf-IT-6rG" firstAttribute="top" secondItem="9SM-fJ-60n" secondAttribute="bottom" constant="8" symbolic="YES" id="CTq-Dd-PNm"/>
                             <constraint firstItem="9SM-fJ-60n" firstAttribute="leading" secondItem="ms5-oD-Bga" secondAttribute="leading" constant="20" id="DZp-c3-aKk"/>
@@ -261,7 +265,7 @@
                             <constraint firstItem="gDF-ah-JWT" firstAttribute="top" secondItem="uzf-IT-6rG" secondAttribute="bottom" constant="8" symbolic="YES" id="vyP-ub-dEb"/>
                             <constraint firstItem="ms5-oD-Bga" firstAttribute="trailing" secondItem="CiK-Kf-ZlH" secondAttribute="trailing" constant="20" id="xjz-fF-hcr"/>
                             <constraint firstItem="ms5-oD-Bga" firstAttribute="bottom" secondItem="ny5-vf-3XS" secondAttribute="bottom" constant="102" id="xtu-e2-fcH"/>
-                            <constraint firstItem="ms5-oD-Bga" firstAttribute="trailing" secondItem="ny5-vf-3XS" secondAttribute="trailing" constant="191.5" id="yER-Cf-q9l"/>
+                            <constraint firstItem="ms5-oD-Bga" firstAttribute="trailing" secondItem="ny5-vf-3XS" secondAttribute="trailing" constant="148" id="yER-Cf-q9l"/>
                             <constraint firstItem="qoc-r7-coC" firstAttribute="leading" secondItem="ms5-oD-Bga" secondAttribute="leading" constant="20" id="yIz-DS-54y"/>
                         </constraints>
                     </view>
@@ -284,8 +288,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Viy-G8-4kY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vbz-dw-uuw">
+                    <connections>
+                        <action selector="onCameraButton:" destination="6AB-3M-foG" id="Gio-Mz-1Zu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-500" y="2018"/>
+            <point key="canvasLocation" x="-500.00000000000006" y="2017.6339285714284"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="fk9-i7-Sqz">
