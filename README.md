@@ -11,6 +11,7 @@ Original App Design Project - README Template
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
+4. [Gifs](#Gifs)
 
 ## Overview
 ### Description
@@ -31,15 +32,19 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 
 **Required Must-have Stories**
 
-* There will be a suggested page that will show food that you may be interested in
-* To the right of the suggested page there will be a page where you can see the foods/recipes that the people you follow posted
-* The furthest screen to the right will show your profile page
-* User will have to log in/sign up
+- [x] User can login
+- [x] User can logout
+- [x] User stays logged in across restarts
+- [] User can post new posts
+- [x] Stylized main feed
+- [x] Detail page of specific post
+- [] Profile screen with user's personal content
+- [] Discover page with app's filtering features
 
 **Optional Nice-to-have Stories**
 
-* A page that shows what people you're following are up to (like instagram's old feature)
-* User can repost posts that he likes
+- [] Page that shows what people you're following are up to (like instagram's old feature)
+- [] User can repost posts that they like
 
 ### 2. Screen Archetypes
 
@@ -95,7 +100,7 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 - Home Feed
   - ```swift
            let query = PFQuery(className:"Post")
-           query.whereKey("author", equalTo: currentUser)
+           query.whereKey("author", equalTo: PFUser.current())
            query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
               if let error = error { 
                  print(error.localizedDescription)
@@ -117,3 +122,5 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
   - Posts that the user has made
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
   - Might use Yelp/Pinterest for certain
+
+## Gifs
