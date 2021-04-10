@@ -13,7 +13,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
-    var recipes = [PFObject]()
+    var posts = [PFObject]()
+    var selectedPost: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,20 +28,46 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let query = PFQuery(className:"Posts")
+        query.includeKeys(["author"])
+        query.limit = 20
+        
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil{
+                self.posts = posts!
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipes.count
+        let post = posts[section]
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewCell") as! HomeViewCell
         
-        cell.recipeNameLabel.text = "test recipe name label"
-        cell.recipeSummaryLabel.text = "test summary label"
-        cell.reviewsLabel.text = "test reviews label"
+        let post = posts[indexPath.section]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewCell") as! HomeViewCell
+        let user = post["author"] as! PFUser
+        
+        cell.recipeNameLabel.text = post["recipeName"] as? String
+        cell.recipeSummaryLabel.text = post["recipeSummary"] as? String
+        cell.reviewsLabel.text = "Reviews:"
+        
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        cell.imageFood.af_setImage(withURL: url)
         
         return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return posts.count
     }
 
     /*
