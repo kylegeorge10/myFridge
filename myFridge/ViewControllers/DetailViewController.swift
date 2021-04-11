@@ -22,9 +22,9 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        recipeNameLabel.text = recipe["recipeName"] as? String
+        recipeNameLabel.text = "test label"
         recipeNameLabel.sizeToFit()
-        fullRecipeLabel.text = recipe["recipe"] as? String
+        fullRecipeLabel.text = "test label"
         fullRecipeLabel.sizeToFit()
     }
     
