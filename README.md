@@ -35,7 +35,7 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 - [x] User can login
 - [x] User can logout
 - [x] User stays logged in across restarts
-- [] User can post new posts
+- [x] User can post new posts
 - [x] Stylized main feed
 - [x] Detail page of specific post
 - [] Profile screen with user's personal content
@@ -124,3 +124,5 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
   - Might use Yelp/Pinterest for certain
 
 ## Gifs
+- User can login/logout and stays logged in across restarts
+<img src='http://g.recordit.co/3MsoonJooy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
