@@ -11,6 +11,7 @@
 		51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */; };
 		51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */; };
 		6F930A75656BE27C74865101 /* Pods_myFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */; };
+		C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246072A2624058B00DAAB5B /* ReviewsViewController.swift */; };
 		C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C287028E2612CCBA00FC28A0 /* AppDelegate.swift */; };
 		C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702902612CCBA00FC28A0 /* SceneDelegate.swift */; };
 		C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702922612CCBA00FC28A0 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858BAC97298403CB1F573BC6 /* Pods-myFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge.release.xcconfig"; path = "Target Support Files/Pods-myFridge/Pods-myFridge.release.xcconfig"; sourceTree = "<group>"; };
+		C246072A2624058B00DAAB5B /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		C287028B2612CCBA00FC28A0 /* myFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C287028E2612CCBA00FC28A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28702902612CCBA00FC28A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				514999B726142AA5004E786C /* NavigationControllers */,
 				C2BED8692613B1E400577E13 /* HomeViewCell.swift */,
 				C290F12C2614344500790F78 /* PostViewController.swift */,
+				C246072A2624058B00DAAB5B /* ReviewsViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				C290F12D2614344500790F78 /* PostViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
+				C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
 				C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */,
 				51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */,

@@ -11,7 +11,6 @@ class HomeViewCell: UITableViewCell {
 
     @IBOutlet weak var imageFood: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
-    @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var recipeSummaryLabel: UILabel!
     
     

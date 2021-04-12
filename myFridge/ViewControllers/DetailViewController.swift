@@ -6,26 +6,34 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var backgroundRecipeImage: UIImageView!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
-    @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var fullRecipeLabel: UILabel!
     
-    var recipe: [String:Any]!
+    var post: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        recipeNameLabel.text = "test label"
+        recipeNameLabel.text = post["recipeName"] as? String
         recipeNameLabel.sizeToFit()
-        fullRecipeLabel.text = "test label"
+        fullRecipeLabel.text = post["recipeFull"] as? String
         fullRecipeLabel.sizeToFit()
+        
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        foodImage.af_setImage(withURL: url)
+ 
     }
     
 

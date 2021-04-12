@@ -55,7 +55,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.recipeNameLabel.text = post["recipeName"] as? String
         cell.recipeSummaryLabel.text = post["recipeSummary"] as? String
-        cell.reviewsLabel.text = "Reviews:"
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
@@ -68,6 +67,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let post = posts[indexPath.section]
+        
+        // Pass the selected movie to the details view controller
+        let detailsViewController = segue.destination as! DetailViewController
+        detailsViewController.post = post
+        
+        tableView.deselectRow(at: indexPath,animated: true)
     }
 
     /*
