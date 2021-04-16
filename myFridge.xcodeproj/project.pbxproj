@@ -21,6 +21,10 @@
 		C28702A62612CCBA00FC28A0 /* myFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702A52612CCBA00FC28A0 /* myFridgeTests.swift */; };
 		C28702B12612CCBA00FC28A0 /* myFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */; };
 		C290F12D2614344500790F78 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290F12C2614344500790F78 /* PostViewController.swift */; };
+		C2A7E58826295BC400131D56 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A7E58726295BC400131D56 /* FollowersViewController.swift */; };
+		C2A7E58D26295BD200131D56 /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A7E58C26295BD200131D56 /* FollowingViewController.swift */; };
+		C2A7E59A26295C0800131D56 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A7E59926295C0800131D56 /* SettingsViewController.swift */; };
+		C2A7E59F26295C1C00131D56 /* UsernameProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A7E59E26295C1C00131D56 /* UsernameProfileViewController.swift */; };
 		C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8642613B18300577E13 /* HomeViewController.swift */; };
 		C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8692613B1E400577E13 /* HomeViewCell.swift */; };
 		C2BED86F2613B31B00577E13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED86E2613B31B00577E13 /* DetailViewController.swift */; };
@@ -69,6 +73,10 @@
 		C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFridgeUITests.swift; sourceTree = "<group>"; };
 		C28702B22612CCBA00FC28A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C290F12C2614344500790F78 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		C2A7E58726295BC400131D56 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
+		C2A7E58C26295BD200131D56 /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
+		C2A7E59926295C0800131D56 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C2A7E59E26295C1C00131D56 /* UsernameProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameProfileViewController.swift; sourceTree = "<group>"; };
 		C2BED8642613B18300577E13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2BED8692613B1E400577E13 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		C2BED86E2613B31B00577E13 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +202,10 @@
 				C2BED8692613B1E400577E13 /* HomeViewCell.swift */,
 				C290F12C2614344500790F78 /* PostViewController.swift */,
 				C246072A2624058B00DAAB5B /* ReviewsViewController.swift */,
+				C2A7E58726295BC400131D56 /* FollowersViewController.swift */,
+				C2A7E58C26295BD200131D56 /* FollowingViewController.swift */,
+				C2A7E59926295C0800131D56 /* SettingsViewController.swift */,
+				C2A7E59E26295C1C00131D56 /* UsernameProfileViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
@@ -454,14 +466,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A7E58826295BC400131D56 /* FollowersViewController.swift in Sources */,
 				C2BED86F2613B31B00577E13 /* DetailViewController.swift in Sources */,
 				51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */,
 				C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */,
 				C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */,
 				C290F12D2614344500790F78 /* PostViewController.swift in Sources */,
+				C2A7E58D26295BD200131D56 /* FollowingViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
+				C2A7E59A26295C0800131D56 /* SettingsViewController.swift in Sources */,
 				C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */,
+				C2A7E59F26295C1C00131D56 /* UsernameProfileViewController.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
 				C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */,
 				51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */,

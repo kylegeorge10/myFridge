@@ -11,10 +11,17 @@ import AlamofireImage
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var backgroundRecipeImage: UIImageView!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var fullRecipeLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var recipeSummary: UILabel!
+    @IBOutlet weak var glutenFreeImage: UIImageView!
+    @IBOutlet weak var veganImage: UIImageView!
+    @IBOutlet weak var nutFreeImage: UIImageView!
+    @IBOutlet weak var reviewsButton: UIButton!
+    @IBOutlet var usernameTapGesture: UITapGestureRecognizer!
     
     var post: PFObject!
     
@@ -23,11 +30,34 @@ class DetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        let user = post["author"] as! PFUser
+        usernameLabel.text = user.username
+        
         recipeNameLabel.text = post["recipeName"] as? String
         recipeNameLabel.sizeToFit()
+        
+        recipeSummary.text = post["recipeSummary"] as? String
+        recipeSummary.sizeToFit()
+        
         fullRecipeLabel.text = post["recipeFull"] as? String
         fullRecipeLabel.sizeToFit()
         
+        /*
+        if (post["glutenFree"] as! Bool) == true{
+            let glutenImage = UIImage(named: "gluten_black")
+            glutenFreeImage.image = glutenImage
+        }
+        
+        if (post["isVegan"] as! Bool) == true{
+            let newVeganImage = UIImage(named: "vegan_black")
+            veganImage.image = newVeganImage
+        }
+        
+        if (post["nutFree"] as! Bool) == true{
+            let newNutFreeImage = UIImage(named: "nut_black")
+            nutFreeImage.image = newNutFreeImage
+        */
+ 
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
@@ -36,6 +66,11 @@ class DetailViewController: UIViewController {
  
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if sender is UILabel{
+            print("hello")
+        }
+    }
 
     /*
     // MARK: - Navigation

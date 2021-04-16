@@ -53,8 +53,33 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewCell") as! HomeViewCell
         let user = post["author"] as! PFUser
         
+        cell.usernameLabel.text = user.username
         cell.recipeNameLabel.text = post["recipeName"] as? String
         cell.recipeSummaryLabel.text = post["recipeSummary"] as? String
+        
+        if post["authorImage"] != nil{
+            let imageProfileFile = post["authorImage"] as! PFFileObject
+            let urlProfileString = imageProfileFile.url!
+            let urlProfile = URL(string: urlProfileString)!
+            
+            cell.profileImage.af_setImage(withURL: urlProfile)
+        }
+        /*
+        if (post["glutenFree"] as! Bool) == true{
+            let glutenImage = UIImage(named: "gluten_black")
+            cell.glutenFreeImage.image = glutenImage
+        }
+        
+        if (post["isVegan"] as! Bool) == true{
+            let veganImage = UIImage(named: "vegan_black")
+            cell.veganImage.image = veganImage
+        }
+        
+        if (post["nutFree"] as! Bool) == true{
+            let nutFreeImage = UIImage(named: "nut_black")
+            cell.peanutFreeImage.image = nutFreeImage
+        }
+        */
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
@@ -73,16 +98,24 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        // Find the selected movie
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let post = posts[indexPath.section]
+        // Find the selected post
+        if sender is UITableViewCell{
+            print("hello")
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)!
+            let post = posts[indexPath.section]
+            
+            // Pass the selected post to the details view controller
+            let detailsViewController = segue.destination as! DetailViewController
+            detailsViewController.post = post
+            
+            tableView.deselectRow(at: indexPath,animated: true)
+        }
         
-        // Pass the selected movie to the details view controller
-        let detailsViewController = segue.destination as! DetailViewController
-        detailsViewController.post = post
-        
-        tableView.deselectRow(at: indexPath,animated: true)
+        if sender is UITapGestureRecognizer{
+            print("hellooooo")
+        }
+
     }
 
     /*

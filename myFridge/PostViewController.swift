@@ -18,6 +18,13 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var difficultyRatingTextField: UITextField!
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var cookingDurationTextField: UITextField!
+    @IBOutlet weak var recipeDetailsLabel: UILabel!
+    @IBOutlet weak var glutenFreeSwitch: UISwitch!
+    @IBOutlet weak var glutenFreeSwitchLabel: UILabel!
+    @IBOutlet weak var veganSwitch: UISwitch!
+    @IBOutlet weak var veganSwitchLabel: UILabel!
+    @IBOutlet weak var nutFreeSwitch: UISwitch!
+    @IBOutlet weak var nutFreeSwitchLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +40,41 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let post = PFObject(className: "Posts")
         
         post["author"] = PFUser.current()
+        recipeDetailsLabel.text = "Recipe Details:"
         post["recipeName"] = recipeNameTextField.text!
         post["recipeSummary"] = recipeSummaryTextField.text!
         post["recipeFull"] = recipeFullTextField.text!
+        
+        
+        //Getting switch values and setting label values
+        if glutenFreeSwitch.isOn{
+            post["glutenFree"] = true as Bool
+        }
+        else{
+            post["glutenFree"] = false as Bool
+        }
+        glutenFreeSwitchLabel.text = "Gluten Free?"
+        
+        
+        if veganSwitch.isOn{
+            post["isVegan"] = true as Bool
+        }
+        else{
+            post["isVegan"] = false as Bool
+        }
+        veganSwitchLabel.text = "Vegan?"
+        
+        
+        if nutFreeSwitch.isOn{
+            post["nutFree"] = true as Bool
+        }
+        else{
+            post["nutFree"] = false as Bool
+        }
+        nutFreeSwitchLabel.text = "Nut Free?"
+        
+        
+        
         post["difficultyRating"] = difficultyRatingTextField.text!
         post["ingredients"] = ingredientsTextField.text!
         post["cookingDuration"] = cookingDurationTextField.text!
