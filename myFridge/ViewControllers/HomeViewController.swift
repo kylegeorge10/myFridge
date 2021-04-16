@@ -9,7 +9,7 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -111,12 +111,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             tableView.deselectRow(at: indexPath,animated: true)
         }
-        
-        if sender is UITapGestureRecognizer{
-            print("hellooooo")
-        }
 
     }
+    
+    @IBAction func onUsernameTap(_ gestureRecognizer: UITapGestureRecognizer) {
+        
+        performSegue(withIdentifier: "userProfileSegue", sender: gestureRecognizer)
+    }
+    
 
     /*
     // MARK: - Navigation

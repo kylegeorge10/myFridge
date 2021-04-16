@@ -159,7 +159,7 @@
                                                         <action selector="onRePostButton:" destination="vW0-Ym-wab" eventType="touchUpInside" id="l93-0R-jkw"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1n-jW-lcD">
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1n-jW-lcD">
                                                     <rect key="frame" x="173" y="7" width="94" height="21"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
@@ -169,7 +169,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="bJf-qZ-IbL" appends="YES" id="dHT-Am-fMD"/>
+                                                        <outletCollection property="gestureRecognizers" destination="kLl-KC-Rdu" appends="YES" id="vpt-Tu-yjT"/>
                                                     </connections>
                                                 </label>
                                             </subviews>
@@ -240,14 +240,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSg-7S-jfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="MUN-hd-AWu" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="bJf-qZ-IbL">
+                <tapGestureRecognizer id="kLl-KC-Rdu">
                     <connections>
-                        <action selector="usernameTapGesture:" destination="MUN-hd-AWu" id="rmu-VH-nOt"/>
+                        <action selector="onUsernameTap:" destination="rqs-yH-NFc" id="LEj-Fx-d6l"/>
+                        <segue destination="sNT-v4-Fdu" kind="presentation" identifier="userProfileSegue" modalPresentationStyle="fullScreen" id="6vm-Xf-Kcf"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2894.202898550725" y="2240.625"/>
+            <point key="canvasLocation" x="-3775" y="2972"/>
         </scene>
         <!--ReviewsViewController-->
         <scene sceneID="jx0-Qu-XCP">
@@ -270,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZ0-JS-kn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="2733"/>
+            <point key="canvasLocation" x="-2265" y="3696"/>
         </scene>
         <!--PostViewController-->
         <scene sceneID="kSY-H2-xFQ">
@@ -417,7 +417,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-794.20289855072474" y="1990.8482142857142"/>
+            <point key="canvasLocation" x="-2265" y="2972"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="fk9-i7-Sqz">
@@ -573,7 +573,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibn-03-cGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="pu7-KT-Ghy"/>
             </objects>
-            <point key="canvasLocation" x="-2894.202898550725" y="2939.7321428571427"/>
+            <point key="canvasLocation" x="-3775" y="3696"/>
         </scene>
         <!--SuggestedViewController-->
         <scene sceneID="fpH-fr-hA7">
@@ -589,7 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-qS-Jkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="2733"/>
+            <point key="canvasLocation" x="1605.7971014492755" y="2732.8125"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="Fyy-jr-5qo">
@@ -648,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oW-Rb-CpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734.7826086956522" y="2732.8125"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="2732.8125"/>
         </scene>
         <!--FollowingViewController-->
         <scene sceneID="w1u-qf-cSm">
@@ -671,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="li3-i8-iZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3325" y="1991"/>
+            <point key="canvasLocation" x="4234.7826086956529" y="1990.8482142857142"/>
         </scene>
         <!--FollowersViewController-->
         <scene sceneID="seW-Jq-kJH">
@@ -694,7 +694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N71-CQ-YDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3325" y="2650"/>
+            <point key="canvasLocation" x="4234.7826086956529" y="2649.7767857142858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CvO-Kn-vRz">
@@ -740,7 +740,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMk-U7-rDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="1991"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="1990.8482142857142"/>
         </scene>
         <!--HomeNavigationController-->
         <scene sceneID="qcg-Lc-jvv">
@@ -765,7 +765,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ap-ie-rVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3775" y="2241"/>
+            <point key="canvasLocation" x="-3775" y="2281"/>
+        </scene>
+        <!--Username-->
+        <scene sceneID="y5Z-5p-UhW">
+            <objects>
+                <viewController id="Wbe-ao-kdf" customClass="UserProfileViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ElA-hB-uD1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LVe-m7-7Mn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Username" id="Z68-2g-bUa">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left" catalog="system" id="Fqu-Md-AuC">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelButton:" destination="Wbe-ao-kdf" id="Imr-Ke-eN6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Era-6g-fxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2265" y="2281"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TOv-Pu-uI9">
@@ -790,7 +813,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmL-5F-2L3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1609" y="1991"/>
+            <point key="canvasLocation" x="-3000" y="2972"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="epM-D6-E3T">
@@ -815,7 +838,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4m-s1-Cau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="1991"/>
+            <point key="canvasLocation" x="1605.7971014492755" y="1990.8482142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SLt-QW-l1d">
@@ -836,7 +859,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANO-25-d5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1610.144927536232" y="2732.8125"/>
+            <point key="canvasLocation" x="-3000" y="3696"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ldN-3T-u7a">
@@ -857,7 +880,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXW-IU-HIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2599" y="1991"/>
+            <point key="canvasLocation" x="3508.6956521739135" y="1990.8482142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jaO-Kj-6GU">
@@ -878,7 +901,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMi-BG-4Lq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2599" y="2650"/>
+            <point key="canvasLocation" x="3508.6956521739135" y="2649.7767857142858"/>
         </scene>
         <!--Settings-->
         <scene sceneID="g8l-zW-z9l">
@@ -936,6 +959,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijv-zm-H0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2599" y="3340"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BIp-uz-jh6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sNT-v4-Fdu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oqd-RU-CBY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wbe-ao-kdf" kind="relationship" relationship="rootViewController" id="azk-qJ-nId"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nr2-zE-xUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3000.0000000000005" y="2281.4732142857142"/>
         </scene>
     </scenes>
     <resources>
