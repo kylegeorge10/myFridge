@@ -43,6 +43,7 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 
 **Optional Nice-to-have Stories**
 
+- [x] Having an Animation until the data is loading. 
 - [] Page that shows what people you're following are up to (like instagram's old feature)
 - [] User can repost posts that they like
 
