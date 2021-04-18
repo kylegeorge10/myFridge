@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "onCameraButton(_:)"
+            landmarkName = "onPostButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
