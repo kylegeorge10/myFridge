@@ -325,18 +325,6 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny5-vf-3XS">
-                                <rect key="frame" x="150" y="722" width="114" height="40"/>
-                                <color key="backgroundColor" red="0.97388154140000005" green="0.73133160220000004" blue="0.34990921549999998" alpha="0.32661437986442388" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Post">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                    <color key="titleShadowColor" red="0.97388154140000005" green="0.73133160220000004" blue="0.34990921549999998" alpha="0.58524877850000001" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="onPostButton:" destination="6AB-3M-foG" eventType="touchUpInside" id="IdK-ja-OZo"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaj-tE-arG">
                                 <rect key="frame" x="20" y="262" width="94" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -393,13 +381,25 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny5-vf-3XS">
+                                <rect key="frame" x="150" y="794" width="114" height="40"/>
+                                <color key="backgroundColor" red="0.97388154140000005" green="0.73133160220000004" blue="0.34990921549999998" alpha="0.32661437986442388" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                    <color key="titleShadowColor" red="0.97388154140000005" green="0.73133160220000004" blue="0.34990921549999998" alpha="0.58524877850000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPostButton:" destination="6AB-3M-foG" eventType="touchUpInside" id="IdK-ja-OZo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ms5-oD-Bga"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ms5-oD-Bga" firstAttribute="trailing" secondItem="ny5-vf-3XS" secondAttribute="trailing" constant="150" id="3Xw-kG-ob2"/>
+                            <constraint firstItem="ny5-vf-3XS" firstAttribute="bottom" secondItem="ms5-oD-Bga" secondAttribute="bottom" constant="-28" id="Spi-89-4jE"/>
                             <constraint firstItem="ny5-vf-3XS" firstAttribute="leading" secondItem="ms5-oD-Bga" secondAttribute="leading" constant="150" id="n3a-74-tFW"/>
-                            <constraint firstItem="ms5-oD-Bga" firstAttribute="bottom" secondItem="ny5-vf-3XS" secondAttribute="bottom" constant="100" id="xB6-Ei-ShV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Post" id="gTO-Ul-Kgc">
@@ -936,8 +936,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSy-hs-hsI">
-                                <rect key="frame" x="150" y="418" width="114" height="114"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSy-hs-hsI">
+                                <rect key="frame" x="120" y="418" width="174" height="114"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -952,9 +952,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="bottom" secondItem="jSy-hs-hsI" secondAttribute="bottom" constant="330" id="90K-hA-crQ"/>
-                            <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="jSy-hs-hsI" secondAttribute="trailing" constant="150" id="a4N-ye-vbb"/>
+                            <constraint firstItem="jSy-hs-hsI" firstAttribute="leading" secondItem="k48-TG-Wow" secondAttribute="leading" constant="120" id="PJy-Kp-sM5"/>
                             <constraint firstItem="jSy-hs-hsI" firstAttribute="top" secondItem="k48-TG-Wow" secondAttribute="top" constant="330" id="eCR-0Y-hPX"/>
-                            <constraint firstItem="jSy-hs-hsI" firstAttribute="leading" secondItem="k48-TG-Wow" secondAttribute="leading" constant="150" id="sgu-Gn-WfI"/>
+                            <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="jSy-hs-hsI" secondAttribute="trailing" constant="120" id="rSh-SR-3bV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="6uO-zX-Uio">
