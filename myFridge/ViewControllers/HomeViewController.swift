@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import Lottie
 import AlamofireImage
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
@@ -16,14 +17,24 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var posts = [PFObject]()
     var selectedPost: PFObject!
     
+    var animationView: AnimationView?
+    var refresh = true
+    
+    let feedRefresh = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startAnimations()
         
         tableView.dataSource = self
         tableView.delegate = self
         
         self.tableView.reloadData()
         // Do any additional setup after loading the view.
+        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.stopAnimations), userInfo: nil, repeats: false)
+    
+        self.feedRefresh.endRefreshing()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -118,6 +129,39 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         performSegue(withIdentifier: "userProfileSegue", sender: gestureRecognizer)
     }
+    
+    func startAnimations() {
+        // Start Skeleton
+        
+        animationView = .init(name: "24703-food-animation")
+        // Set the size to the frame
+        //animationView!.frame = view.bounds
+        animationView!.frame = CGRect(x: view.frame.width / 6 , y: 200, width: 300, height: 300)
+
+        // fit the
+        animationView!.contentMode = .scaleAspectFit
+        view.addSubview(animationView!)
+        
+        // 4. Set animation loop mode
+        animationView!.loopMode = .loop
+
+        // Animation speed - Larger number = faste
+        animationView!.animationSpeed = 2
+
+        //  Play animation
+        animationView!.play()
+        
+    }
+    
+
+    @objc func stopAnimations() {
+        // ----- Stop Animation
+        animationView?.stop()
+        
+        view.subviews.last?.removeFromSuperview()
+        refresh = false
+    }
+    
     
 
     /*
