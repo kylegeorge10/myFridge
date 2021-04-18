@@ -145,6 +145,14 @@
 				C2BED8642613B18300577E13 /* HomeViewController.swift */,
 				C2BED86E2613B31B00577E13 /* DetailViewController.swift */,
 				51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */,
+				C2BED8692613B1E400577E13 /* HomeViewCell.swift */,
+				C290F12C2614344500790F78 /* PostViewController.swift */,
+				C246072A2624058B00DAAB5B /* ReviewsViewController.swift */,
+				C2A7E58726295BC400131D56 /* FollowersViewController.swift */,
+				C2A7E58C26295BD200131D56 /* FollowingViewController.swift */,
+				C2A7E59926295C0800131D56 /* SettingsViewController.swift */,
+				C2A7E59E26295C1C00131D56 /* UsernameProfileViewController.swift */,
+				C23927252629ED1100947C13 /* UserProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -212,14 +220,6 @@
 				514999A62614266D004E786C /* Assets */,
 				514999B326142981004E786C /* ViewControllers */,
 				514999B726142AA5004E786C /* NavigationControllers */,
-				C2BED8692613B1E400577E13 /* HomeViewCell.swift */,
-				C290F12C2614344500790F78 /* PostViewController.swift */,
-				C246072A2624058B00DAAB5B /* ReviewsViewController.swift */,
-				C2A7E58726295BC400131D56 /* FollowersViewController.swift */,
-				C2A7E58C26295BD200131D56 /* FollowingViewController.swift */,
-				C2A7E59926295C0800131D56 /* SettingsViewController.swift */,
-				C2A7E59E26295C1C00131D56 /* UsernameProfileViewController.swift */,
-				C23927252629ED1100947C13 /* UserProfileViewController.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
