@@ -11,6 +11,7 @@
 		51596696262C0D4F00DC7189 /* 24703-food-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 51596695262C0D4F00DC7189 /* 24703-food-animation.json */; };
 		51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */; };
 		51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */; };
+		51E5BF73262D6A56004A1EED /* DiscoveryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */; };
 		6F930A75656BE27C74865101 /* Pods_myFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */; };
 		C23927262629ED1100947C13 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23927252629ED1100947C13 /* UserProfileViewController.swift */; };
 		C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246072A2624058B00DAAB5B /* ReviewsViewController.swift */; };
@@ -58,6 +59,7 @@
 		51596695262C0D4F00DC7189 /* 24703-food-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "24703-food-animation.json"; path = "../../../../../../../Downloads/24703-food-animation.json"; sourceTree = "<group>"; };
 		51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryGridViewController.swift; sourceTree = "<group>"; };
 		7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858BAC97298403CB1F573BC6 /* Pods-myFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge.release.xcconfig"; path = "Target Support Files/Pods-myFridge/Pods-myFridge.release.xcconfig"; sourceTree = "<group>"; };
 		C23927252629ED1100947C13 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				C2A7E59926295C0800131D56 /* SettingsViewController.swift */,
 				C2A7E59E26295C1C00131D56 /* UsernameProfileViewController.swift */,
 				C23927252629ED1100947C13 /* UserProfileViewController.swift */,
+				51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
 				C23927262629ED1100947C13 /* UserProfileViewController.swift in Sources */,
+				51E5BF73262D6A56004A1EED /* DiscoveryGridViewController.swift in Sources */,
 				C2A7E59A26295C0800131D56 /* SettingsViewController.swift in Sources */,
 				C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */,
 				C2A7E59F26295C1C00131D56 /* UsernameProfileViewController.swift in Sources */,
