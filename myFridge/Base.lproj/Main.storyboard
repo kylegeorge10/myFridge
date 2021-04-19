@@ -587,10 +587,10 @@
             </objects>
             <point key="canvasLocation" x="-3775" y="3696"/>
         </scene>
-        <!--SuggestedViewController-->
+        <!--DiscoveryGridViewController-->
         <scene sceneID="fpH-fr-hA7">
             <objects>
-                <viewController title="SuggestedViewController" id="ZNW-Tt-Dnx" customClass="DiscoveryGridViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DiscoveryGridViewController" id="ZNW-Tt-Dnx" customClass="DiscoveryGridViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jZJ-u0-m2d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
