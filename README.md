@@ -43,6 +43,7 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 
 **Optional Nice-to-have Stories**
 
+- [x] Having an Animation until the data is loading. 
 - [] Page that shows what people you're following are up to (like instagram's old feature)
 - [] User can repost posts that they like
 
@@ -126,3 +127,7 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 ## Gifs
 - User can login/logout and stays logged in across restarts
 <img src='http://g.recordit.co/3MsoonJooy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+- User can see an appIcon and Launch Screen
+- User can also see an animation while waiting for the app to complete retrive the data from the database
+<img src='http://g.recordit.co/JwfaQmny8V.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
