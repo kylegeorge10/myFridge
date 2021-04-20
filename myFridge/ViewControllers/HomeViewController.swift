@@ -75,22 +75,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             cell.profileImage.af_setImage(withURL: urlProfile)
         }
-        /*
-        if (post["glutenFree"] as! Bool) == true{
+        
+        if (post["glutenFree"] as! Bool) != false{
             let glutenImage = UIImage(named: "gluten_black")
             cell.glutenFreeImage.image = glutenImage
         }
         
-        if (post["isVegan"] as! Bool) == true{
+        if (post["isVegan"] as! Bool) != false{
             let veganImage = UIImage(named: "vegan_black")
             cell.veganImage.image = veganImage
         }
         
-        if (post["nutFree"] as! Bool) == true{
+        if (post["nutFree"] as! Bool) != false{
             let nutFreeImage = UIImage(named: "nut_black")
             cell.peanutFreeImage.image = nutFreeImage
         }
-        */
+        
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
