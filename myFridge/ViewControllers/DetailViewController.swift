@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var usernameTapGesture: UITapGestureRecognizer!
     
     var post: PFObject!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +57,43 @@ class DetailViewController: UIViewController {
             let newNutFreeImage = UIImage(named: "nut_black")
             nutFreeImage.image = newNutFreeImage
         */
+        
+        let gluten = ((post["glutenFree"]) as? Bool)
+        if (gluten == true){
+            
+            let glutenImage = UIImage(named: "gluten_black")
+            glutenFreeImage.image = glutenImage
+        }
+        else {
+            let glutenImage = UIImage(named: "gluten_white")
+            glutenFreeImage.image = glutenImage
+        }
  
+        
+        let nutfree = ((post["nutFree"]) as? Bool)
+        if (nutfree == true){
+            
+            let newNutFreeImage = UIImage(named: "nut_black")
+            nutFreeImage.image = newNutFreeImage
+        }
+        else {
+            let newNutFreeImage = UIImage(named: "nut_white")
+            nutFreeImage.image = newNutFreeImage
+        }
+        
+        
+        let vegan = ((post["isVegan"]) as? Bool)
+        if (vegan == true){
+            
+            let newVeganImage = UIImage(named: "vegan_black")
+            veganImage.image = newVeganImage
+        }
+        else {
+            let newVeganImage = UIImage(named: "vegan_white")
+            veganImage.image = newVeganImage
+        }
+        
+        
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
