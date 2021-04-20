@@ -102,11 +102,21 @@ class DetailViewController: UIViewController {
  
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if sender is UILabel{
-            print("hello")
+    @IBAction func onReviewsButton(_ sender: Any) {
+        
+        //getting the current posts data
+        let post = self.post
+        
+        //passing data of post to the reviews controller
+        func prepare(for segue: UIStoryboardSegue, sender: UIButton){
+            let reviewsViewController = segue.destination as! ReviewsViewController
+            reviewsViewController.post = post
         }
+        
+        //moving the view controller to the next controller
+        performSegue(withIdentifier: "reviewsSegue", sender: sender)
     }
+    
 
     /*
     // MARK: - Navigation

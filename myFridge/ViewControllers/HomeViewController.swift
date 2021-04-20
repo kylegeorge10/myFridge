@@ -111,7 +111,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Find the selected post
         if sender is UITableViewCell{
-            print("hello")
+            print("Sender is UITableViewCell")
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)!
             let post = posts[indexPath.section]
