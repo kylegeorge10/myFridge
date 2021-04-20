@@ -456,10 +456,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWk-f0-k6i">
-                                <rect key="frame" x="339" y="287" width="55" height="40"/>
+                                <rect key="frame" x="276" y="287" width="118" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9ek-Oi-Vd8"/>
-                                    <constraint firstAttribute="width" constant="55" id="NlU-jA-shy"/>
+                                    <constraint firstAttribute="width" constant="118" id="NlU-jA-shy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <state key="normal" title="Reviews">
@@ -492,7 +492,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipe summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQV-Py-bHz">
                                 <rect key="frame" x="158" y="163" width="236" height="27.5"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -527,11 +527,11 @@
                         <viewLayoutGuide key="safeArea" id="1oW-9A-QwN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WWk-f0-k6i" firstAttribute="leading" secondItem="8dH-MB-SaR" secondAttribute="trailing" constant="231" id="0rX-rm-FrD"/>
+                            <constraint firstItem="WWk-f0-k6i" firstAttribute="leading" secondItem="8dH-MB-SaR" secondAttribute="trailing" constant="168" id="0rX-rm-FrD"/>
                             <constraint firstItem="irP-qJ-4Rn" firstAttribute="leading" secondItem="adr-77-a96" secondAttribute="trailing" constant="8" symbolic="YES" id="107-nd-26u"/>
                             <constraint firstItem="b40-cK-ZLH" firstAttribute="top" secondItem="8iX-Lf-xks" secondAttribute="bottom" constant="7.5" id="16d-Ti-Si7"/>
                             <constraint firstItem="adr-77-a96" firstAttribute="leading" secondItem="1oW-9A-QwN" secondAttribute="leading" constant="17" id="1Fr-oT-8bL"/>
-                            <constraint firstItem="WWk-f0-k6i" firstAttribute="leading" secondItem="8dH-MB-SaR" secondAttribute="trailing" constant="231" id="3Fe-Uf-8Me"/>
+                            <constraint firstItem="WWk-f0-k6i" firstAttribute="leading" secondItem="8dH-MB-SaR" secondAttribute="trailing" constant="168" id="3Fe-Uf-8Me"/>
                             <constraint firstItem="Yad-i3-oG1" firstAttribute="top" secondItem="1oW-9A-QwN" secondAttribute="top" constant="4" id="3Qy-NW-WNX"/>
                             <constraint firstItem="b40-cK-ZLH" firstAttribute="leading" secondItem="aH1-ib-FuL" secondAttribute="trailing" constant="8" symbolic="YES" id="5AD-O0-RE0"/>
                             <constraint firstItem="adr-77-a96" firstAttribute="top" secondItem="aH1-ib-FuL" secondAttribute="bottom" constant="8" symbolic="YES" id="7f6-TH-HPd"/>
@@ -585,7 +585,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibn-03-cGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="pu7-KT-Ghy"/>
             </objects>
-            <point key="canvasLocation" x="-3775" y="3696"/>
+            <point key="canvasLocation" x="-3775.36231884058" y="3695.7589285714284"/>
         </scene>
         <!--DiscoveryGridViewController-->
         <scene sceneID="fpH-fr-hA7">
