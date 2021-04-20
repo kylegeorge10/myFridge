@@ -599,7 +599,7 @@
                                 </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipe summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQV-Py-bHz">
-                                <rect key="frame" x="158" y="148" width="173" height="42.666666666666657"/>
+                                <rect key="frame" x="158" y="148" width="212" height="42.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -626,13 +626,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Recipe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zF-JY-GTG">
-                                <rect key="frame" x="17" y="335" width="311" height="27.333333333333314"/>
+                                <rect key="frame" x="17" y="335" width="350" height="27.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWk-f0-k6i">
-                                <rect key="frame" x="276" y="296" width="55" height="40"/>
+                                <rect key="frame" x="276" y="296" width="94" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9ek-Oi-Vd8"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="NlU-jA-shy"/>
@@ -1169,7 +1169,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijv-zm-H0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3573.8461538461538" y="3415.8767772511846"/>
+            <point key="canvasLocation" x="3569" y="3452"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BIp-uz-jh6">
