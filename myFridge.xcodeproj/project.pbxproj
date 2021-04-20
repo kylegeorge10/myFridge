@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DED5740AE388CBD78C3E25A /* Pods_myFridge_myFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451A5501FE8E273B5D9692B7 /* Pods_myFridge_myFridgeUITests.framework */; };
-		51596696262C0D4F00DC7189 /* 24703-food-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 51596695262C0D4F00DC7189 /* 24703-food-animation.json */; };
+		51951D64262E85A1003BF31B /* 24703-food-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 51951D63262E85A1003BF31B /* 24703-food-animation.json */; };
 		51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */; };
 		51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */; };
 		51E5BF73262D6A56004A1EED /* DiscoveryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */; };
@@ -56,7 +56,7 @@
 		04E39B8F5B32D16738BAAE46 /* Pods-myFridge-myFridgeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge-myFridgeUITests.release.xcconfig"; path = "Target Support Files/Pods-myFridge-myFridgeUITests/Pods-myFridge-myFridgeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		089F715EE160452419B894F6 /* Pods-myFridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-myFridgeTests/Pods-myFridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		451A5501FE8E273B5D9692B7 /* Pods_myFridge_myFridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFridge_myFridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		51596695262C0D4F00DC7189 /* 24703-food-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "24703-food-animation.json"; path = "../../../../../../../Downloads/24703-food-animation.json"; sourceTree = "<group>"; };
+		51951D63262E85A1003BF31B /* 24703-food-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "24703-food-animation.json"; sourceTree = "<group>"; };
 		51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryGridViewController.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		51596694262C0D2800DC7189 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				51596695262C0D4F00DC7189 /* 24703-food-animation.json */,
+				51951D63262E85A1003BF31B /* 24703-food-animation.json */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 				C287029B2612CCBA00FC28A0 /* LaunchScreen.storyboard in Resources */,
 				C28702982612CCBA00FC28A0 /* Assets.xcassets in Resources */,
 				C28702962612CCBA00FC28A0 /* Main.storyboard in Resources */,
-				51596696262C0D4F00DC7189 /* 24703-food-animation.json in Resources */,
+				51951D64262E85A1003BF31B /* 24703-food-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
