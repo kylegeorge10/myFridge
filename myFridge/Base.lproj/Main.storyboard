@@ -455,20 +455,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWk-f0-k6i">
-                                <rect key="frame" x="276" y="287" width="118" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="9ek-Oi-Vd8"/>
-                                    <constraint firstAttribute="width" constant="118" id="NlU-jA-shy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Reviews">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.073311755919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fIu-BZ-McF" kind="presentation" modalPresentationStyle="fullScreen" id="us7-su-5tv"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8iX-Lf-xks">
                                 <rect key="frame" x="158" y="92" width="25" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -491,7 +477,7 @@
                                 </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipe summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQV-Py-bHz">
-                                <rect key="frame" x="158" y="163" width="236" height="27.5"/>
+                                <rect key="frame" x="158" y="148" width="236" height="42.5"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -523,6 +509,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWk-f0-k6i">
+                                <rect key="frame" x="276" y="296" width="118" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9ek-Oi-Vd8"/>
+                                    <constraint firstAttribute="width" constant="118" id="NlU-jA-shy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Reviews">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.073311755919999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fIu-BZ-McF" kind="presentation" modalPresentationStyle="fullScreen" id="us7-su-5tv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1oW-9A-QwN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -539,7 +539,7 @@
                             <constraint firstItem="4zF-JY-GTG" firstAttribute="top" secondItem="adr-77-a96" secondAttribute="bottom" constant="17" id="Hi9-po-9bD"/>
                             <constraint firstItem="4zF-JY-GTG" firstAttribute="top" secondItem="irP-qJ-4Rn" secondAttribute="bottom" constant="17" id="HjW-2e-s4R"/>
                             <constraint firstItem="b40-cK-ZLH" firstAttribute="top" secondItem="8iX-Lf-xks" secondAttribute="bottom" constant="7.5" id="JFg-2A-T5k"/>
-                            <constraint firstItem="4zF-JY-GTG" firstAttribute="top" secondItem="WWk-f0-k6i" secondAttribute="bottom" constant="8" symbolic="YES" id="K6E-xx-Hwb"/>
+                            <constraint firstItem="4zF-JY-GTG" firstAttribute="top" secondItem="WWk-f0-k6i" secondAttribute="bottom" constant="-1" id="K6E-xx-Hwb"/>
                             <constraint firstItem="1oW-9A-QwN" firstAttribute="trailing" secondItem="LQV-Py-bHz" secondAttribute="trailing" constant="20" id="KpS-RO-wcv"/>
                             <constraint firstItem="Yad-i3-oG1" firstAttribute="leading" secondItem="8iX-Lf-xks" secondAttribute="trailing" constant="3" id="LZP-va-rzZ"/>
                             <constraint firstItem="irP-qJ-4Rn" firstAttribute="leading" secondItem="adr-77-a96" secondAttribute="trailing" constant="8" symbolic="YES" id="POj-bo-IvW"/>
@@ -549,15 +549,14 @@
                             <constraint firstItem="4zF-JY-GTG" firstAttribute="leading" secondItem="1oW-9A-QwN" secondAttribute="leading" constant="17" id="Whl-yQ-RCC"/>
                             <constraint firstItem="1oW-9A-QwN" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="4zF-JY-GTG" secondAttribute="bottom" constant="450.5" id="Wth-nt-WJD"/>
                             <constraint firstItem="8dH-MB-SaR" firstAttribute="leading" secondItem="irP-qJ-4Rn" secondAttribute="trailing" constant="8" symbolic="YES" id="Z3f-ST-rRN"/>
-                            <constraint firstItem="4zF-JY-GTG" firstAttribute="top" secondItem="WWk-f0-k6i" secondAttribute="bottom" constant="8" symbolic="YES" id="afJ-hc-gKI"/>
+                            <constraint firstItem="4zF-JY-GTG" firstAttribute="top" secondItem="WWk-f0-k6i" secondAttribute="bottom" constant="-1" id="afJ-hc-gKI"/>
                             <constraint firstItem="1oW-9A-QwN" firstAttribute="trailing" secondItem="WWk-f0-k6i" secondAttribute="trailing" constant="20" id="c6Z-Ie-PVJ"/>
                             <constraint firstItem="1oW-9A-QwN" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="b40-cK-ZLH" secondAttribute="trailing" constant="141.5" id="cX6-uK-5Np"/>
                             <constraint firstItem="8iX-Lf-xks" firstAttribute="leading" secondItem="aH1-ib-FuL" secondAttribute="trailing" constant="8" symbolic="YES" id="d18-FV-rUA"/>
                             <constraint firstItem="aH1-ib-FuL" firstAttribute="leading" secondItem="1oW-9A-QwN" secondAttribute="leading" id="dv8-3n-Iij"/>
-                            <constraint firstItem="WWk-f0-k6i" firstAttribute="top" relation="lessThanOrEqual" secondItem="LQV-Py-bHz" secondAttribute="bottom" constant="96.5" id="ebY-vj-ZTN"/>
-                            <constraint firstItem="LQV-Py-bHz" firstAttribute="top" secondItem="b40-cK-ZLH" secondAttribute="bottom" constant="20" id="f2r-ns-Dfo"/>
+                            <constraint firstItem="WWk-f0-k6i" firstAttribute="top" relation="lessThanOrEqual" secondItem="LQV-Py-bHz" secondAttribute="bottom" constant="105.5" id="ebY-vj-ZTN"/>
+                            <constraint firstItem="LQV-Py-bHz" firstAttribute="top" secondItem="b40-cK-ZLH" secondAttribute="bottom" constant="5" id="f2r-ns-Dfo"/>
                             <constraint firstItem="Yad-i3-oG1" firstAttribute="leading" secondItem="8iX-Lf-xks" secondAttribute="trailing" constant="3" id="geo-8M-bdI"/>
-                            <constraint firstItem="LQV-Py-bHz" firstAttribute="top" secondItem="b40-cK-ZLH" secondAttribute="bottom" constant="20" id="hxU-tL-Zbj"/>
                             <constraint firstItem="8dH-MB-SaR" firstAttribute="leading" secondItem="irP-qJ-4Rn" secondAttribute="trailing" constant="8" symbolic="YES" id="iip-Xm-l0j"/>
                             <constraint firstItem="1oW-9A-QwN" firstAttribute="trailing" secondItem="Yad-i3-oG1" secondAttribute="trailing" constant="146" id="jbg-MY-XEN"/>
                             <constraint firstItem="b40-cK-ZLH" firstAttribute="top" secondItem="Yad-i3-oG1" secondAttribute="bottom" constant="9" id="kl2-Ci-neO"/>
