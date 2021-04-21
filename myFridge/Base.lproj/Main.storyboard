@@ -807,6 +807,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Discovery" id="g6u-6r-cgk"/>
+                    <connections>
+                        <outlet property="addItemsTextField" destination="gRz-hm-2Ma" id="dU8-D9-B6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-qS-Jkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

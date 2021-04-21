@@ -32,6 +32,17 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Do any additional setup after loading the view.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //Dismiss the keyboard when not in use
+        recipeNameTextField.resignFirstResponder()
+        recipeSummaryTextField.resignFirstResponder()
+        recipeFullTextField.resignFirstResponder()
+        difficultyRatingTextField.resignFirstResponder()
+        ingredientsTextField.resignFirstResponder()
+        cookingDurationTextField.resignFirstResponder()
+        
+    }
+    
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
