@@ -12,9 +12,19 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var usernameLabel: UILabel!
         
+    var currentUser = PFUser.current()
     
     override func viewDidLoad() {
           super.viewDidLoad()
+        
+        if currentUser != nil {
+          // Do stuff with the user
+            print(currentUser as Any)
+            usernameLabel.text = currentUser!["username"] as? String
+        } else {
+          // No user found
+            print("None")
+        }
         
         
       }
