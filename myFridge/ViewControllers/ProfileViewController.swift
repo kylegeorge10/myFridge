@@ -9,12 +9,15 @@ import UIKit
 import Parse
 
 class ProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+        
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+          super.viewDidLoad()
+        
+        
+      }
     
 
     /*
