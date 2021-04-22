@@ -29,15 +29,26 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         collectionView.dataSource = self
 
         // Do any additional setup after loading the view.
+        
+        query.findObjectsInBackground{(posts, error) in
+            if posts != nil{
+                self.posts = posts!
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     @IBAction func onNextItemButton(_ sender: Any) {
         itemList.append(addItemsTextField.text!)
-        if itemList != nil{
+        if itemList.count != 0{
             print(itemList)
             showItemsLabel.text = itemList.joined(separator: ", ")
         } else {
             print("None")
+        }
+        addItemsTextField.text?.removeAll()
+        if itemList.count != 0{
+            addItemsTextField.placeholder = "Add another item"
         }
     }
     
@@ -48,10 +59,19 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         } else {
             showItemsLabel.text = "List of Items I have"
         }
+        if itemList == []{
+            showItemsLabel.text = "List of Items I have"
+            addItemsTextField.placeholder = "Add the items you have"
+        }
     }
     
     @IBAction func onSearchButton(_ sender: UIButton) {
         print(itemList)
+        print(posts.count)
+        
+        let ingredients = self.posts[0]["ingredients"]
+        print(ingredients)
+        /*
         query.countObjectsInBackground { (count: Int32, error: Error?) in
             if let error = error {
                 // The request failed
@@ -60,7 +80,25 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 print("\(count) objects found!")
                 
             }
+        }*/
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
+            
+            let post = posts[indexPath.item]
+            
+            cell.recipeNameLabel.text = post["recipeName"] as? String
+            
+            let imageFile = post["image"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.recipeImageView.af_setImage(withURL: url)
+            return cell
         }
+        
+        self.collectionView.reloadData()
+        print("data reloaded")
         
     }
     
@@ -90,6 +128,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
         cell.recipeImageView.af_setImage(withURL: url)
         return cell
+        
     }
     
 
