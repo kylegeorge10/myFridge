@@ -29,6 +29,14 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 2
+        layout.minimumInteritemSpacing = 2
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 1) / 2
+        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
 
         // Do any additional setup after loading the view.
         

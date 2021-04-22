@@ -744,7 +744,7 @@
         <scene sceneID="fpH-fr-hA7">
             <objects>
                 <viewController title="DiscoveryGridViewController" id="ZNW-Tt-Dnx" customClass="DiscoveryGridViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jZJ-u0-m2d">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="jZJ-u0-m2d">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -810,29 +810,32 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GCZ-6N-iyZ">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="250"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-cooking-book" translatesAutoresizingMaskIntoConstraints="NO" id="y3a-Ei-RIU">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-cooking-book" id="y3a-Ei-RIU">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.97388154140000005" green="0.73133160220000004" blue="0.34990921549999998" alpha="0.30547991899999999" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="7AO-oW-VOx"/>
                                                         <constraint firstAttribute="width" constant="180" id="m85-5n-o0b"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recpieName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-6d-gTo">
-                                                    <rect key="frame" x="8" y="208" width="74" height="28"/>
-                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recpieName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-6d-gTo">
+                                                    <rect key="frame" x="8" y="208" width="164" height="34"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
                                                     <color key="textColor" systemColor="systemOrangeColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Mgy-6d-gTo" firstAttribute="top" secondItem="y3a-Ei-RIU" secondAttribute="bottom" constant="8" id="Blb-oz-FvL"/>
+                                                <constraint firstItem="Mgy-6d-gTo" firstAttribute="leading" secondItem="GCZ-6N-iyZ" secondAttribute="leadingMargin" id="5pk-64-AKH"/>
                                                 <constraint firstItem="y3a-Ei-RIU" firstAttribute="leading" secondItem="GCZ-6N-iyZ" secondAttribute="leading" id="Vmc-Kx-IhL"/>
                                                 <constraint firstItem="y3a-Ei-RIU" firstAttribute="top" secondItem="GCZ-6N-iyZ" secondAttribute="top" id="X6y-xy-rqt"/>
                                                 <constraint firstAttribute="trailing" secondItem="y3a-Ei-RIU" secondAttribute="trailing" id="ef1-4j-Wgt"/>
-                                                <constraint firstItem="Mgy-6d-gTo" firstAttribute="leading" secondItem="GCZ-6N-iyZ" secondAttribute="leading" constant="8" id="voy-yH-m9J"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mgy-6d-gTo" secondAttribute="bottom" constant="8" id="luQ-co-nr6"/>
+                                                <constraint firstItem="Mgy-6d-gTo" firstAttribute="centerX" secondItem="y3a-Ei-RIU" secondAttribute="centerX" id="pQ3-bC-tvm"/>
+                                                <constraint firstItem="Mgy-6d-gTo" firstAttribute="top" secondItem="y3a-Ei-RIU" secondAttribute="bottom" constant="8" symbolic="YES" id="xvU-cx-7t5"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="250"/>
@@ -868,6 +871,7 @@
                             <constraint firstItem="TXv-I1-fIV" firstAttribute="top" secondItem="kMc-On-pcP" secondAttribute="bottom" constant="10" id="c5O-jp-iDv"/>
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="trailing" secondItem="gjP-eF-nzd" secondAttribute="trailing" id="clc-CZ-QH4"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gRz-hm-2Ma" secondAttribute="trailing" constant="20" id="dGM-QW-NjM"/>
+                            <constraint firstItem="pvK-kO-dF5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="8" symbolic="YES" id="fdo-7v-zox"/>
                             <constraint firstItem="kMc-On-pcP" firstAttribute="top" secondItem="gjP-eF-nzd" secondAttribute="top" constant="10" id="gGc-78-su8"/>
                             <constraint firstItem="gRz-hm-2Ma" firstAttribute="leading" secondItem="01T-ba-h6s" secondAttribute="trailing" constant="8" symbolic="YES" id="gPn-AK-Yth"/>
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="leading" secondItem="gjP-eF-nzd" secondAttribute="leading" id="geR-wm-yIm"/>
