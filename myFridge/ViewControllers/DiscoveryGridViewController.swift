@@ -18,7 +18,9 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     
     // declare a list to store the user's fridge inventory
     var itemList: Array<String> = Array()
+    var ingredientsList: Array<String> = Array()
     var posts = [PFObject]()
+    var isGood = false
     
     let query = PFQuery(className:"Posts")
     
@@ -69,8 +71,22 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         print(itemList)
         print(posts.count)
         
-        let ingredients = self.posts[0]["ingredients"]
-        print(ingredients)
+        let ingredients = self.posts[5]["ingredients"] as! String
+        let tempIngredientsList = ingredients.components(separatedBy: ",")
+        for item in tempIngredientsList{
+            ingredientsList.append(item.trimmingCharacters(in: .whitespaces))
+        }
+        print(ingredientsList)
+        
+        for item in itemList{
+            if ingredientsList.contains(item){
+                isGood = true
+            }
+        }
+        
+        if isGood{
+            print("good recipe")
+        }
         /*
         query.countObjectsInBackground { (count: Int32, error: Error?) in
             if let error = error {
@@ -80,7 +96,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 print("\(count) objects found!")
                 
             }
-        }*/
+        }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
@@ -99,7 +115,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
         self.collectionView.reloadData()
         print("data reloaded")
-        
+        */
     }
     
     
