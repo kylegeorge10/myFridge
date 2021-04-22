@@ -805,15 +805,16 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oux-87-DLW">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeFoundCell" id="oux-87-DLW" customClass="RecipeFoundCell" customModule="myFridge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GCZ-6N-iyZ">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3a-Ei-RIU">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-cooking-book" translatesAutoresizingMaskIntoConstraints="NO" id="y3a-Ei-RIU">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                                    <color key="backgroundColor" red="0.97388154140000005" green="0.73133160220000004" blue="0.34990921549999998" alpha="0.30547991899999999" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="7AO-oW-VOx"/>
                                                         <constraint firstAttribute="width" constant="180" id="m85-5n-o0b"/>
@@ -835,9 +836,23 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="250"/>
+                                        <connections>
+                                            <outlet property="recipeImageView" destination="y3a-Ei-RIU" id="eZF-hX-Ars"/>
+                                            <outlet property="recipeNameLabel" destination="Mgy-6d-gTo" id="FPI-Pj-Ul7"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvK-kO-dF5">
+                                <rect key="frame" x="309" y="301.33333333333331" width="51" height="40"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSearchButton:" destination="ZNW-Tt-Dnx" eventType="touchUpInside" id="e35-xm-Mt5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gjP-eF-nzd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -858,8 +873,10 @@
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="leading" secondItem="gjP-eF-nzd" secondAttribute="leading" id="geR-wm-yIm"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="TXv-I1-fIV" secondAttribute="trailing" constant="53" id="iwf-nx-jAS"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="336" id="o1m-Sf-Psd"/>
+                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="pvK-kO-dF5" secondAttribute="trailing" constant="30" id="oiY-N7-cwk"/>
                             <constraint firstItem="TXv-I1-fIV" firstAttribute="leading" secondItem="jZJ-u0-m2d" secondAttribute="leadingMargin" id="qEw-gX-uGd"/>
                             <constraint firstItem="vzC-aZ-Ilz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kMc-On-pcP" secondAttribute="trailing" constant="8" symbolic="YES" id="qIX-k0-rez"/>
+                            <constraint firstItem="pvK-kO-dF5" firstAttribute="top" secondItem="TXv-I1-fIV" secondAttribute="bottom" constant="60" id="tx1-oY-FX7"/>
                             <constraint firstItem="01T-ba-h6s" firstAttribute="leading" secondItem="kMc-On-pcP" secondAttribute="trailing" constant="15" id="y94-9t-wv7"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="vzC-aZ-Ilz" secondAttribute="trailing" constant="130" id="zq4-mQ-45m"/>
                         </constraints>
@@ -867,8 +884,7 @@
                     <navigationItem key="navigationItem" title="Discovery" id="g6u-6r-cgk"/>
                     <connections>
                         <outlet property="addItemsTextField" destination="gRz-hm-2Ma" id="dU8-D9-B6g"/>
-                        <outlet property="foundPostImageView" destination="y3a-Ei-RIU" id="Xpa-sR-kKV"/>
-                        <outlet property="foundPostRecipeNameLabel" destination="Mgy-6d-gTo" id="nEL-26-lDT"/>
+                        <outlet property="collectionView" destination="uxE-kW-dxH" id="dmq-mP-nXv"/>
                         <outlet property="showItemsLabel" destination="TXv-I1-fIV" id="oeN-lp-8Pz"/>
                     </connections>
                 </viewController>
@@ -1325,6 +1341,7 @@
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="gluten_white" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="icons8-cooking-book" width="100" height="100"/>
         <image name="kitchen-guy-001-512" width="409" height="512"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="nut_white" width="512" height="512"/>

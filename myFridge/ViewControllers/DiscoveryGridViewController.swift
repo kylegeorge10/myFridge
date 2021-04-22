@@ -6,21 +6,27 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
 
 class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
 
     @IBOutlet weak var addItemsTextField: UITextField!
     @IBOutlet weak var showItemsLabel: UILabel!
-    @IBOutlet weak var foundPostImageView: UIImageView!
-    @IBOutlet weak var foundPostRecipeNameLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // declare a list to store the user's fridge inventory
     var itemList: Array<String> = Array()
+    var posts = [PFObject]()
+    
+    let query = PFQuery(className:"Posts")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.delegate = self
+        collectionView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -44,6 +50,19 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         }
     }
     
+    @IBAction func onSearchButton(_ sender: UIButton) {
+        print(itemList)
+        query.countObjectsInBackground { (count: Int32, error: Error?) in
+            if let error = error {
+                // The request failed
+                print(error.localizedDescription)
+            } else {
+                print("\(count) objects found!")
+                
+            }
+        }
+        
+    }
     
     
     
@@ -54,11 +73,23 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
+        
+        let post = posts[indexPath.item]
+        
+        cell.recipeNameLabel.text = post["recipeName"] as? String
+        
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        cell.recipeImageView.af_setImage(withURL: url)
+        return cell
     }
     
 

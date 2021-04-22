@@ -12,6 +12,7 @@
 		51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */; };
 		51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */; };
 		51E5BF73262D6A56004A1EED /* DiscoveryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */; };
+		51F60604263172DB00C83A44 /* RecipeFoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60603263172DB00C83A44 /* RecipeFoundCell.swift */; };
 		6F930A75656BE27C74865101 /* Pods_myFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */; };
 		C23927262629ED1100947C13 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23927252629ED1100947C13 /* UserProfileViewController.swift */; };
 		C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246072A2624058B00DAAB5B /* ReviewsViewController.swift */; };
@@ -62,6 +63,7 @@
 		51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryGridViewController.swift; sourceTree = "<group>"; };
+		51F60603263172DB00C83A44 /* RecipeFoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFoundCell.swift; sourceTree = "<group>"; };
 		7235E6EDA14CF4D6A28A5780 /* Pods_myFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858BAC97298403CB1F573BC6 /* Pods-myFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge.release.xcconfig"; path = "Target Support Files/Pods-myFridge/Pods-myFridge.release.xcconfig"; sourceTree = "<group>"; };
 		C23927252629ED1100947C13 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				514999B326142981004E786C /* ViewControllers */,
 				514999B726142AA5004E786C /* NavigationControllers */,
 				C2ABB055262F496800018648 /* ReviewViewCell.swift */,
+				51F60603263172DB00C83A44 /* RecipeFoundCell.swift */,
 			);
 			path = myFridge;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				C2BED86F2613B31B00577E13 /* DetailViewController.swift in Sources */,
 				51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */,
 				C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */,
+				51F60604263172DB00C83A44 /* RecipeFoundCell.swift in Sources */,
 				C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */,
 				C290F12D2614344500790F78 /* PostViewController.swift in Sources */,
 				C2A7E58D26295BD200131D56 /* FollowingViewController.swift in Sources */,
