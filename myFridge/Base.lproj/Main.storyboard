@@ -781,7 +781,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add the items you have" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRz-hm-2Ma">
-                                <rect key="frame" x="191" y="113" width="179" height="34"/>
+                                <rect key="frame" x="182" y="113" width="179" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -867,9 +867,9 @@
                             <constraint firstAttribute="bottom" secondItem="uxE-kW-dxH" secondAttribute="bottom" id="bJ7-vO-2re"/>
                             <constraint firstItem="TXv-I1-fIV" firstAttribute="top" secondItem="kMc-On-pcP" secondAttribute="bottom" constant="10" id="c5O-jp-iDv"/>
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="trailing" secondItem="gjP-eF-nzd" secondAttribute="trailing" id="clc-CZ-QH4"/>
-                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="gRz-hm-2Ma" secondAttribute="trailing" constant="20" id="dGM-QW-NjM"/>
+                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gRz-hm-2Ma" secondAttribute="trailing" constant="20" id="dGM-QW-NjM"/>
                             <constraint firstItem="kMc-On-pcP" firstAttribute="top" secondItem="gjP-eF-nzd" secondAttribute="top" constant="10" id="gGc-78-su8"/>
-                            <constraint firstItem="gRz-hm-2Ma" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="01T-ba-h6s" secondAttribute="trailing" constant="8" symbolic="YES" id="gPn-AK-Yth"/>
+                            <constraint firstItem="gRz-hm-2Ma" firstAttribute="leading" secondItem="01T-ba-h6s" secondAttribute="trailing" constant="8" symbolic="YES" id="gPn-AK-Yth"/>
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="leading" secondItem="gjP-eF-nzd" secondAttribute="leading" id="geR-wm-yIm"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="TXv-I1-fIV" secondAttribute="trailing" constant="53" id="iwf-nx-jAS"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="336" id="o1m-Sf-Psd"/>
