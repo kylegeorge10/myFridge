@@ -20,6 +20,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     var itemList: Array<String> = Array()
     var ingredientsList: Array<String> = Array()
     var posts = [PFObject]()
+    var filteredPosts = [PFObject]()
     var isGood = false
     
     let query = PFQuery(className:"Posts")
@@ -51,7 +52,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     @IBAction func onNextItemButton(_ sender: Any) {
         itemList.append(addItemsTextField.text!)
         if itemList.count != 0{
-            print(itemList)
+            //print(itemList)
             showItemsLabel.text = itemList.joined(separator: ", ")
         } else {
             print("None")
@@ -72,29 +73,68 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         if itemList == []{
             showItemsLabel.text = "List of Items I have"
             addItemsTextField.placeholder = "Add the items you have"
+            
+            //also reload the collection view back to the random posts if the person removes their
+            //inputted ingredients
         }
     }
     
     @IBAction func onSearchButton(_ sender: UIButton) {
-        print(itemList)
-        print(posts.count)
+        //print(itemList)
+        //print(posts.count)
         
-        let ingredients = self.posts[5]["ingredients"] as! String
-        let tempIngredientsList = ingredients.components(separatedBy: ",")
-        for item in tempIngredientsList{
-            ingredientsList.append(item.trimmingCharacters(in: .whitespaces))
-        }
-        print(ingredientsList)
+        //WHAT WE NEED TO DO:
         
-        for item in itemList{
-            if ingredientsList.contains(item){
-                isGood = true
+        //1:
+        //Run a loop that collects the ingredient of each post and check to see if the ingredients of that post
+        //match the ingredients on our fridge
+        
+        //2:
+        //Once we find the posts (if any) that match our ingredients we then want to add that post to a list of
+        //posts that we can use to reload the data of the collection table to show only those posts
+        
+        filteredPosts.removeAll()
+        var position = 0
+        while position <= (self.posts.count-1){
+            
+            //move ingredients of the current post to a list and format it
+            let ingredients = self.posts[position]["ingredients"] as! String
+            let tempIngredientsList = ingredients.components(separatedBy: ",")
+            for item in tempIngredientsList{
+                ingredientsList.append((item.trimmingCharacters(in: .whitespaces)).lowercased())
             }
+            //print(ingredientsList)
+            
+            //check if ingredients are in posts ingredient list
+            for item in itemList{
+                if ingredientsList.contains(item.lowercased()){
+                    isGood = true
+                }else{
+                    isGood = false
+                }
+            }
+            
+            //if ingredients are in posts ingredients list then add that recipe to the recipe collection
+            if isGood{
+                //add post to a list of posts that match our ingredients
+                //filteredPosts.append(post)
+                print("good recipe")
+                filteredPosts.append(self.posts[position])
+                isGood = false
+            }
+            ingredientsList.removeAll()
+            position += 1
         }
+        print(filteredPosts.count)
+        //print(filteredPosts[0]["recipeName"] as! String)
         
-        if isGood{
-            print("good recipe")
-        }
+        
+        //reload the collection view to show only the filtered posts
+        self.collectionView.reloadData()
+        print("data reloaded")
+        
+        
+        
         /*
         query.countObjectsInBackground { (count: Int32, error: Error?) in
             if let error = error {
@@ -140,17 +180,35 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        print("IN COLLECTION VIEW")
+        var position: Int
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
         
-        let post = posts[indexPath.item]
+        if filteredPosts.count != 0{
+            print("IN IF")
+            let post = filteredPosts[indexPath.item]
+            
+            cell.recipeNameLabel.text = post["recipeName"] as? String
+            
+            let imageFile = post["image"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.recipeImageView.af_setImage(withURL: url)
+        }else{
+            
+            let post = posts[indexPath.item]
+            
+            cell.recipeNameLabel.text = post["recipeName"] as? String
+            
+            let imageFile = post["image"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.recipeImageView.af_setImage(withURL: url)
+        }
         
-        cell.recipeNameLabel.text = post["recipeName"] as? String
-        
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        
-        cell.recipeImageView.af_setImage(withURL: url)
         return cell
         
     }
