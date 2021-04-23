@@ -22,6 +22,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     var posts = [PFObject]()
     var filteredPosts = [PFObject]()
     var isGood = false
+    var position = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +97,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         //Once we find the posts (if any) that match our ingredients we then want to add that post to a list of
         //posts that we can use to reload the data of the collection table to show only those posts
         
+        position += 1
         filteredPosts.removeAll()
         var position = 0
         while position <= (self.posts.count-1){
@@ -185,17 +187,18 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         print("IN COLLECTION VIEW")
+        position += 1
         //var position: Int
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
         
         print(filteredPosts.count)
-        var runs = filteredPosts.count
         
         if filteredPosts.count != 0{
             print("IN IF")
-            print(filteredPosts)
-            while runs == 0 {
-                let post = filteredPosts[runs]
+            //print(filteredPosts.count)
+            
+            if position <= filteredPosts.count-1{
+                let post = filteredPosts[position]
                 
                 cell.recipeNameLabel.text = post["recipeName"] as? String
                 
@@ -204,8 +207,8 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 let url = URL(string: urlString)!
                 
                 cell.recipeImageView.af_setImage(withURL: url)
-                runs -= 1
             }
+            
         }else{
             
             let post = posts[indexPath.item]
