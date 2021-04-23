@@ -164,14 +164,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegan_white" translatesAutoresizingMaskIntoConstraints="NO" id="vaC-fC-ox5">
-                                                    <rect key="frame" x="355" y="95" width="25" height="22"/>
+                                                    <rect key="frame" x="345" y="95" width="25" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="WvC-1u-AI1"/>
                                                         <constraint firstAttribute="height" constant="22" id="lkf-fj-beZ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nut_white" translatesAutoresizingMaskIntoConstraints="NO" id="EVF-cA-xNg">
-                                                    <rect key="frame" x="355" y="125" width="25" height="33"/>
+                                                    <rect key="frame" x="345" y="125" width="25" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="8mU-aV-aiw"/>
                                                         <constraint firstAttribute="height" constant="33" id="ahB-fb-6KJ"/>
@@ -200,14 +200,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gluten_white" translatesAutoresizingMaskIntoConstraints="NO" id="hqR-UE-SCQ">
-                                                    <rect key="frame" x="355" y="65" width="25" height="22"/>
+                                                    <rect key="frame" x="345" y="64" width="25" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="G6t-5v-Xk9"/>
                                                         <constraint firstAttribute="height" constant="22" id="S8z-pw-YCr"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCv-x0-h17">
-                                                    <rect key="frame" x="345" y="11" width="45" height="45"/>
+                                                    <rect key="frame" x="335" y="11" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="UPe-DF-lNu"/>
                                                         <constraint firstAttribute="width" constant="45" id="y6R-Us-yYQ"/>
@@ -220,22 +220,23 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hqR-UE-SCQ" firstAttribute="top" secondItem="nCv-x0-h17" secondAttribute="bottom" constant="9" id="2ke-9y-hcl"/>
+                                                <constraint firstItem="hqR-UE-SCQ" firstAttribute="top" secondItem="nCv-x0-h17" secondAttribute="bottom" constant="8" id="2ke-9y-hcl"/>
                                                 <constraint firstItem="lHO-k9-Nk3" firstAttribute="top" secondItem="Feh-9l-Pn0" secondAttribute="bottom" constant="-2" id="3h1-e0-emo"/>
-                                                <constraint firstItem="hqR-UE-SCQ" firstAttribute="top" secondItem="nCv-x0-h17" secondAttribute="bottom" constant="9" id="4De-j3-u7a"/>
-                                                <constraint firstAttribute="trailing" secondItem="EVF-cA-xNg" secondAttribute="trailing" constant="10" id="6fl-vF-xG1"/>
-                                                <constraint firstItem="nCv-x0-h17" firstAttribute="leading" secondItem="G1n-jW-lcD" secondAttribute="trailing" constant="90.329999999999998" id="7Hf-0n-HZa"/>
+                                                <constraint firstItem="hqR-UE-SCQ" firstAttribute="top" secondItem="nCv-x0-h17" secondAttribute="bottom" constant="8" id="4De-j3-u7a"/>
+                                                <constraint firstAttribute="trailing" secondItem="EVF-cA-xNg" secondAttribute="trailing" constant="20" id="6fl-vF-xG1"/>
+                                                <constraint firstItem="nCv-x0-h17" firstAttribute="leading" secondItem="G1n-jW-lcD" secondAttribute="trailing" constant="80.333333333333314" id="7Hf-0n-HZa"/>
                                                 <constraint firstItem="EVF-cA-xNg" firstAttribute="top" secondItem="vaC-fC-ox5" secondAttribute="bottom" constant="8" symbolic="YES" id="7Jz-iW-UVU"/>
+                                                <constraint firstItem="nCv-x0-h17" firstAttribute="leading" secondItem="lHO-k9-Nk3" secondAttribute="trailing" constant="82.666666666666686" id="9Le-ni-QQd"/>
                                                 <constraint firstItem="Feh-9l-Pn0" firstAttribute="top" secondItem="OYU-zQ-Mw7" secondAttribute="top" id="E5g-By-M3E"/>
-                                                <constraint firstItem="vaC-fC-ox5" firstAttribute="top" secondItem="hqR-UE-SCQ" secondAttribute="bottom" constant="8" symbolic="YES" id="GUg-U7-yMC"/>
+                                                <constraint firstItem="vaC-fC-ox5" firstAttribute="top" secondItem="hqR-UE-SCQ" secondAttribute="bottom" constant="9" id="GUg-U7-yMC"/>
                                                 <constraint firstItem="G1n-jW-lcD" firstAttribute="top" secondItem="OYU-zQ-Mw7" secondAttribute="top" constant="7" id="IC1-tl-Ltb"/>
-                                                <constraint firstItem="vaC-fC-ox5" firstAttribute="leading" secondItem="J3Z-uh-qz3" secondAttribute="trailing" constant="17" id="KqX-Hg-MrI"/>
+                                                <constraint firstItem="vaC-fC-ox5" firstAttribute="leading" secondItem="J3Z-uh-qz3" secondAttribute="trailing" constant="7" id="KqX-Hg-MrI"/>
                                                 <constraint firstItem="Feh-9l-Pn0" firstAttribute="leading" secondItem="rZl-8t-lhX" secondAttribute="trailing" constant="6" id="MSd-El-XQg"/>
-                                                <constraint firstAttribute="trailing" secondItem="hqR-UE-SCQ" secondAttribute="trailing" constant="10" id="O1Z-Eg-6SG"/>
-                                                <constraint firstItem="vaC-fC-ox5" firstAttribute="top" secondItem="hqR-UE-SCQ" secondAttribute="bottom" constant="8" symbolic="YES" id="O4K-3b-86o"/>
+                                                <constraint firstAttribute="trailing" secondItem="hqR-UE-SCQ" secondAttribute="trailing" constant="20" id="O1Z-Eg-6SG"/>
+                                                <constraint firstItem="vaC-fC-ox5" firstAttribute="top" secondItem="hqR-UE-SCQ" secondAttribute="bottom" constant="9" id="O4K-3b-86o"/>
                                                 <constraint firstAttribute="bottom" secondItem="rZl-8t-lhX" secondAttribute="bottom" id="OVb-nX-Ixg"/>
                                                 <constraint firstItem="lHO-k9-Nk3" firstAttribute="top" secondItem="Feh-9l-Pn0" secondAttribute="bottom" constant="-2" id="RlY-HL-CIc"/>
-                                                <constraint firstItem="lHO-k9-Nk3" firstAttribute="leading" secondItem="rZl-8t-lhX" secondAttribute="trailing" constant="8" symbolic="YES" id="UJx-AS-HEA"/>
+                                                <constraint firstItem="lHO-k9-Nk3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rZl-8t-lhX" secondAttribute="trailing" symbolic="YES" id="UJx-AS-HEA"/>
                                                 <constraint firstItem="EVF-cA-xNg" firstAttribute="top" secondItem="vaC-fC-ox5" secondAttribute="bottom" constant="8" symbolic="YES" id="UgZ-R2-DSP"/>
                                                 <constraint firstItem="rZl-8t-lhX" firstAttribute="top" secondItem="OYU-zQ-Mw7" secondAttribute="top" id="WZ8-XV-88G"/>
                                                 <constraint firstAttribute="bottom" secondItem="EVF-cA-xNg" secondAttribute="bottom" id="YMm-sM-vho"/>
@@ -243,12 +244,12 @@
                                                 <constraint firstItem="J3Z-uh-qz3" firstAttribute="leading" secondItem="Feh-9l-Pn0" secondAttribute="leading" id="cb9-FF-vwL"/>
                                                 <constraint firstItem="rZl-8t-lhX" firstAttribute="leading" secondItem="OYU-zQ-Mw7" secondAttribute="leading" id="duP-CS-FO4"/>
                                                 <constraint firstItem="J3Z-uh-qz3" firstAttribute="bottom" secondItem="rZl-8t-lhX" secondAttribute="bottom" id="e5B-05-7ZE"/>
-                                                <constraint firstAttribute="trailing" secondItem="nCv-x0-h17" secondAttribute="trailing" id="eQY-c2-lUo"/>
-                                                <constraint firstItem="hqR-UE-SCQ" firstAttribute="leading" secondItem="J3Z-uh-qz3" secondAttribute="trailing" constant="17" id="iM1-Vs-vJZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="nCv-x0-h17" secondAttribute="trailing" constant="10" id="eQY-c2-lUo"/>
+                                                <constraint firstItem="hqR-UE-SCQ" firstAttribute="leading" secondItem="J3Z-uh-qz3" secondAttribute="trailing" constant="7" id="iM1-Vs-vJZ"/>
                                                 <constraint firstItem="G1n-jW-lcD" firstAttribute="leading" secondItem="Feh-9l-Pn0" secondAttribute="trailing" constant="2" id="mCf-JW-keh"/>
                                                 <constraint firstItem="nCv-x0-h17" firstAttribute="top" secondItem="OYU-zQ-Mw7" secondAttribute="top" constant="11" id="tiJ-bs-nKA"/>
-                                                <constraint firstAttribute="trailing" secondItem="vaC-fC-ox5" secondAttribute="trailing" constant="10" id="xL3-8v-uLk"/>
-                                                <constraint firstItem="EVF-cA-xNg" firstAttribute="leading" secondItem="J3Z-uh-qz3" secondAttribute="trailing" constant="17" id="yAp-Ji-X8B"/>
+                                                <constraint firstAttribute="trailing" secondItem="vaC-fC-ox5" secondAttribute="trailing" constant="20" id="xL3-8v-uLk"/>
+                                                <constraint firstItem="EVF-cA-xNg" firstAttribute="leading" secondItem="J3Z-uh-qz3" secondAttribute="trailing" constant="7" id="yAp-Ji-X8B"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1344,7 +1345,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bsy-Vn-bKJ"/>
+        <segue reference="TkC-Ez-T7F"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.2.squarepath" catalog="system" width="128" height="89"/>
