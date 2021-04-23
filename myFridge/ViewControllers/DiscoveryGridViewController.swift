@@ -213,6 +213,19 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let post = posts[indexPath.section]
+        
+        // Pass the selected post to the details view controller
+        let detailsViewController = segue.destination as! DetailViewController
+        detailsViewController.post = post
+        
+        //collectionView.deselectRow(at: indexPath,animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation
