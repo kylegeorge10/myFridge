@@ -35,6 +35,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.stopAnimations), userInfo: nil, repeats: false)
     
         self.feedRefresh.endRefreshing()
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

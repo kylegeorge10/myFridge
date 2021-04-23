@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         let user = post["author"] as! PFUser
         usernameLabel.text = user.username
         

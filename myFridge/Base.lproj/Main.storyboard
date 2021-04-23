@@ -598,14 +598,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-ib-FuL">
-                                <rect key="frame" x="0.0" y="44" width="150" height="200"/>
+                                <rect key="frame" x="0.0" y="88" width="150" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="4WI-Ea-geK"/>
                                     <constraint firstAttribute="width" constant="150" id="Unq-7C-ukY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b40-cK-ZLH">
-                                <rect key="frame" x="158" y="78" width="114.33333333333331" height="21"/>
+                                <rect key="frame" x="158" y="122" width="114.33333333333331" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cRz-wd-n8j"/>
                                 </constraints>
@@ -614,7 +614,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8iX-Lf-xks">
-                                <rect key="frame" x="158" y="48.666666666666664" width="25" height="21.666666666666664"/>
+                                <rect key="frame" x="158" y="92.666666666666671" width="25" height="21.666666666666671"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="m1L-LZ-UsJ"/>
@@ -622,7 +622,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yad-i3-oG1">
-                                <rect key="frame" x="186" y="48" width="81.666666666666686" height="21"/>
+                                <rect key="frame" x="186" y="92" width="81.666666666666686" height="21"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ash-H7-9PK"/>
@@ -635,40 +635,40 @@
                                 </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipe summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQV-Py-bHz">
-                                <rect key="frame" x="158" y="104" width="212" height="42.666666666666657"/>
+                                <rect key="frame" x="158" y="148" width="212" height="42.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gluten_white" translatesAutoresizingMaskIntoConstraints="NO" id="adr-77-a96">
-                                <rect key="frame" x="17" y="252" width="25" height="22"/>
+                                <rect key="frame" x="17" y="296" width="25" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="7tP-5v-MhJ"/>
                                     <constraint firstAttribute="height" constant="22" id="eGO-N0-hbt"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegan_white" translatesAutoresizingMaskIntoConstraints="NO" id="irP-qJ-4Rn">
-                                <rect key="frame" x="50" y="252" width="25" height="22"/>
+                                <rect key="frame" x="50" y="296" width="25" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="1q3-aL-qvk"/>
                                     <constraint firstAttribute="height" constant="22" id="PBy-dC-C2Z"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nut_white" translatesAutoresizingMaskIntoConstraints="NO" id="8dH-MB-SaR">
-                                <rect key="frame" x="83" y="252" width="25" height="22"/>
+                                <rect key="frame" x="83" y="296" width="25" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="vtl-wA-ycb"/>
                                     <constraint firstAttribute="height" constant="22" id="wPu-7K-6kQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Recipe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zF-JY-GTG">
-                                <rect key="frame" x="17" y="291" width="350" height="68.666666666666686"/>
+                                <rect key="frame" x="17" y="335" width="350" height="27.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWk-f0-k6i">
-                                <rect key="frame" x="276" y="252" width="118" height="40"/>
+                                <rect key="frame" x="276" y="296" width="118" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9ek-Oi-Vd8"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="NlU-jA-shy"/>
@@ -847,7 +847,7 @@
                                         <connections>
                                             <outlet property="recipeImageView" destination="y3a-Ei-RIU" id="eZF-hX-Ars"/>
                                             <outlet property="recipeNameLabel" destination="Mgy-6d-gTo" id="FPI-Pj-Ul7"/>
-                                            <segue destination="64b-eP-c3R" kind="presentation" modalPresentationStyle="fullScreen" id="Bsy-Vn-bKJ"/>
+                                            <segue destination="64b-eP-c3R" kind="show" identifier="collectionToDetailSegue" id="Bsy-Vn-bKJ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

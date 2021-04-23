@@ -23,8 +23,6 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     var filteredPosts = [PFObject]()
     var isGood = false
     
-    let query = PFQuery(className:"Posts")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,12 +39,17 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
 
         // Do any additional setup after loading the view.
         
-        query.findObjectsInBackground{(posts, error) in
+        let query = PFQuery(className:"Posts")
+        query.includeKeys(["author"])
+        query.limit = 20
+        
+        query.findObjectsInBackground { (posts, error) in
             if posts != nil{
                 self.posts = posts!
                 self.collectionView.reloadData()
             }
         }
+
     }
     
     @IBAction func onNextItemButton(_ sender: Any) {
@@ -182,7 +185,6 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         print("IN COLLECTION VIEW")
-        var position: Int
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
         
         if filteredPosts.count != 0{
@@ -217,15 +219,28 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
-        let post = posts[indexPath.section]
+        let post = posts[indexPath.row]
         
         // Pass the selected post to the details view controller
         let detailsViewController = segue.destination as! DetailViewController
         detailsViewController.post = post
+        print("END OF SEGUE")
         
         //collectionView.deselectRow(at: indexPath,animated: true)
     }
     
+    /*
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        let post = posts[indexPath.item]
+        
+        func prepare(segue: UIStoryboardSegue, sender: UICollectionViewCell){
+            let detailsViewController = segue.destination as! DetailViewController
+            detailsViewController.post = post
+        }
+        performSegue(withIdentifier: "collectionToDetailSegue", sender: cell)
+    }
+ */
 
     /*
     // MARK: - Navigation
