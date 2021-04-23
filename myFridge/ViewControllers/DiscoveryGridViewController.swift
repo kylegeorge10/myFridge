@@ -185,19 +185,27 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         print("IN COLLECTION VIEW")
+        //var position: Int
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
+        
+        print(filteredPosts.count)
+        var runs = filteredPosts.count
         
         if filteredPosts.count != 0{
             print("IN IF")
-            let post = filteredPosts[indexPath.item]
-            
-            cell.recipeNameLabel.text = post["recipeName"] as? String
-            
-            let imageFile = post["image"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-            
-            cell.recipeImageView.af_setImage(withURL: url)
+            print(filteredPosts)
+            while runs == 0 {
+                let post = filteredPosts[runs]
+                
+                cell.recipeNameLabel.text = post["recipeName"] as? String
+                
+                let imageFile = post["image"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                cell.recipeImageView.af_setImage(withURL: url)
+                runs -= 1
+            }
         }else{
             
             let post = posts[indexPath.item]
