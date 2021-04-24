@@ -24,6 +24,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     var isGood = false
     var position = 0
     var postPosition = 0
+    var currPosts = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +81,8 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         if itemList == []{
             showItemsLabel.text = "List of Items I have"
             addItemsTextField.placeholder = "Add the items you have"
-            filteredPosts = []
+            filteredPosts.removeAll()
+            currPosts.removeAll()
             collectionView.reloadData()
             
             //also reload the collection view back to the random posts if the person removes their
@@ -105,6 +107,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         position = 0
         postPosition = 0
         filteredPosts.removeAll()
+        currPosts.removeAll()
         var position = 0
         while position <= (self.posts.count-1){
             
@@ -220,6 +223,8 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 let url = URL(string: urlString)!
                 
                 cell.recipeImageView.af_setImage(withURL: url)
+                
+                currPosts.append(filteredPosts[position])
             }
             
         }
@@ -236,6 +241,8 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 let url = URL(string: urlString)!
                 
                 cell.recipeImageView.af_setImage(withURL: url)
+                
+                currPosts.append(posts[postPosition])
             }
         }
         position += 1
