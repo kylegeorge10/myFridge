@@ -31,6 +31,13 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         let user = post["author"] as! PFUser
         usernameLabel.text = user.username
+        if user["profileImage"] != nil{
+            let imageFile = user["profileImage"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            profileImage.af_setImage(withURL: url)
+        }
         
         recipeNameLabel.text = post["recipeName"] as? String
         recipeNameLabel.sizeToFit()

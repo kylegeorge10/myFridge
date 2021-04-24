@@ -36,6 +36,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.reloadData()
         // Do any additional setup after loading the view.
         Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.stopAnimations), userInfo: nil, repeats: false)
+        
     
         self.feedRefresh.endRefreshing()
         
@@ -77,12 +78,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.recipeNameLabel.text = post["recipeName"] as? String
         cell.recipeSummaryLabel.text = post["recipeSummary"] as? String
         
-        if post["authorImage"] != nil{
-            let imageProfileFile = post["authorImage"] as! PFFileObject
-            let urlProfileString = imageProfileFile.url!
-            let urlProfile = URL(string: urlProfileString)!
+        if user["profileImage"] != nil{
+            let imageFile = user["profileImage"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
             
-            cell.profileImage.af_setImage(withURL: urlProfile)
+            cell.profileImage.af_setImage(withURL: url)
         }
         
         if (post["glutenFree"] as! Bool) != false{
@@ -106,6 +107,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let url = URL(string: urlString)!
         
         cell.imageFood.af_setImage(withURL: url)
+        
+        
+        
         
         return cell
     }

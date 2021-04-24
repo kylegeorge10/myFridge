@@ -33,6 +33,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
           // Do stuff with the user
             print(currentUser as Any)
             usernameLabel.text = currentUser!["username"] as? String
+            if currentUser?["profileImage"] != nil{
+                let imageFile = currentUser?["profileImage"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                profileImageView.af_setImage(withURL: url)
+            }
         } else {
           // No user found
             print("None")
@@ -45,13 +52,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         super.viewDidAppear(animated)
         
         
+        
         let query = PFQuery(className: "Posts")
         
         query.includeKey("author")
+        
         query.limit = 20
         query.findObjectsInBackground { (posts, error) in
             if posts != nil{
-               
+                
                 self.posts = posts!
                 
                 self.userTableView.reloadData()
@@ -96,14 +105,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
         dismiss(animated: true, completion: nil)
         
-        let post = PFObject(className: "User")
-        
         let profileImageData = profileImageView.image!.pngData()
         let file = PFFileObject(name: "profileImage.png", data: profileImageData!)
         
-        post["profileImage"] = file
+        currentUser?["profileImage"] = file
         
-        post.saveInBackground { (success, error) in
+        currentUser?.saveInBackground { (success, error) in
             if success{
                 self.dismiss(animated: true, completion: nil)
                 print("saved!")
