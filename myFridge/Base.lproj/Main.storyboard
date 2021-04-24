@@ -969,10 +969,14 @@
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GWu-Nr-S3x">
                                 <rect key="frame" x="0.0" y="88.666666666666657" width="75" height="65.666666666666671"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="A7B-Sa-JPk"/>
                                     <constraint firstAttribute="height" constant="67" id="B1S-iw-9aF"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eRO-LX-r0y" appends="YES" id="8hM-Ja-uG7"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPg-wx-4kI">
                                 <rect key="frame" x="83" y="107" width="108" height="28"/>
@@ -1005,7 +1009,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gJe-4c-RA9" firstAttribute="leading" secondItem="BPg-wx-4kI" secondAttribute="trailing" constant="100" id="0Aw-ny-p11"/>
-                            <constraint firstItem="BPg-wx-4kI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GWu-Nr-S3x" secondAttribute="trailing" symbolic="YES" id="8T0-go-u7U"/>
+                            <constraint firstItem="BPg-wx-4kI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GWu-Nr-S3x" secondAttribute="trailing" constant="8" symbolic="YES" id="8T0-go-u7U"/>
                             <constraint firstItem="GWu-Nr-S3x" firstAttribute="top" secondItem="s1d-xI-E5P" secondAttribute="topMargin" constant="-0.5" id="QNy-fy-7hx"/>
                             <constraint firstAttribute="trailing" secondItem="SHD-mK-ALn" secondAttribute="trailing" id="TjH-dM-LXH"/>
                             <constraint firstItem="SHD-mK-ALn" firstAttribute="leading" secondItem="GWu-Nr-S3x" secondAttribute="leading" id="UU4-6X-ZyM"/>
@@ -1035,9 +1039,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oW-Rb-CpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="6vX-ZE-0r2">
+                <tapGestureRecognizer id="eRO-LX-r0y">
                     <connections>
-                        <action selector="onCameraButton:" destination="Kty-ay-9ly" id="0gC-dp-tID"/>
+                        <action selector="onCameraButton:" destination="Kty-ay-9ly" id="x2P-Xy-hwd"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

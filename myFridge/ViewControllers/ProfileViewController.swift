@@ -18,9 +18,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
     var currentUser = PFUser.current()
     var posts = [PFObject]()
+
     
     override func viewDidLoad() {
           super.viewDidLoad()
+        
+        
         
         userTableView.delegate = self
         userTableView.dataSource = self
@@ -40,17 +43,32 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let query = PFQuery(className: "Posts")
-        query.includeKey("author")
         
+        
+        let query = PFQuery(className: "Posts")
+        
+        query.includeKey("author")
+        query.limit = 20
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil{
+               
+                self.posts = posts!
+                
+                self.userTableView.reloadData()
+            }
+        }
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        
+        return posts.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = userTableView.dequeueReusableCell(withIdentifier: "userPostCell") as! userPostCell
+        let post = posts[indexPath.row]
+        
+        return cell
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
@@ -78,7 +96,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
         dismiss(animated: true, completion: nil)
         
-        let post = PFObject(className: "Posts")
+        let post = PFObject(className: "User")
         
         let profileImageData = profileImageView.image!.pngData()
         let file = PFFileObject(name: "profileImage.png", data: profileImageData!)

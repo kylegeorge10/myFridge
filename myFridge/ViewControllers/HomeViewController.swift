@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     var posts = [PFObject]()
     var selectedPost: PFObject!
     
@@ -26,6 +27,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         startAnimations()
+        feedRefresh.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
+        tableView.refreshControl = feedRefresh
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -35,6 +38,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(self.stopAnimations), userInfo: nil, repeats: false)
     
         self.feedRefresh.endRefreshing()
+        
         
         
     }
@@ -50,8 +54,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if posts != nil{
                 self.posts = posts!
                 self.tableView.reloadData()
+                self.feedRefresh.endRefreshing()
+                
             }
         }
+        //self.refreshControl.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -163,7 +170,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         view.subviews.last?.removeFromSuperview()
         refresh = false
     }
-    
     
 
     /*
