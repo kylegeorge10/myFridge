@@ -181,7 +181,11 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return posts.count
+        if filteredPosts.count != 0{
+            return filteredPosts.count
+        }else{
+            return posts.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
