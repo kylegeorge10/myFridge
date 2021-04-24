@@ -78,12 +78,13 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         } else {
             showItemsLabel.text = "List of Items I have"
         }
-        if itemList == []{
+        if itemList.count == 0{
             showItemsLabel.text = "List of Items I have"
             addItemsTextField.placeholder = "Add the items you have"
             filteredPosts.removeAll()
             currPosts.removeAll()
-            collectionView.reloadData()
+        
+        collectionView.reloadData()
             
             //also reload the collection view back to the random posts if the person removes their
             //inputted ingredients
@@ -146,38 +147,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         //reload the collection view to show only the filtered posts
         self.collectionView.reloadData()
         print("data reloaded")
-        
-        
-        
-        /*
-        query.countObjectsInBackground { (count: Int32, error: Error?) in
-            if let error = error {
-                // The request failed
-                print(error.localizedDescription)
-            } else {
-                print("\(count) objects found!")
-                
-            }
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
-            
-            let post = posts[indexPath.item]
-            
-            cell.recipeNameLabel.text = post["recipeName"] as? String
-            
-            let imageFile = post["image"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-            
-            cell.recipeImageView.af_setImage(withURL: url)
-            return cell
-        }
-        
-        self.collectionView.reloadData()
-        print("data reloaded")
-        */
+
     }
     
     
@@ -251,67 +221,63 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
     }
     
-/*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
-        let post = posts[indexPath.item]
+        let post = currPosts[indexPath.item]
         print(post)
-        
+
         // Pass the selected post to the details view controller
         let detailsViewController = segue.destination as! DetailViewController
         detailsViewController.post = post
         print("END OF SEGUE")
-        
+
         //collectionView.deselectRow(at: indexPath,animated: true)
     }
-    */
-    /*
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        let post = posts[indexPath.item]
-        
-        func prepare(segue: UIStoryboardSegue, sender: UICollectionViewCell){
-            let detailsViewController = segue.destination as! DetailViewController
-            detailsViewController.post = post
-        }
-        performSegue(withIdentifier: "collectionToDetailSegue", sender: cell)
-    }
-*/
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-            // ATTEMPT 1:
-        
-//        let cell = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
-//        cell!.post = posts[indexPath.item]
-//        print(posts[indexPath.item])
-//        self.navigationController?.pushViewController(cell!, animated: true)
-        
-        // ATTEMPT 2:
-        
-//        func prepare(for segue: UIStoryboardSegue, sender: Any?){
-//            if segue.identifier == "collectionToDetailSegue"{
-//                let cell = sender as! UICollectionViewCell
-//                let indexPath = collectionView.indexPath(for: cell)!
-//                let post = posts[indexPath.item]
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath)
+//        let post = currPosts[indexPath.item]
 //
-//                let detailsViewController = segue.destination as! DetailViewController
-//                detailsViewController.post = post
-//            }
-//
+//        func prepare(segue: UIStoryboardSegue, sender: UICollectionViewCell){
+//            let detailsViewController = segue.destination as! DetailViewController
+//            detailsViewController.post = post
 //        }
-    }
+//        performSegue(withIdentifier: "collectionToDetailSegue", sender: cell)
+//    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//
+//            // ATTEMPT 1:
+//
+////        let cell = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
+////        cell!.post = posts[indexPath.item]
+////        print(posts[indexPath.item])
+////        self.navigationController?.pushViewController(cell!, animated: true)
+//
+//        // ATTEMPT 2:
+//
+////        func prepare(for segue: UIStoryboardSegue, sender: Any?){
+////            if segue.identifier == "collectionToDetailSegue"{
+////                let cell = sender as! UICollectionViewCell
+////                let indexPath = collectionView.indexPath(for: cell)!
+////                let post = posts[indexPath.item]
+////
+////                let detailsViewController = segue.destination as! DetailViewController
+////                detailsViewController.post = post
+////            }
+////
+////        }
+//    }
     
         //ATTEMPT 3 :
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "collectionToDetailSegue"{
-            if let dest = segue.destination as? DetailViewController, let index = collectionView.indexPathsForSelectedItems?.first{ // <------------- this "first" looks very suspicious for the problem we have now
-                dest.post = posts[index.item]
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "collectionToDetailSegue"{
+//            if let dest = segue.destination as? DetailViewController, let index = collectionView.indexPathsForSelectedItems?.first{ // <------------- this "first" looks very suspicious for the problem we have now
+//                dest.post = posts[index.item]
+//            }
+//        }
+//    }
     
     
         // ATTEMPT 4: (workes exactly like the ATTEMPT 3 and has the same issue)
