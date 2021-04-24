@@ -157,7 +157,7 @@
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Feh-9l-Pn0">
                                                     <rect key="frame" x="136" y="1" width="35" height="33.666666666666671"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="1Af-qP-xbW"/>
                                                         <constraint firstAttribute="height" constant="35" id="5ul-bs-91n"/>
@@ -212,7 +212,7 @@
                                                         <constraint firstAttribute="height" constant="45" id="UPe-DF-lNu"/>
                                                         <constraint firstAttribute="width" constant="45" id="y6R-Us-yYQ"/>
                                                     </constraints>
-                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" image="arrow.2.squarepath" catalog="system"/>
                                                     <connections>
                                                         <action selector="onRePostButton:" destination="vW0-Ym-wab" eventType="touchUpInside" id="l93-0R-jkw"/>
@@ -236,7 +236,7 @@
                                                 <constraint firstItem="vaC-fC-ox5" firstAttribute="top" secondItem="hqR-UE-SCQ" secondAttribute="bottom" constant="9" id="O4K-3b-86o"/>
                                                 <constraint firstAttribute="bottom" secondItem="rZl-8t-lhX" secondAttribute="bottom" id="OVb-nX-Ixg"/>
                                                 <constraint firstItem="lHO-k9-Nk3" firstAttribute="top" secondItem="Feh-9l-Pn0" secondAttribute="bottom" constant="-2" id="RlY-HL-CIc"/>
-                                                <constraint firstItem="lHO-k9-Nk3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rZl-8t-lhX" secondAttribute="trailing" symbolic="YES" id="UJx-AS-HEA"/>
+                                                <constraint firstItem="lHO-k9-Nk3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rZl-8t-lhX" secondAttribute="trailing" constant="8" symbolic="YES" id="UJx-AS-HEA"/>
                                                 <constraint firstItem="EVF-cA-xNg" firstAttribute="top" secondItem="vaC-fC-ox5" secondAttribute="bottom" constant="8" symbolic="YES" id="UgZ-R2-DSP"/>
                                                 <constraint firstItem="rZl-8t-lhX" firstAttribute="top" secondItem="OYU-zQ-Mw7" secondAttribute="top" id="WZ8-XV-88G"/>
                                                 <constraint firstAttribute="bottom" secondItem="EVF-cA-xNg" secondAttribute="bottom" id="YMm-sM-vho"/>
@@ -316,7 +316,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-Wm-gqi">
                                                     <rect key="frame" x="8" y="11" width="35" height="32.666666666666671"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="b5a-Df-OW0"/>
                                                         <constraint firstAttribute="height" constant="34" id="o7d-4L-b34"/>
@@ -616,7 +616,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8iX-Lf-xks">
                                 <rect key="frame" x="158" y="92.666666666666671" width="25" height="21.666666666666671"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="m1L-LZ-UsJ"/>
                                     <constraint firstAttribute="height" constant="23" id="pwo-mO-YCS"/>
@@ -686,6 +686,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1oW-9A-QwN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="WWk-f0-k6i" firstAttribute="leading" secondItem="8dH-MB-SaR" secondAttribute="trailing" constant="168" id="0rX-rm-FrD"/>
                             <constraint firstItem="irP-qJ-4Rn" firstAttribute="leading" secondItem="adr-77-a96" secondAttribute="trailing" constant="8" symbolic="YES" id="107-nd-26u"/>
@@ -932,7 +933,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-4c-RA9">
                                 <rect key="frame" x="291" y="88" width="59" height="40"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Following"/>
+                                <state key="normal" title="Following">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="uXa-c3-3F3" kind="presentation" modalPresentationStyle="fullScreen" id="Vmr-gg-513"/>
                                 </connections>
@@ -940,7 +943,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuY-ak-9GJ">
                                 <rect key="frame" x="291" y="138" width="59" height="40"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Followers"/>
+                                <state key="normal" title="Followers">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="WOq-Td-LcM" kind="presentation" modalPresentationStyle="fullScreen" id="RJd-jp-DoL"/>
                                 </connections>
@@ -949,13 +954,15 @@
                         <viewLayoutGuide key="safeArea" id="DHC-XS-Isj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BPg-wx-4kI" firstAttribute="leading" secondItem="GWu-Nr-S3x" secondAttribute="trailing" constant="8" symbolic="YES" id="8T0-go-u7U"/>
+                            <constraint firstItem="gJe-4c-RA9" firstAttribute="leading" secondItem="BPg-wx-4kI" secondAttribute="trailing" constant="100" id="0Aw-ny-p11"/>
+                            <constraint firstItem="BPg-wx-4kI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GWu-Nr-S3x" secondAttribute="trailing" symbolic="YES" id="8T0-go-u7U"/>
                             <constraint firstItem="GWu-Nr-S3x" firstAttribute="top" secondItem="s1d-xI-E5P" secondAttribute="topMargin" constant="-0.5" id="QNy-fy-7hx"/>
                             <constraint firstAttribute="trailing" secondItem="SHD-mK-ALn" secondAttribute="trailing" id="TjH-dM-LXH"/>
                             <constraint firstItem="SHD-mK-ALn" firstAttribute="leading" secondItem="GWu-Nr-S3x" secondAttribute="leading" id="UU4-6X-ZyM"/>
                             <constraint firstItem="GWu-Nr-S3x" firstAttribute="centerY" secondItem="BPg-wx-4kI" secondAttribute="centerY" id="Xfy-Fu-F5U"/>
                             <constraint firstItem="SHD-mK-ALn" firstAttribute="bottom" secondItem="DHC-XS-Isj" secondAttribute="bottom" id="Z6F-nD-AsU"/>
                             <constraint firstItem="DHC-XS-Isj" firstAttribute="trailing" secondItem="iuY-ak-9GJ" secondAttribute="trailing" constant="40" id="dCv-8b-Fgk"/>
+                            <constraint firstItem="iuY-ak-9GJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GWu-Nr-S3x" secondAttribute="trailing" constant="8" symbolic="YES" id="gAD-3g-T5y"/>
                             <constraint firstItem="SHD-mK-ALn" firstAttribute="leading" secondItem="s1d-xI-E5P" secondAttribute="leading" id="k3d-4b-ngq"/>
                             <constraint firstItem="iuY-ak-9GJ" firstAttribute="top" secondItem="gJe-4c-RA9" secondAttribute="bottom" constant="10" id="qn6-SO-t2c"/>
                             <constraint firstItem="SHD-mK-ALn" firstAttribute="top" secondItem="iuY-ak-9GJ" secondAttribute="bottom" constant="53" id="wEz-g7-2cF"/>
@@ -965,6 +972,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="uJf-vp-dg1">
                         <barButtonItem key="rightBarButtonItem" image="gearshape.fill" catalog="system" style="done" id="OEJ-wC-pXE">
+                            <color key="tintColor" systemColor="systemGreenColor"/>
                             <connections>
                                 <segue destination="i0h-uu-Nvn" kind="presentation" modalPresentationStyle="fullScreen" id="DLt-14-7Ba"/>
                             </connections>
@@ -982,7 +990,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2645" y="2717"/>
+            <point key="canvasLocation" x="2643.0769230769229" y="2713.507109004739"/>
         </scene>
         <!--FollowingViewController-->
         <scene sceneID="w1u-qf-cSm">
@@ -1040,6 +1048,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="oDd-LX-w83" kind="relationship" relationship="viewControllers" id="3Ss-t2-7yc"/>
@@ -1057,6 +1067,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YPv-Z2-CmI" customClass="ProfileNavigationController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="ADt-mY-6xY">
                         <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zlf-JM-Rsv">
@@ -1064,7 +1075,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1089,7 +1100,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1134,7 +1145,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1162,7 +1173,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1184,6 +1195,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1205,6 +1217,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1224,8 +1237,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kNK-R5-7sO">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1246,7 +1261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSy-hs-hsI">
-                                <rect key="frame" x="120" y="418" width="150" height="62"/>
+                                <rect key="frame" x="120" y="618" width="150" height="52"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -1256,14 +1271,23 @@
                                     <action selector="onLogoutButton:" destination="O8g-Iu-eh2" eventType="touchUpInside" id="pe3-tM-7yo"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logoutIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tCX-b6-DA9">
+                                <rect key="frame" x="14" y="118" width="360" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="kAb-I9-K48"/>
+                                    <constraint firstAttribute="width" constant="360" id="kWH-pI-rs6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k48-TG-Wow"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="k48-TG-Wow" firstAttribute="bottom" secondItem="jSy-hs-hsI" secondAttribute="bottom" constant="330" id="90K-hA-crQ"/>
-                            <constraint firstItem="jSy-hs-hsI" firstAttribute="leading" secondItem="k48-TG-Wow" secondAttribute="leading" constant="120" id="PJy-Kp-sM5"/>
-                            <constraint firstItem="jSy-hs-hsI" firstAttribute="top" secondItem="k48-TG-Wow" secondAttribute="top" constant="330" id="eCR-0Y-hPX"/>
+                            <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="tCX-b6-DA9" secondAttribute="trailing" constant="16" id="AvF-Bf-mWq"/>
+                            <constraint firstItem="k48-TG-Wow" firstAttribute="bottom" secondItem="jSy-hs-hsI" secondAttribute="bottom" constant="140" id="R6F-Ye-ZLD"/>
+                            <constraint firstItem="jSy-hs-hsI" firstAttribute="leading" secondItem="k48-TG-Wow" secondAttribute="leading" constant="120" id="dmu-Pg-Usv"/>
+                            <constraint firstItem="tCX-b6-DA9" firstAttribute="top" secondItem="k48-TG-Wow" secondAttribute="top" constant="30" id="ocL-U5-pGb"/>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="jSy-hs-hsI" secondAttribute="trailing" constant="120" id="rSh-SR-3bV"/>
+                            <constraint firstItem="jSy-hs-hsI" firstAttribute="top" secondItem="tCX-b6-DA9" secondAttribute="bottom" constant="50" id="tvT-Lx-fKV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="6uO-zX-Uio">
@@ -1278,7 +1302,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA8-We-L3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rfJ-yW-Yqe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4582" y="3451"/>
+            <point key="canvasLocation" x="4580" y="3450.7109004739336"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wzJ-I1-B3E">
@@ -1290,6 +1314,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1311,6 +1336,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1332,6 +1358,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1357,6 +1384,7 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="icons8-cooking-book" width="100" height="100"/>
         <image name="kitchen-guy-001-512" width="409" height="512"/>
+        <image name="logoutIcon" width="512" height="512"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="nut_white" width="512" height="512"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>

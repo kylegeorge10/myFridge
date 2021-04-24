@@ -274,12 +274,60 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
 */
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
-        cell!.post = posts[indexPath.item]
-        print(posts[indexPath.item])
-        self.navigationController?.pushViewController(cell!, animated: true)
+        
+            // ATTEMPT 1:
+        
+//        let cell = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
+//        cell!.post = posts[indexPath.item]
+//        print(posts[indexPath.item])
+//        self.navigationController?.pushViewController(cell!, animated: true)
+        
+        // ATTEMPT 2:
+        
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//            if segue.identifier == "collectionToDetailSegue"{
+//                let cell = sender as! UICollectionViewCell
+//                let indexPath = collectionView.indexPath(for: cell)!
+//                let post = posts[indexPath.item]
+//
+//                let detailsViewController = segue.destination as! DetailViewController
+//                detailsViewController.post = post
+//            }
+//
+//        }
     }
-
+    
+        //ATTEMPT 3 :
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "collectionToDetailSegue"{
+            if let dest = segue.destination as? DetailViewController, let index = collectionView.indexPathsForSelectedItems?.first{ // <------------- this "first" looks very suspicious for the problem we have now
+                dest.post = posts[index.item]
+            }
+        }
+    }
+    
+    
+        // ATTEMPT 4: (workes exactly like the ATTEMPT 3 and has the same issue)
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//
+//        // Find the selected post
+//        if sender is UICollectionViewCell{
+//            print("Sender is UICollectionViewCell")
+//            let cell = sender as! UICollectionViewCell
+//            let indexPath = collectionView.indexPath(for: cell)!
+//            let post = posts[indexPath.item]
+//
+//            // Pass the selected post to the details view controller
+//            let detailsViewController = segue.destination as! DetailViewController
+//            detailsViewController.post = post
+//
+////            collectionView.deselectRow(at: indexPath,animated: true)
+//        }
+//
+//    }
+    
     /*
     // MARK: - Navigation
 
