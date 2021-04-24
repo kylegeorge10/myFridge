@@ -23,9 +23,12 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     var filteredPosts = [PFObject]()
     var isGood = false
     var position = 0
+    var postPosition = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        postPosition = 0
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -77,6 +80,8 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         if itemList == []{
             showItemsLabel.text = "List of Items I have"
             addItemsTextField.placeholder = "Add the items you have"
+            filteredPosts = []
+            collectionView.reloadData()
             
             //also reload the collection view back to the random posts if the person removes their
             //inputted ingredients
@@ -97,7 +102,8 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         //Once we find the posts (if any) that match our ingredients we then want to add that post to a list of
         //posts that we can use to reload the data of the collection table to show only those posts
         
-        position += 1
+        position = 0
+        postPosition = 0
         filteredPosts.removeAll()
         var position = 0
         while position <= (self.posts.count-1){
@@ -191,7 +197,6 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         print("IN COLLECTION VIEW")
-        position += 1
         //var position: Int
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeFoundCell", for: indexPath) as! RecipeFoundCell
         
@@ -199,10 +204,14 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
         if filteredPosts.count != 0{
             print("IN IF")
+            print("position: ", position)
             //print(filteredPosts.count)
             
             if position <= filteredPosts.count-1{
+                print("IN IFFFF")
                 let post = filteredPosts[position]
+                
+                print(filteredPosts[position])
                 
                 cell.recipeNameLabel.text = post["recipeName"] as? String
                 
@@ -213,28 +222,35 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 cell.recipeImageView.af_setImage(withURL: url)
             }
             
-        }else{
-            
-            let post = posts[indexPath.item]
-            
-            cell.recipeNameLabel.text = post["recipeName"] as? String
-            
-            let imageFile = post["image"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-            
-            cell.recipeImageView.af_setImage(withURL: url)
         }
-        
+        else{
+            
+            print("IN ELSE")
+            if postPosition <= posts.count-1{
+                let post = posts[postPosition]
+                
+                cell.recipeNameLabel.text = post["recipeName"] as? String
+                
+                let imageFile = post["image"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                cell.recipeImageView.af_setImage(withURL: url)
+            }
+        }
+        position += 1
+        postPosition += 1
         return cell
         
     }
     
+/*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
-        let post = posts[indexPath.row]
+        let post = posts[indexPath.item]
+        print(post)
         
         // Pass the selected post to the details view controller
         let detailsViewController = segue.destination as! DetailViewController
@@ -243,7 +259,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         
         //collectionView.deselectRow(at: indexPath,animated: true)
     }
-    
+    */
     /*
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
@@ -255,7 +271,14 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         }
         performSegue(withIdentifier: "collectionToDetailSegue", sender: cell)
     }
- */
+*/
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = storyboard?.instantiateViewController(identifier: "detailViewController") as? DetailViewController
+        cell!.post = posts[indexPath.item]
+        print(posts[indexPath.item])
+        self.navigationController?.pushViewController(cell!, animated: true)
+    }
 
     /*
     // MARK: - Navigation
