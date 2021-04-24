@@ -9,16 +9,22 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class ProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var userTableView: UITableView!
     
     @IBOutlet weak var usernameLabel: UILabel!
         
     var currentUser = PFUser.current()
+    var posts = [PFObject]()
     
     override func viewDidLoad() {
           super.viewDidLoad()
+        
+        userTableView.delegate = self
+        userTableView.dataSource = self
+        
         
         if currentUser != nil {
           // Do stuff with the user
@@ -31,6 +37,21 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
         
       }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let query = PFQuery(className: "Posts")
+        query.includeKey("author")
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
     
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()

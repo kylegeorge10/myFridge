@@ -915,6 +915,56 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SHD-mK-ALn">
                                 <rect key="frame" x="0.0" y="231" width="390" height="530"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userPostCell" rowHeight="174" id="Uf8-M8-dnK" customClass="userPostCell" customModule="myFridge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uf8-M8-dnK" id="hdM-SQ-S4o">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZI-VN-Eju">
+                                                    <rect key="frame" x="200" y="32" width="49" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="eLU-M0-D29"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xc-Hg-zff">
+                                                    <rect key="frame" x="195" y="111" width="93" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-cooking-book" translatesAutoresizingMaskIntoConstraints="NO" id="t7p-XU-axm">
+                                                    <rect key="frame" x="10" y="10" width="160" height="170"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="O8B-wZ-5vU"/>
+                                                        <constraint firstAttribute="height" constant="170" id="aE6-TS-aRY"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1xc-Hg-zff" firstAttribute="top" secondItem="6ZI-VN-Eju" secondAttribute="bottom" constant="58" id="34T-F1-Lnv"/>
+                                                <constraint firstAttribute="trailing" secondItem="6ZI-VN-Eju" secondAttribute="trailing" constant="141" id="3u2-YW-Ey0"/>
+                                                <constraint firstItem="6ZI-VN-Eju" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t7p-XU-axm" secondAttribute="trailing" constant="8" symbolic="YES" id="8gC-vH-JjN"/>
+                                                <constraint firstItem="6ZI-VN-Eju" firstAttribute="top" secondItem="hdM-SQ-S4o" secondAttribute="topMargin" constant="21" id="FvL-h0-Wuh"/>
+                                                <constraint firstItem="t7p-XU-axm" firstAttribute="top" secondItem="hdM-SQ-S4o" secondAttribute="top" constant="10" id="XHT-4K-xQ3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1xc-Hg-zff" secondAttribute="trailing" constant="82" id="Zim-Dh-RSb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1xc-Hg-zff" secondAttribute="bottom" constant="31" id="mao-jt-csY"/>
+                                                <constraint firstItem="1xc-Hg-zff" firstAttribute="leading" secondItem="t7p-XU-axm" secondAttribute="trailing" constant="25" id="qWq-ja-zH6"/>
+                                                <constraint firstItem="t7p-XU-axm" firstAttribute="leading" secondItem="hdM-SQ-S4o" secondAttribute="leading" constant="10" id="yKT-wt-22h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeNameLabel" destination="6ZI-VN-Eju" id="cqr-fs-gk1"/>
+                                            <outlet property="summaryLabel" destination="1xc-Hg-zff" id="PnK-La-1jI"/>
+                                            <outlet property="userPostImageView" destination="t7p-XU-axm" id="4a6-lW-qyn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GWu-Nr-S3x">
                                 <rect key="frame" x="0.0" y="88.666666666666657" width="75" height="65.666666666666671"/>
@@ -980,6 +1030,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="profileImageView" destination="GWu-Nr-S3x" id="FoP-1v-cny"/>
+                        <outlet property="userTableView" destination="SHD-mK-ALn" id="vbl-Fn-WF3"/>
                         <outlet property="usernameLabel" destination="BPg-wx-4kI" id="HsK-0w-bbr"/>
                     </connections>
                 </viewController>
