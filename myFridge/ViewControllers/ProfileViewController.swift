@@ -29,6 +29,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         userTableView.dataSource = self
         
         
+      }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         if currentUser != nil {
           // Do stuff with the user
             print(currentUser as Any)
@@ -44,13 +49,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
           // No user found
             print("None")
         }
-        
-        
-      }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
         
         
         let query = PFQuery(className: "Posts")
