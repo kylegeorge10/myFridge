@@ -13,6 +13,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeSummaryLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var rePostButton: UIButton!
     @IBOutlet weak var glutenFreeImage: UIImageView!

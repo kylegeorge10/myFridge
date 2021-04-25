@@ -73,10 +73,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewCell") as! HomeViewCell
         let user = post["author"] as! PFUser
-        
         cell.usernameLabel.text = user.username
         cell.recipeNameLabel.text = post["recipeName"] as? String
         cell.recipeSummaryLabel.text = post["recipeSummary"] as? String
+        
+        let theDate = post.createdAt
+        //print(theDate as Any)
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+        formatter.dateStyle = .short
+
+        let fDate = formatter.string(from: theDate!)
+        cell.dateLabel.text = fDate
+        
         
         if user["profileImage"] != nil{
             let imageFile = user["profileImage"] as! PFFileObject
@@ -84,7 +93,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let url = URL(string: urlString)!
             
             cell.profileImage.af_setImage(withURL: url)
+            
+            
         }
+        
         
         if (post["glutenFree"] as! Bool) != false{
             let glutenImage = UIImage(named: "gluten_black")
