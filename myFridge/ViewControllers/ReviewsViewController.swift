@@ -29,6 +29,11 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
 //        }
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Dismiss the keyboard
+        reviewTextView.resignFirstResponder()
+    }
 
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -74,6 +79,14 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
 
         let user = review["author"] as! PFUser
         cell.usernameButton.setTitle(user.username, for: .normal)
+        
+        if user["profileImage"] != nil{
+            let imageFile = user["profileImage"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.profileImage.af_setImage(withURL: url)
+        }
 
         return cell
     }
