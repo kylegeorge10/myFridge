@@ -435,54 +435,6 @@
             </objects>
             <point key="canvasLocation" x="-2266" y="3783"/>
         </scene>
-        <!--Add Reivew-->
-        <scene sceneID="5ua-OV-fk6">
-            <objects>
-                <viewController id="XSz-tU-aIh" customClass="addReviewViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4cO-ad-0oN">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write you review here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cg4-ed-pKl">
-                                <rect key="frame" x="0.0" y="88" width="390" height="182"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlj-nO-m2i">
-                                <rect key="frame" x="180" y="402" width="30" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onAddButton:" destination="XSz-tU-aIh" eventType="touchUpInside" id="YIN-cu-kj7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="jlf-St-Eak"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Reivew" id="hkf-yp-k6F">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left" catalog="system" id="wZi-Ds-LHj">
-                            <color key="tintColor" systemColor="systemGreenColor"/>
-                            <connections>
-                                <action selector="cancelButton:" destination="XSz-tU-aIh" id="7dd-Mu-ctc"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="addButton" destination="rlj-nO-m2i" id="QIb-ar-Dfq"/>
-                        <outlet property="reviewTextField" destination="Cg4-ed-pKl" id="OEN-pK-YJh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aKa-ZI-FOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-622" y="3783"/>
-        </scene>
         <!--PostViewController-->
         <scene sceneID="kSY-H2-xFQ">
             <objects>
@@ -971,7 +923,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-qS-Jkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604.6153846153845" y="2732.7014218009476"/>
+            <point key="canvasLocation" x="-215" y="2972"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="Fyy-jr-5qo">
@@ -1308,7 +1260,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4m-s1-Cau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605.7971014492755" y="1990.8482142857142"/>
+            <point key="canvasLocation" x="-215" y="1991"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SLt-QW-l1d">
@@ -1671,31 +1623,9 @@
             </objects>
             <point key="canvasLocation" x="-3000.0000000000005" y="2281.4732142857142"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="P0U-4d-rbz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sOQ-nW-9oX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyO-uU-gMm">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                            <color key="textColor" systemColor="systemOrangeColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XSz-tU-aIh" kind="relationship" relationship="rootViewController" id="WnM-h7-cSz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cow-n9-68p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1488" y="3783"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TkC-Ez-T7F"/>
+        <segue reference="Bsy-Vn-bKJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGreenColor"/>
     <resources>
