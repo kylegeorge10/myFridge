@@ -8,55 +8,74 @@
 import UIKit
 import Parse
 
-class ReviewsViewController: UIViewController{ //UITableViewDataSource, UITableViewDelegate {
-    
-    @IBOutlet weak var addReviewButton: UIBarButtonItem!
+class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addReviewButton: UIButton!
+    @IBOutlet weak var reviewTextView: UITextView!
     
     var post: PFObject!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //tableView.dataSource = self
-        //tableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
         // Do any additional setup after loading the view.
+        
+//        let currPost = post
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//            let addReviewViewController = segue.destination as! addReviewViewController
+//            addReviewViewController.post = currPost
+//        }
+        
     }
-    
 
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
-    }
- 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //let reviews = (post["reviews"] as? [PFObject]) ?? []
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewViewCell") as! ReviewViewCell
-        
-        //let review = reviews[indexPath.row]
-        cell.reviewTextField.text = "great recipe" //review["text"] as? String
-        
-        //let user = review["author"] as! PFUser
-        cell.usernameButton.setTitle("username", for: .normal)//user.username, for: .normal)
-        
-        return cell
-    }
- */
-    
     @IBAction func onAddReviewButton(_ sender: Any) {
-        let post = self.post
+        print(post)
+        let review = PFObject(className: "Reviews")
         
-        func prepare(for segue: UIStoryboardSegue, sender: UIBarButtonItem){
-            let addReviewViewController = segue.destination as! addReviewViewController
-            addReviewViewController.post = post
+        review["text"] = reviewTextView.text
+        review["post"] = post
+        review["author"] = PFUser.current()
+        
+        post.add(review, forKey: "reviews")
+        
+        post.saveInBackground{ (success, error) in
+            if success{
+                print("review saved")
+            }
+            else{
+                print("Error saving review")
+            }
         }
         
-        performSegue(withIdentifier: "addReviewSegue", sender: sender)
+        reviewTextView.text = "Add a review"
+        
+        tableView.reloadData()
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let reviews = (post["reviews"] as? [PFObject]) ?? []
+        
+        return reviews.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewViewCell") as! ReviewViewCell
+        
+        let reviews = (post["reviews"] as? [PFObject]) ?? []
+
+        let review = reviews[indexPath.row]
+        cell.reviewLabel.text = review["text"] as? String
+
+        let user = review["author"] as! PFUser
+        cell.usernameButton.setTitle(user.username, for: .normal)
+
+        return cell
     }
     
     

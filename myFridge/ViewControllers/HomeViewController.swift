@@ -48,7 +48,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidAppear(animated)
         
         let query = PFQuery(className:"Posts")
-        query.includeKeys(["author"])
+        query.includeKeys(["author", "reviews", "reviews.author"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in

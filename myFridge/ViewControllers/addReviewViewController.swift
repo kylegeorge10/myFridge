@@ -30,15 +30,23 @@ class addReviewViewController: UIViewController {
     }
     
     @IBAction func onAddButton(_ sender: Any) {
+        print(post)
         let review = PFObject(className: "Reviews")
         
+        print("HERE 1")
+        
         review["text"] = reviewTextField.text
+        print("HERE 2")
         review["post"] = post
+        print("HERE 3")
         review["author"] = PFUser.current()
+        print("HERE 4")
         
         post.add(review, forKey: "reviews")
+        print("HERE 5")
         
         post.saveInBackground{ (success, error) in
+            print("HERE 6")
             if success{
                 print("review saved")
             }

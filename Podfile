@@ -9,6 +9,7 @@ target 'myFridge' do
   pod 'Parse'
   pod 'AlamofireImage'
   pod 'lottie-ios'
+  pod 'MessageInputBar'
 
   target 'myFridgeTests' do
     inherit! :search_paths

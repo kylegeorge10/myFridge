@@ -13,15 +13,17 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
-    @IBOutlet weak var fullRecipeLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var recipeSummary: UILabel!
     @IBOutlet weak var glutenFreeImage: UIImageView!
     @IBOutlet weak var veganImage: UIImageView!
     @IBOutlet weak var nutFreeImage: UIImageView!
     @IBOutlet weak var reviewsButton: UIButton!
     @IBOutlet var usernameTapGesture: UITapGestureRecognizer!
+    @IBOutlet weak var recipeSummary: UITextView!
+    @IBOutlet weak var ingredientsList: UITextView!
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var fullRecipe: UITextView!
     
     var post: PFObject!
         
@@ -45,24 +47,11 @@ class DetailViewController: UIViewController {
         recipeSummary.text = post["recipeSummary"] as? String
         recipeSummary.sizeToFit()
         
-        fullRecipeLabel.text = post["recipeFull"] as? String
-        fullRecipeLabel.sizeToFit()
+        fullRecipe.text = post["recipeFull"] as? String
+        fullRecipe.sizeToFit()
         
-        /*
-        if (post["glutenFree"] as! Bool) == true{
-            let glutenImage = UIImage(named: "gluten_black")
-            glutenFreeImage.image = glutenImage
-        }
-        
-        if (post["isVegan"] as! Bool) == true{
-            let newVeganImage = UIImage(named: "vegan_black")
-            veganImage.image = newVeganImage
-        }
-        
-        if (post["nutFree"] as! Bool) == true{
-            let newNutFreeImage = UIImage(named: "nut_black")
-            nutFreeImage.image = newNutFreeImage
-        */
+        ingredientsList.text = post["ingredients"] as? String
+        ingredientsList.sizeToFit()
         
         let gluten = ((post["glutenFree"]) as? Bool)
         if (gluten == true){
@@ -109,18 +98,14 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func onReviewsButton(_ sender: Any) {
-        
-        //getting the current posts data
-        let post = self.post
-        
-        //passing data of post to the reviews controller
-        func prepare(for segue: UIStoryboardSegue, sender: UIButton){
-            let reviewsViewController = segue.destination as! ReviewsViewController
-            reviewsViewController.post = post
-        }
-        
         //moving the view controller to the next controller
         performSegue(withIdentifier: "reviewsSegue", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigation = segue.destination as! UINavigationController
+        let reviewsViewController = navigation.topViewController as! ReviewsViewController
+        reviewsViewController.post = self.post
     }
     
 
