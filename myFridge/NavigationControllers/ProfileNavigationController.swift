@@ -6,13 +6,22 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileNavigationController: UINavigationController {
-
+    @IBOutlet weak var profileTabBarItem: UITabBarItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let user = PFUser.current()
+        profileTabBarItem.selectedImage = user?["profileImage"] as? UIImage
     }
     
 

@@ -162,7 +162,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G1n-jW-lcD">
-                                                    <rect key="frame" x="173" y="7" width="165" height="24"/>
+                                                    <rect key="frame" x="173" y="7" width="164" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
@@ -205,7 +205,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short summary of recipe (restaurant style)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J3Z-uh-qz3">
-                                                    <rect key="frame" x="136" y="64" width="202" height="107"/>
+                                                    <rect key="frame" x="136" y="64" width="201" height="107"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="202" id="cBA-rp-PXN"/>
@@ -1191,6 +1191,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="profileTabBarItem" destination="ADt-mY-6xY" id="yyx-hx-s4H"/>
                         <segue destination="Kty-ay-9ly" kind="relationship" relationship="rootViewController" id="OmZ-Ch-h3P"/>
                     </connections>
                 </navigationController>
