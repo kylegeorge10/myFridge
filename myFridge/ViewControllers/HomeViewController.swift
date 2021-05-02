@@ -47,7 +47,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let query = PFQuery(className:"Posts")
+        //obatins the data from parse and sort with recent posts at top and older posts at the bottom.
+        let query = PFQuery(className:"Posts").order(byDescending: "createdAt")
         query.includeKeys(["author", "reviews", "reviews.author"])
         query.limit = 20
         
@@ -71,6 +72,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let post = posts[indexPath.section]
         
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeViewCell") as! HomeViewCell
         let user = post["author"] as! PFUser
         cell.usernameLabel.text = user.username
@@ -81,7 +83,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //print(theDate as Any)
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")
-        formatter.dateStyle = .short
+        formatter.dateStyle = .long
 
         let fDate = formatter.string(from: theDate!)
         cell.dateLabel.text = fDate
