@@ -23,7 +23,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     override func viewDidLoad() {
           super.viewDidLoad()
         
-        
+        //setting the profile picture design.
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.clipsToBounds = true
+        profileImageView.layer.borderColor = UIColor.systemOrange.cgColor
+        profileImageView.layer.borderWidth = 3.5
         
         userTableView.delegate = self
         userTableView.dataSource = self
@@ -73,8 +77,20 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = userTableView.dequeueReusableCell(withIdentifier: "userPostCell") as! userPostCell
-        let post = posts[indexPath.row]
-        
+        if (posts[indexPath.row]["author"] as AnyObject).username! == currentUser?.username{
+            let post = posts[indexPath.row]
+            print(post)
+            
+            cell.recipeNameLabel.text = post["recipeName"] as? String
+            cell.summaryLabel.text = post["recipeSummary"] as? String
+            
+            let imageFile = post["image"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.userPostImageView.af_setImage(withURL: url)
+
+        }
         return cell
     }
     
@@ -115,7 +131,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
             }
         }
     }
-        
+    
+
     
     
     

@@ -86,6 +86,11 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
             let url = URL(string: urlString)!
             
             cell.profileImage.af_setImage(withURL: url)
+            //design of the profile picture.
+            cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size.width / 5
+            cell.profileImage.clipsToBounds = true
+            cell.profileImage.layer.borderColor = UIColor.systemOrange.cgColor
+            cell.profileImage.layer.borderWidth = 1.5
         }
 
         return cell
