@@ -49,6 +49,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBAction func onPostButton(_ sender: Any) {
         let post = PFObject(className: "Posts")
+        let user = PFObject(className: "User")
         
         post["author"] = PFUser.current()
         recipeDetailsLabel.text = "Recipe Details:"
@@ -94,6 +95,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let file = PFFileObject(name: "image.png", data: imageData!)
         
         post["image"] = file
+        
+        user.add(post, forKey: "postsByUser")
         
         post.saveInBackground { (success, error) in
             if success{
