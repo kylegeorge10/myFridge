@@ -79,7 +79,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         let cell = userTableView.dequeueReusableCell(withIdentifier: "userPostCell") as! userPostCell
         if (posts[indexPath.row]["author"] as AnyObject).username! == currentUser?.username{
             let post = posts[indexPath.row]
-            print(post)
+            //print(post)
             
             cell.recipeNameLabel.text = post["recipeName"] as? String
             cell.summaryLabel.text = post["recipeSummary"] as? String
@@ -95,16 +95,36 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            picker.sourceType = .camera
+//        }else{
+//            picker.sourceType = .photoLibrary
+//        }
+//        present(picker, animated: true, completion: nil)
         let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
+            picker.delegate = self
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            picker.sourceType = .camera
-        }else{
-            picker.sourceType = .photoLibrary
-        }
-        present(picker, animated: true, completion: nil)
+        alert.view.tintColor = UIColor.systemGreen
+        
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
+            action in picker.sourceType = .camera
+            
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {
+            action in picker.sourceType = .photoLibrary
+            
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
     }
     
     
