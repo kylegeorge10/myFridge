@@ -30,6 +30,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         feedRefresh.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
         tableView.refreshControl = feedRefresh
         
+        // refresh control icon color
+        feedRefresh.tintColor = UIColor.systemGreen
+        
+        // refresh control note attribute
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 15), NSAttributedString.Key.foregroundColor: UIColor.systemGreen]
+        let attributedTitle = NSAttributedString(string: "Fetching More Yummy Recipies!", attributes: attributes as [NSAttributedString.Key : Any])
+        feedRefresh.attributedTitle = attributedTitle
+        
+        
+        
         tableView.dataSource = self
         tableView.delegate = self
         
