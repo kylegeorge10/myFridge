@@ -25,6 +25,9 @@
 		C287029B2612CCBA00FC28A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28702992612CCBA00FC28A0 /* LaunchScreen.storyboard */; };
 		C28702A62612CCBA00FC28A0 /* myFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702A52612CCBA00FC28A0 /* myFridgeTests.swift */; };
 		C28702B12612CCBA00FC28A0 /* myFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */; };
+		C28C5123264EFA100078AC86 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C5122264EFA100078AC86 /* NewPostViewController.swift */; };
+		C28C5125264EFBB90078AC86 /* RecipePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C5124264EFBB90078AC86 /* RecipePostViewController.swift */; };
+		C28C5127264EFBDC0078AC86 /* IngredientPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28C5126264EFBDC0078AC86 /* IngredientPostViewController.swift */; };
 		C290F12D2614344500790F78 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C290F12C2614344500790F78 /* PostViewController.swift */; };
 		C2A7E58826295BC400131D56 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A7E58726295BC400131D56 /* FollowersViewController.swift */; };
 		C2A7E58D26295BD200131D56 /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A7E58C26295BD200131D56 /* FollowingViewController.swift */; };
@@ -84,6 +87,9 @@
 		C28702AC2612CCBA00FC28A0 /* myFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28702B02612CCBA00FC28A0 /* myFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFridgeUITests.swift; sourceTree = "<group>"; };
 		C28702B22612CCBA00FC28A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28C5122264EFA100078AC86 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		C28C5124264EFBB90078AC86 /* RecipePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePostViewController.swift; sourceTree = "<group>"; };
+		C28C5126264EFBDC0078AC86 /* IngredientPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientPostViewController.swift; sourceTree = "<group>"; };
 		C290F12C2614344500790F78 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		C2A7E58726295BC400131D56 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		C2A7E58C26295BD200131D56 /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,9 @@
 				51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */,
 				C2ABB050262F3D6900018648 /* addReviewViewController.swift */,
 				51EFF48F26342B6500136199 /* userPostCell.swift */,
+				C28C5122264EFA100078AC86 /* NewPostViewController.swift */,
+				C28C5124264EFBB90078AC86 /* RecipePostViewController.swift */,
+				C28C5126264EFBDC0078AC86 /* IngredientPostViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -505,10 +514,13 @@
 				C290F12D2614344500790F78 /* PostViewController.swift in Sources */,
 				C2A7E58D26295BD200131D56 /* FollowingViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
+				C28C5125264EFBB90078AC86 /* RecipePostViewController.swift in Sources */,
 				C2ABB051262F3D6900018648 /* addReviewViewController.swift in Sources */,
 				C287028F2612CCBA00FC28A0 /* AppDelegate.swift in Sources */,
+				C28C5123264EFA100078AC86 /* NewPostViewController.swift in Sources */,
 				C23927262629ED1100947C13 /* UserProfileViewController.swift in Sources */,
 				51E5BF73262D6A56004A1EED /* DiscoveryGridViewController.swift in Sources */,
+				C28C5127264EFBDC0078AC86 /* IngredientPostViewController.swift in Sources */,
 				C2ABB056262F496800018648 /* ReviewViewCell.swift in Sources */,
 				C2A7E59A26295C0800131D56 /* SettingsViewController.swift in Sources */,
 				C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */,
