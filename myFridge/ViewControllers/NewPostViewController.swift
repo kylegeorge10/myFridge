@@ -10,34 +10,42 @@ import Parse
 
 class NewPostViewController: UIViewController {
     @IBOutlet weak var postImage: UIImageView!
-    
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeNameTextView: UITextView!
-    
     @IBOutlet weak var recipeDescriptionLabel: UILabel!
     @IBOutlet weak var recipeDescriptionTextView: UITextView!
-    
     @IBOutlet weak var cookingInstructionsButton: UIButton!
-    
+    @IBOutlet weak var instructionsCheckImage: UIImageView!
     @IBOutlet weak var glutenFreeSwitch: UISwitch!
     @IBOutlet weak var glutenFreeLabel: UILabel!
     @IBOutlet weak var veganSwitch: UISwitch!
     @IBOutlet weak var veganLabel: UILabel!
     @IBOutlet weak var nutFreeSwitch: UISwitch!
     @IBOutlet weak var nutFreeLabel: UILabel!
-    
     @IBOutlet weak var difficultyTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
-    
     @IBOutlet weak var ingredientsListButton: UIButton!
-    
+    @IBOutlet weak var ingredientsCheckImage: UIImageView!
     @IBOutlet weak var postButton: UIButton!
     
+    var directionsList: Array<String> = Array()
+    var ingredientsList: Array<String> = Array()
     var instructionsAdded = false
     var ingredientsAdded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("HERE", ingredientsAdded)
+        print("HERE", instructionsAdded)
+        
+        if instructionsAdded == true{
+            instructionsCheckImage.tintColor = UIColor.green
+        }
+        
+        if ingredientsAdded == true{
+            ingredientsCheckImage.tintColor = UIColor.green
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -89,6 +97,22 @@ class NewPostViewController: UIViewController {
             }else{
                 print(error!)
             }
+        }
+    }
+    
+    func prepare(for segue: UIStoryboardSegue, sender: UIButton) {
+        if sender == cookingInstructionsButton{
+            let instructionsViewController = segue.destination as! InstructionsViewController
+            instructionsViewController.ingredientsAdded = ingredientsAdded
+            instructionsViewController.ingredientsList = ingredientsList
+            instructionsViewController.directionsList = directionsList
+            instructionsViewController.ingredientsAdded = instructionsAdded
+        }else if sender == ingredientsListButton{
+            let ingredientsViewController = segue.destination as! IngredientPostViewController
+            ingredientsViewController.instructionsAdded = instructionsAdded
+            ingredientsViewController.directionsList = directionsList
+            ingredientsViewController.ingredientsList = ingredientsList
+            ingredientsViewController.ingredientsAdded = ingredientsAdded
         }
     }
 
