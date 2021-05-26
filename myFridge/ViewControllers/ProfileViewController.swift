@@ -92,6 +92,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
             let post = userPosts[indexPath.row]
             cell.recipeNameLabel.text = post["recipeName"] as? String
             cell.summaryLabel.text = post["recipeSummary"] as? String
+            
+            let theDate = post.createdAt
+            //print(theDate as Any)
+            let formatter = DateFormatter()
+            formatter.locale = Locale(identifier: "en_US")
+            formatter.dateStyle = .long
+
+            let fDate = formatter.string(from: theDate!)
+            cell.dateLabel.text = fDate
 
             let imageFile = post["image"] as! PFFileObject
             let urlString = imageFile.url!
