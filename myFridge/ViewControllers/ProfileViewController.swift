@@ -15,12 +15,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var userTableView: UITableView!
     
     @IBOutlet weak var usernameLabel: UILabel!
-        
+    @IBOutlet weak var postNumLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var fullnameLabel: UILabel!
+    
     var currentUser = PFUser.current()
     
     var posts = [PFObject]()
     
     var userPosts = [PFObject]()
+    
     
     override func viewDidLoad() {
           super.viewDidLoad()
@@ -75,6 +79,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
                 }
                 //print(userPosts)
                 self.userTableView.reloadData()
+                postNumLabel.text = String(userPosts.count)
             }
         }
     }
@@ -111,6 +116,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         }
         return cell
     }
+    
     
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
