@@ -68,6 +68,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         query.findObjectsInBackground { [self] (posts, error) in
             if posts != nil{
                 
+                userPosts.removeAll()
                 self.posts = posts!
                 for allPosts in self.posts{
                     if (allPosts["author"] as AnyObject).username == currentUser?.username{
