@@ -22,7 +22,8 @@ class SignUpFormViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var matchPasswordErrorLabel: UILabel!
     @IBOutlet weak var onCompleteButton: UIButton!
     
-    var currentUser = PFUser.current()
+    //var currentUser = PFUser.current()
+//    let user = PFUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,32 +59,63 @@ class SignUpFormViewController: UIViewController, UIImagePickerControllerDelegat
     
     
     @IBAction func onComplete(_ sender: Any) {
-        let user = PFUser()
+        let myUser:PFUser = PFUser()
         
-        user["first_name"] = firstNameTextField.text
-        user["last_name"] = lastNameTextField.text
-        user["bio"] = bioTextView.text
-        user.email = userNameTextField.text
-        user.username = userNameTextField.text
+        let userName = userNameTextField.text
+        let userPassword = newPasswordTextField.text
+        let userPasswordConfirm = confirmPasswordTextField.text
+        let userFirstName = firstNameTextField.text
+        let userLastName = lastNameTextField.text
+        let userBio = bioTextView.text
+        let userEmail = emailTextField.text
         
-        //check if the new password and confirm passwords are matching.
-        if newPasswordTextField.text != confirmPasswordTextField.text{
-            print("Oops! Passwords did not match.")
-            matchPasswordErrorLabel.text = "Oops! Passwords did not match."
-        }else{
-            user.password = newPasswordTextField.text
+        if (userName!.isEmpty || userPassword!.isEmpty || userPasswordConfirm!.isEmpty || userFirstName!.isEmpty || userLastName!.isEmpty){
+            var myAlert = UIAlertController(title: "Alert", message: "Please fill in the required fields.", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            
+            myAlert.addAction(okAction)
+            
+            self.present(myAlert, animated: true, completion: nil)
+            
+            return
         }
         
-        user.signUpInBackground { (success, error) in
+        if (userPassword != userPasswordConfirm){
+            var myAlert = UIAlertController(title: "Alert", message: "Passwords do not match, Please try again.", preferredStyle: UIAlertController.Style.alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            
+            myAlert.addAction(okAction)
+            
+            self.present(myAlert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        myUser.username = userName
+        myUser.password = userPassword
+        myUser.email = userEmail
+        myUser.setObject(userFirstName as Any, forKey: "first_name")
+        myUser.setObject(userLastName as Any, forKey: "last_name")
+        myUser.setObject(userBio as Any, forKey: "bio")
+        
+        
+        let profileImageData = profileImageView.image!.pngData()
+        
+        if (profileImageData != nil){
+            let file = PFFileObject(name: "profileImage.png", data: profileImageData!)
+            myUser.setObject(file as Any, forKey: "profileImage")
+        }
+      
+        
+        myUser.signUpInBackground { (success, error) in
             if success{
                 self.performSegue(withIdentifier: "confirmationSegue", sender: nil)
             } else{
                 print("Error: \(error?.localizedDescription)")
             }
         }
-        
-        
-        
     }
     
     
@@ -125,18 +157,6 @@ class SignUpFormViewController: UIViewController, UIImagePickerControllerDelegat
         
         picker.isNavigationBarHidden = false
         self.dismiss(animated: true, completion: nil)
-        
-        let profileImageData = profileImageView.image!.pngData()
-        let file = PFFileObject(name: "profileImage.png", data: profileImageData!)
-        
-        currentUser?["profileImage"] = file
-        
-        currentUser?.saveInBackground { (success, error) in
-            if success{
-                self.dismiss(animated: true, completion: nil)
-                print("saved!")
-            }
-        }
     }
     
     /*
