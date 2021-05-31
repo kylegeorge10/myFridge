@@ -79,6 +79,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIP-QE-tNt"/>
+                                    <segue destination="eNv-0R-zKW" kind="presentation" identifier="signUpSegue" id="e2v-Fn-RJB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,24 +134,24 @@
             <objects>
                 <viewController id="vlR-Zj-Hr0" customClass="SignInTransitionViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ShN-4g-PKG">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="keV-YE-8hi" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="347" width="390" height="285"/>
+                                <rect key="frame" x="0.0" y="359" width="390" height="219"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="4986-cookiesmilk"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello &amp; Welcome To myFridge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPA-kl-mCo">
-                                <rect key="frame" x="5" y="164" width="380" height="128"/>
+                                <rect key="frame" x="5" y="176" width="380" height="128"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fF-2E-vGn">
-                                <rect key="frame" x="109" y="699" width="170" height="40"/>
+                                <rect key="frame" x="109" y="645" width="170" height="40"/>
                                 <color key="backgroundColor" red="0.90536245449030117" green="1" blue="0.82642810945580547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
                                 <state key="normal" title="Let's get started!">
@@ -161,11 +162,18 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cooker" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-Dk-0f6">
-                                <rect key="frame" x="259" y="44" width="115" height="127"/>
+                                <rect key="frame" x="259" y="56" width="115" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="jlY-gD-0y1"/>
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="kitchen-guy-001-512" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-Be-md0">
+                                <rect key="frame" x="10" y="56" width="100" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Dac-7d-IbI"/>
+                                    <constraint firstAttribute="height" constant="110" id="xGN-Wf-rlC"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s9I-Qm-6dB"/>
@@ -174,6 +182,7 @@
                         <constraints>
                             <constraint firstItem="keV-YE-8hi" firstAttribute="trailing" secondItem="s9I-Qm-6dB" secondAttribute="trailing" id="5iM-st-SbD"/>
                             <constraint firstItem="s9I-Qm-6dB" firstAttribute="trailing" secondItem="9fF-2E-vGn" secondAttribute="trailing" constant="111" id="CYK-Jf-QVn"/>
+                            <constraint firstItem="gRW-Be-md0" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" constant="10" id="R3a-JE-DJ4"/>
                             <constraint firstItem="s9I-Qm-6dB" firstAttribute="bottom" secondItem="9fF-2E-vGn" secondAttribute="bottom" constant="71" id="RZz-7d-3P7"/>
                             <constraint firstItem="keV-YE-8hi" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" id="SUT-4s-nie"/>
                             <constraint firstItem="eKl-Dk-0f6" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" id="YD0-Qa-Dcu"/>
@@ -184,10 +193,12 @@
                             <constraint firstItem="s9I-Qm-6dB" firstAttribute="bottom" secondItem="keV-YE-8hi" secondAttribute="bottom" constant="178" id="k4m-Jy-6kR"/>
                             <constraint firstItem="nPA-kl-mCo" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" constant="120" id="kEy-Jp-UP3"/>
                             <constraint firstItem="eKl-Dk-0f6" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" constant="259" id="rPk-VR-JaV"/>
+                            <constraint firstItem="gRW-Be-md0" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" id="tq9-aZ-C0r"/>
                             <constraint firstItem="s9I-Qm-6dB" firstAttribute="trailing" secondItem="nPA-kl-mCo" secondAttribute="trailing" constant="5" id="w9S-Qa-2MT"/>
                             <constraint firstItem="9fF-2E-vGn" firstAttribute="top" secondItem="keV-YE-8hi" secondAttribute="bottom" constant="67" id="zw8-Lv-gzI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nD2-Zc-djM"/>
                     <connections>
                         <outlet property="animationView" destination="keV-YE-8hi" id="xvr-VO-cPG"/>
                         <outlet property="startButton" destination="9fF-2E-vGn" id="ay3-Yc-W34"/>
@@ -195,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TP6-V1-HiY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693.84615384615381" y="337.67772511848341"/>
+            <point key="canvasLocation" x="1623.0769230769231" y="337.67772511848341"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="Lmt-bt-zod">
@@ -260,6 +271,10 @@
                                 <color key="backgroundColor" red="0.8645852315" green="1" blue="0.76724887980000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                 <state key="normal" title="Ready to Discover!"/>
+                                <connections>
+                                    <action selector="onComplete:" destination="V4Q-FY-ygA" eventType="touchUpInside" id="VID-JM-kws"/>
+                                    <segue destination="Kbh-tm-0ji" kind="presentation" identifier="loginSegue" id="XnZ-6U-HRQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your First Name Here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-Ab-hh6">
                                 <rect key="frame" x="72" y="260" width="296" height="34"/>
@@ -309,7 +324,7 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="new-password"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add somthing up..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-ik-vso">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add somthing up for your bio..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-ik-vso">
                                 <rect key="frame" x="16" y="671" width="358" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -317,16 +332,27 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.circle.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cJc-TO-QOd">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.circle.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cJc-TO-QOd">
                                 <rect key="frame" x="135" y="102" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GhJ-br-b35" appends="YES" id="cKG-ML-bU5"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlh-tt-BZj">
                                 <rect key="frame" x="16" y="367" width="68" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="13"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kra-KM-S4b">
+                                <rect key="frame" x="126" y="551" width="248" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="10"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -337,15 +363,32 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" id="rIy-S1-Izg">
                             <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
                             <color key="tintColor" systemColor="systemGreenColor"/>
+                            <connections>
+                                <action selector="onBackButton:" destination="V4Q-FY-ygA" id="gQm-G8-eVH"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bioTextView" destination="2bn-ik-vso" id="93Y-58-4nV"/>
+                        <outlet property="confirmPasswordTextField" destination="kbb-iN-fPO" id="DYS-TZ-MCF"/>
+                        <outlet property="emailTextField" destination="BrE-jL-QdV" id="xtw-QC-9Wn"/>
+                        <outlet property="firstNameTextField" destination="1oQ-Ab-hh6" id="6YB-gI-zo3"/>
+                        <outlet property="lastNameTextField" destination="tbK-ga-vty" id="ZB8-tw-9EF"/>
+                        <outlet property="matchPasswordErrorLabel" destination="kra-KM-S4b" id="2kI-ml-zTu"/>
+                        <outlet property="newPasswordTextField" destination="TEO-Ys-7U6" id="7ZV-hB-TKt"/>
+                        <outlet property="onCompleteButton" destination="pt1-61-3p4" id="cAf-Lr-l0G"/>
+                        <outlet property="profileImageView" destination="cJc-TO-QOd" id="V65-8V-T4a"/>
+                        <outlet property="userNameTextField" destination="LbL-m1-Auq" id="sqU-M9-n1j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLS-QL-1KM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GhJ-br-b35">
+                    <connections>
+                        <action selector="onCameraButton:" destination="V4Q-FY-ygA" id="4gg-hp-QN6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2649.2307692307691" y="337.67772511848341"/>
+            <point key="canvasLocation" x="3578.4615384615386" y="337.67772511848341"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="99G-BB-Uwm">
@@ -1633,7 +1676,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnl-Ud-17j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="1108"/>
+            <point key="canvasLocation" x="-215" y="1078"/>
         </scene>
         <!--Profile Navigation Controller-->
         <scene sceneID="s3M-PD-01V">
@@ -2185,10 +2228,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-Bt-7x1">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-Bt-7x1">
                                 <rect key="frame" x="0.0" y="88" width="165" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="17k-S7-kvx" appends="YES" id="v3w-Cv-AVr"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-eB-Puf">
                                 <rect key="frame" x="16" y="277" width="100" height="28"/>
@@ -2307,6 +2354,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRP-wq-S0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="17k-S7-kvx">
+                    <connections>
+                        <action selector="uploadImageButton:" destination="4nK-53-TVx" id="k5W-rW-cSM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2266.1538461538462" y="2971.5639810426537"/>
         </scene>
@@ -2803,13 +2855,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ie-6y-9oZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.5384615384614" y="337.67772511848341"/>
+            <point key="canvasLocation" x="2650.7692307692305" y="337.67772511848341"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Es-zn-QWc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eNv-0R-zKW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="erx-An-Nr3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vlR-Zj-Hr0" kind="relationship" relationship="rootViewController" id="b2z-I4-JGc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRR-Uo-9W7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693.84615384615381" y="337.67772511848341"/>
         </scene>
     </scenes>
     <designables>
         <designable name="keV-YE-8hi"/>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="XnZ-6U-HRQ"/>
         <segue reference="Bsy-Vn-bKJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGreenColor"/>
@@ -2826,6 +2897,7 @@
         <image name="gluten_white" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="icons8-cooking-book" width="100" height="100"/>
+        <image name="kitchen-guy-001-512" width="409" height="512"/>
         <image name="logoutIcon" width="512" height="512"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="nut_white" width="512" height="512"/>

@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class NewPostViewController: UIViewController {
+class NewPostViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeNameTextView: UITextView!
@@ -103,6 +103,16 @@ class NewPostViewController: UIViewController {
     }
     
     @IBAction func onNextButton(_ sender: Any) {
+        
+        let post = PFObject(className: "Posts")
+        let user = PFObject(className: "User")
+        
+        let imageData = postImage.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        post["image"] = file
+        
+        
+        
         if recipeNameTextView.text != nil{
             if recipeDescriptionTextView.text != nil{
                 if difficultyTextField.text != nil{
@@ -212,5 +222,43 @@ class NewPostViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Uploading the image via an image picker.
+    
+    @IBAction func uploadImageButton(_ sender: UITapGestureRecognizer) {
+        let picker = UIImagePickerController()
+            picker.delegate = self
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        alert.view.tintColor = UIColor.systemGreen
+        
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
+            action in picker.sourceType = UIImagePickerController.SourceType.camera
+            picker.allowsEditing = true
+            picker.delegate = self
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {action in picker.sourceType = .photoLibrary
+            picker.allowsEditing = true
+            picker.delegate = self
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageAspectScaled(toFill: size)
+        
+        postImage.image = scaledImage
+        
+        picker.isNavigationBarHidden = false
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

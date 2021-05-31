@@ -132,14 +132,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         alert.view.tintColor = UIColor.systemGreen
         
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
-            action in picker.sourceType = .camera
-            
+            action in picker.sourceType = UIImagePickerController.SourceType.camera
+            picker.allowsEditing = true
+            picker.delegate = self
             self.present(picker, animated: true, completion: nil)
             
         }))
-        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {
-            action in picker.sourceType = .photoLibrary
-            
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {action in picker.sourceType = .photoLibrary
+            picker.allowsEditing = true
+            picker.delegate = self
             self.present(picker, animated: true, completion: nil)
             
         }))
@@ -150,14 +151,15 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.editedImage] as! UIImage
+        let image = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
         let scaledImage = image.af_imageAspectScaled(toFill: size)
         
         profileImageView.image = scaledImage
         
-        dismiss(animated: true, completion: nil)
+        picker.isNavigationBarHidden = false
+        self.dismiss(animated: true, completion: nil)
         
         let profileImageData = profileImageView.image!.pngData()
         let file = PFFileObject(name: "profileImage.png", data: profileImageData!)
