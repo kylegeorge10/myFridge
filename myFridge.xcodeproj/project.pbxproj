@@ -12,6 +12,9 @@
 		519772152662B78B00D7651F /* SignInTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519772142662B78B00D7651F /* SignInTransitionViewController.swift */; };
 		51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */; };
 		51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */; };
+		51DEE3F026650D6B00FE8C0A /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = 51DEE3EF26650D6A00FE8C0A /* 972-done.json */; };
+		51DEE3F126650D6B00FE8C0A /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = 51DEE3EF26650D6A00FE8C0A /* 972-done.json */; };
+		51DEE3F226650D6B00FE8C0A /* 972-done.json in Resources */ = {isa = PBXBuildFile; fileRef = 51DEE3EF26650D6A00FE8C0A /* 972-done.json */; };
 		51E2E5582662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */ = {isa = PBXBuildFile; fileRef = 51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */; };
 		51E2E5592662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */ = {isa = PBXBuildFile; fileRef = 51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */; };
 		51E2E55A2662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */ = {isa = PBXBuildFile; fileRef = 51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */; };
@@ -76,6 +79,7 @@
 		519772142662B78B00D7651F /* SignInTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTransitionViewController.swift; sourceTree = "<group>"; };
 		51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		51DEE3EF26650D6A00FE8C0A /* 972-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "972-done.json"; sourceTree = "<group>"; };
 		51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4986-cookiesmilk.json"; sourceTree = "<group>"; };
 		51E2E55B2662CC590076EBF7 /* SignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewController.swift; sourceTree = "<group>"; };
 		51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryGridViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			children = (
 				51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */,
 				51951D63262E85A1003BF31B /* 24703-food-animation.json */,
+				51DEE3EF26650D6A00FE8C0A /* 972-done.json */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 				C287029B2612CCBA00FC28A0 /* LaunchScreen.storyboard in Resources */,
 				C28702982612CCBA00FC28A0 /* Assets.xcassets in Resources */,
 				C28702962612CCBA00FC28A0 /* Main.storyboard in Resources */,
+				51DEE3F026650D6B00FE8C0A /* 972-done.json in Resources */,
 				51951D64262E85A1003BF31B /* 24703-food-animation.json in Resources */,
 				51E2E5582662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */,
 			);
@@ -406,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E2E5592662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */,
+				51DEE3F126650D6B00FE8C0A /* 972-done.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E2E55A2662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */,
+				51DEE3F226650D6B00FE8C0A /* 972-done.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

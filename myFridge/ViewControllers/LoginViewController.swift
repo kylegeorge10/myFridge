@@ -8,7 +8,8 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -22,8 +23,23 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         signInButton.layer.cornerRadius = signInButton.frame.size.width/5
         signUpButton.layer.cornerRadius = signUpButton.frame.size.width/5
+        
+//        self.usernameField.delegate = self
+//        self.passwordField.delegate = self
     
     }
+    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        let nextTag = textField.tag + 1
+//        let nextTF = textField.superview?.viewWithTag(nextTag) as UIResponder?
+//        if nextTF != nil {
+//            print("yes")
+//            nextTF?.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//        }
+//        return false
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Dismiss the keyboard
