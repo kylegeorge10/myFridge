@@ -49,13 +49,13 @@ class DetailViewController: UIViewController {
         recipeNameLabel.text = post["recipeName"] as? String
         recipeNameLabel.sizeToFit()
         
-        recipeSummary.text = post["recipeSummary"] as? String
+        recipeSummary.text = post["recipeDescription"] as? String
         recipeSummary.sizeToFit()
         
-        fullRecipe.text = post["recipeFull"] as? String
+        //fullRecipe.text = post["recipeFull"] as? String
         fullRecipe.sizeToFit()
         
-        ingredientsList.text = post["ingredients"] as? String
+        //ingredientsList.text = post["ingredients"] as? String
         ingredientsList.sizeToFit()
         
         let gluten = ((post["glutenFree"]) as? Bool)
@@ -94,7 +94,7 @@ class DetailViewController: UIViewController {
         }
         
         
-        let imageFile = post["image"] as! PFFileObject
+        let imageFile = post["postImage"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         

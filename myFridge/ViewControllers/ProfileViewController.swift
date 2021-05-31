@@ -128,7 +128,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
             let fDate = formatter.string(from: theDate!)
             cell.dateLabel.text = fDate
 
-            let imageFile = post["image"] as! PFFileObject
+            let imageFile = post["postImage"] as! PFFileObject
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
 

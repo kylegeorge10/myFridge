@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class finalPostViewController: UIViewController {
 
@@ -41,6 +42,9 @@ class finalPostViewController: UIViewController {
     var directionsList: Array<String> = Array()
     var measurementsList: Array<String> = Array()
     var ingredientsList: Array<String> = Array()
+    
+    var users = [PFObject]()
+    var currentUser = PFUser.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,11 +94,96 @@ class finalPostViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+    }
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onPostButton(_ sender: Any) {
+        let post = PFObject(className: "Posts")
+        
+        post["author"] = PFUser.current()
+        post["recipeName"] = recipeNameTextView.text
+        post["recipeDescription"] = recipeDescriptionTextView.text
+        
+        
+        //Getting switch values and setting label values
+        if glutenFreeSwitch.isOn{
+            post["glutenFree"] = true as Bool
+        }
+        else{
+            post["glutenFree"] = false as Bool
+        }
+//        glutenFreeSwitchLabel.text = "Gluten Free?"
+        
+        
+        if veganSwitch.isOn{
+            post["isVegan"] = true as Bool
+        }
+        else{
+            post["isVegan"] = false as Bool
+        }
+//        veganSwitchLabel.text = "Vegan?"
+        
+        
+        if nutFreeSwitch.isOn{
+            post["nutFree"] = true as Bool
+        }
+        else{
+            post["nutFree"] = false as Bool
+        }
+//        nutFreeSwitchLabel.text = "Nut Free?"
+        
+        
+        
+        post["difficulty"] = difficultyTextField.text
+        post["cookingDuration"] = durationTextField.text
+        
+        post["directions"] = directionsList
+        post["measurements"] = measurementsList
+        post["ingredients"] = ingredientsList
+        
+        let imageData = postImage.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        post["postImage"] = file
+        
+        print("here")
+        
+        let query = PFQuery(className: "User")
+        
+        query.includeKey("username")
+        
+        query.limit = 20
+        query.findObjectsInBackground { [self] (users, error) in
+            if users != nil{
+                
+                //userPosts.removeAll()
+                self.users = users!
+                print(self.users)
+                for user in self.users{
+                    if (user["objectId"] as AnyObject).objectId == currentUser?.objectId{
+                        print("here")
+                        user.add(post, forKey: "postsByUser")
+                        dismiss(animated: true, completion: nil)
+                    }else{
+                        print("not the current user")
+                    }
+                }
+            }
+        }
+
+        
+        post.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("saved!")
+            }
+        }
+        
+        //user?.add(post, forKey: "postsByUser")
     }
     
     /*

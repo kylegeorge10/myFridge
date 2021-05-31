@@ -104,12 +104,9 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate &
     
     @IBAction func onNextButton(_ sender: Any) {
         
-        let post = PFObject(className: "Posts")
-        let user = PFObject(className: "User")
-        
-        let imageData = postImage.image!.pngData()
-        let file = PFFileObject(name: "image.png", data: imageData!)
-        post["image"] = file
+        //let imageData = postImage.image!.pngData()
+        //let file = PFFileObject(name: "image.png", data: imageData!)
+        //post["image"] = file
         
         
         
@@ -129,6 +126,7 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate &
         let navigation = segue.destination as? UINavigationController
         let instructionsViewController = navigation?.topViewController as? InstructionsViewController
         
+        instructionsViewController?.postImage = self.postImage.image
         instructionsViewController?.recipeName = recipeNameTextView.text!
         instructionsViewController?.recipeDescription = recipeDescriptionTextView.text!
         if glutenFreeSwitch.isOn{

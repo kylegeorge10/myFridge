@@ -87,7 +87,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let user = post["author"] as! PFUser
         cell.usernameLabel.text = user.username
         cell.recipeNameLabel.text = post["recipeName"] as? String
-        cell.recipeSummaryLabel.text = post["recipeSummary"] as? String
+        cell.recipeSummaryLabel.text = post["recipeDescription"] as? String
         
         let theDate = post.createdAt
         //print(theDate as Any)
@@ -130,7 +130,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         
-        let imageFile = post["image"] as! PFFileObject
+        let imageFile = post["postImage"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
