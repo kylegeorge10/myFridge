@@ -137,15 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="keV-YE-8hi" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="359" width="390" height="219"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="4986-cookiesmilk"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello &amp; Welcome To myFridge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPA-kl-mCo">
-                                <rect key="frame" x="5" y="176" width="380" height="128"/>
+                                <rect key="frame" x="5" y="81" width="380" height="128"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
@@ -161,20 +154,13 @@
                                     <segue destination="xwh-dM-fTS" kind="presentation" id="GXJ-Aq-GSq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cooker" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-Dk-0f6">
-                                <rect key="frame" x="259" y="56" width="115" height="127"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="jlY-gD-0y1"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="kitchen-guy-001-512" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-Be-md0">
-                                <rect key="frame" x="10" y="56" width="100" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Dac-7d-IbI"/>
-                                    <constraint firstAttribute="height" constant="110" id="xGN-Wf-rlC"/>
-                                </constraints>
-                            </imageView>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="keV-YE-8hi" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="250" width="390" height="315"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="4986-cookiesmilk"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s9I-Qm-6dB"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -182,20 +168,15 @@
                         <constraints>
                             <constraint firstItem="keV-YE-8hi" firstAttribute="trailing" secondItem="s9I-Qm-6dB" secondAttribute="trailing" id="5iM-st-SbD"/>
                             <constraint firstItem="s9I-Qm-6dB" firstAttribute="trailing" secondItem="9fF-2E-vGn" secondAttribute="trailing" constant="111" id="CYK-Jf-QVn"/>
-                            <constraint firstItem="gRW-Be-md0" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" constant="10" id="R3a-JE-DJ4"/>
                             <constraint firstItem="s9I-Qm-6dB" firstAttribute="bottom" secondItem="9fF-2E-vGn" secondAttribute="bottom" constant="71" id="RZz-7d-3P7"/>
                             <constraint firstItem="keV-YE-8hi" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" id="SUT-4s-nie"/>
-                            <constraint firstItem="eKl-Dk-0f6" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" id="YD0-Qa-Dcu"/>
                             <constraint firstItem="nPA-kl-mCo" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" constant="5" id="aYy-g7-zXM"/>
-                            <constraint firstItem="keV-YE-8hi" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" constant="303" id="fw4-GJ-s6o"/>
+                            <constraint firstItem="keV-YE-8hi" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" constant="194" id="fw4-GJ-s6o"/>
                             <constraint firstItem="9fF-2E-vGn" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" constant="109" id="iy9-jc-dbX"/>
-                            <constraint firstItem="s9I-Qm-6dB" firstAttribute="trailing" secondItem="eKl-Dk-0f6" secondAttribute="trailing" constant="16" id="jGW-gf-MFp"/>
-                            <constraint firstItem="s9I-Qm-6dB" firstAttribute="bottom" secondItem="keV-YE-8hi" secondAttribute="bottom" constant="178" id="k4m-Jy-6kR"/>
-                            <constraint firstItem="nPA-kl-mCo" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" constant="120" id="kEy-Jp-UP3"/>
-                            <constraint firstItem="eKl-Dk-0f6" firstAttribute="leading" secondItem="s9I-Qm-6dB" secondAttribute="leading" constant="259" id="rPk-VR-JaV"/>
-                            <constraint firstItem="gRW-Be-md0" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" id="tq9-aZ-C0r"/>
+                            <constraint firstItem="s9I-Qm-6dB" firstAttribute="bottom" secondItem="keV-YE-8hi" secondAttribute="bottom" constant="191" id="k4m-Jy-6kR"/>
+                            <constraint firstItem="nPA-kl-mCo" firstAttribute="top" secondItem="s9I-Qm-6dB" secondAttribute="top" constant="25" id="kEy-Jp-UP3"/>
                             <constraint firstItem="s9I-Qm-6dB" firstAttribute="trailing" secondItem="nPA-kl-mCo" secondAttribute="trailing" constant="5" id="w9S-Qa-2MT"/>
-                            <constraint firstItem="9fF-2E-vGn" firstAttribute="top" secondItem="keV-YE-8hi" secondAttribute="bottom" constant="67" id="zw8-Lv-gzI"/>
+                            <constraint firstItem="9fF-2E-vGn" firstAttribute="top" secondItem="keV-YE-8hi" secondAttribute="bottom" constant="80" id="zw8-Lv-gzI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nD2-Zc-djM"/>
@@ -389,6 +370,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3578.4615384615386" y="337.67772511848341"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Pdu-PJ-Mto">
+            <objects>
+                <viewController id="AsB-l0-ssW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hjK-9D-wMc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lck-Ut-MXv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jiN-sO-PYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4540" y="352"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="99G-BB-Uwm">
@@ -2897,7 +2893,6 @@
         <image name="gluten_white" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="icons8-cooking-book" width="100" height="100"/>
-        <image name="kitchen-guy-001-512" width="409" height="512"/>
         <image name="logoutIcon" width="512" height="512"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="nut_white" width="512" height="512"/>
