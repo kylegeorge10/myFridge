@@ -9,8 +9,15 @@
 /* Begin PBXBuildFile section */
 		4DED5740AE388CBD78C3E25A /* Pods_myFridge_myFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451A5501FE8E273B5D9692B7 /* Pods_myFridge_myFridgeUITests.framework */; };
 		51951D64262E85A1003BF31B /* 24703-food-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 51951D63262E85A1003BF31B /* 24703-food-animation.json */; };
+		519772152662B78B00D7651F /* SignInTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519772142662B78B00D7651F /* SignInTransitionViewController.swift */; };
 		51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */; };
 		51C0F5B9261304E8008BAB6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */; };
+		51E2E5582662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */ = {isa = PBXBuildFile; fileRef = 51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */; };
+		51E2E5592662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */ = {isa = PBXBuildFile; fileRef = 51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */; };
+		51E2E55A2662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */ = {isa = PBXBuildFile; fileRef = 51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */; };
+		51E2E55C2662CC590076EBF7 /* SignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2E55B2662CC590076EBF7 /* SignUpFormViewController.swift */; };
+		51E2E55D2662CC590076EBF7 /* SignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2E55B2662CC590076EBF7 /* SignUpFormViewController.swift */; };
+		51E2E55E2662CC590076EBF7 /* SignUpFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2E55B2662CC590076EBF7 /* SignUpFormViewController.swift */; };
 		51E5BF73262D6A56004A1EED /* DiscoveryGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */; };
 		51EFF49026342B6500136199 /* userPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EFF48F26342B6500136199 /* userPostCell.swift */; };
 		51F60604263172DB00C83A44 /* RecipeFoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60603263172DB00C83A44 /* RecipeFoundCell.swift */; };
@@ -64,8 +71,11 @@
 		089F715EE160452419B894F6 /* Pods-myFridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-myFridgeTests/Pods-myFridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		451A5501FE8E273B5D9692B7 /* Pods_myFridge_myFridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFridge_myFridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51951D63262E85A1003BF31B /* 24703-food-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "24703-food-animation.json"; sourceTree = "<group>"; };
+		519772142662B78B00D7651F /* SignInTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTransitionViewController.swift; sourceTree = "<group>"; };
 		51C0F5B3261304A5008BAB6C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		51C0F5B8261304E8008BAB6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4986-cookiesmilk.json"; sourceTree = "<group>"; };
+		51E2E55B2662CC590076EBF7 /* SignUpFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormViewController.swift; sourceTree = "<group>"; };
 		51E5BF72262D6A56004A1EED /* DiscoveryGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryGridViewController.swift; sourceTree = "<group>"; };
 		51EFF48F26342B6500136199 /* userPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userPostCell.swift; sourceTree = "<group>"; };
 		51F60603263172DB00C83A44 /* RecipeFoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFoundCell.swift; sourceTree = "<group>"; };
@@ -175,6 +185,8 @@
 				C28C5122264EFA100078AC86 /* NewPostViewController.swift */,
 				C28C5126264EFBDC0078AC86 /* IngredientPostViewController.swift */,
 				C2CB0DFD26518C920074D1B4 /* InstructionsViewController.swift */,
+				519772142662B78B00D7651F /* SignInTransitionViewController.swift */,
+				51E2E55B2662CC590076EBF7 /* SignUpFormViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +202,7 @@
 		51596694262C0D2800DC7189 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				51E2E5572662BCA40076EBF7 /* 4986-cookiesmilk.json */,
 				51951D63262E85A1003BF31B /* 24703-food-animation.json */,
 			);
 			path = Extras;
@@ -378,6 +391,7 @@
 				C28702982612CCBA00FC28A0 /* Assets.xcassets in Resources */,
 				C28702962612CCBA00FC28A0 /* Main.storyboard in Resources */,
 				51951D64262E85A1003BF31B /* 24703-food-animation.json in Resources */,
+				51E2E5582662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E2E5592662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E2E55A2662BCA40076EBF7 /* 4986-cookiesmilk.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +529,7 @@
 				C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */,
 				C2CB0DFE26518C920074D1B4 /* InstructionsViewController.swift in Sources */,
 				C290F12D2614344500790F78 /* PostViewController.swift in Sources */,
+				51E2E55C2662CC590076EBF7 /* SignUpFormViewController.swift in Sources */,
 				C2A7E58D26295BD200131D56 /* FollowingViewController.swift in Sources */,
 				C28702932612CCBA00FC28A0 /* ViewController.swift in Sources */,
 				C2ABB051262F3D6900018648 /* addReviewViewController.swift in Sources */,
@@ -524,6 +541,7 @@
 				C2ABB056262F496800018648 /* ReviewViewCell.swift in Sources */,
 				C2A7E59A26295C0800131D56 /* SettingsViewController.swift in Sources */,
 				C246072B2624058B00DAAB5B /* ReviewsViewController.swift in Sources */,
+				519772152662B78B00D7651F /* SignInTransitionViewController.swift in Sources */,
 				C2A7E59F26295C1C00131D56 /* UsernameProfileViewController.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
 				51EFF49026342B6500136199 /* userPostCell.swift in Sources */,
@@ -536,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E2E55D2662CC590076EBF7 /* SignUpFormViewController.swift in Sources */,
 				C28702A62612CCBA00FC28A0 /* myFridgeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E2E55E2662CC590076EBF7 /* SignUpFormViewController.swift in Sources */,
 				C28702B12612CCBA00FC28A0 /* myFridgeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

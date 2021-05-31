@@ -35,6 +35,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         profileImageView.layer.borderColor = UIColor.systemOrange.cgColor
         profileImageView.layer.borderWidth = 3.5
         
+        
         userTableView.delegate = self
         userTableView.dataSource = self
         
@@ -113,6 +114,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
             let url = URL(string: urlString)!
 
             cell.userPostImageView.af_setImage(withURL: url)
+            cell.userPostImageView.layer.cornerRadius = cell.userPostImageView.frame.size.height / 4.5
+            cell.userPostImageView.clipsToBounds = true
+            cell.userPostImageView.layer.borderColor = UIColor.systemGray.cgColor
+            cell.userPostImageView.layer.borderWidth = 2.5
             
         }
         return cell
