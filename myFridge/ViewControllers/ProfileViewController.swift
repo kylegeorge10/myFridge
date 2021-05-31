@@ -48,6 +48,25 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
           // Do stuff with the user
             
             usernameLabel.text = currentUser!["username"] as? String
+            
+            //checking for name
+            if (currentUser!["fisrt_name"] != nil || currentUser!["last_name"] != nil){
+                let fName = currentUser!["first_name"] as? String
+                let lName = currentUser!["last_name"] as? String
+                fullnameLabel.text = "\(fName!) \(lName!)"
+            }else{
+                fullnameLabel.text = "Full Name"
+            }
+            
+            //checking for bio
+            if (currentUser!["bio"] != nil) {
+                bioLabel.text = currentUser!["bio"] as? String
+                
+            }else{
+                bioLabel.text = "Bio"
+            }
+            
+            //checking for the profile picture
             if currentUser?["profileImage"] != nil{
                 let imageFile = currentUser?["profileImage"] as! PFFileObject
                 let urlString = imageFile.url!
