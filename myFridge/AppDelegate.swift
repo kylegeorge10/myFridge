@@ -23,9 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     //$0.clientKey = "7IQxdbRtZJBnw5OiBu24A9aX1iSWz9bOVLOklW7J"
                     
                     //Senuda's Parse
-                    $0.applicationId = "RTm5AC0nYB7cVLGt5P9E8DS7VToS41M2amM2oQfh"
-                    $0.clientKey = "Pr4BESsGeUtweM7x2wuqLTTIeACn8b2apAQ9Fsm9"
-                    $0.server = "https://parseapi.back4app.com"
+//                    $0.applicationId = "RTm5AC0nYB7cVLGt5P9E8DS7VToS41M2amM2oQfh"
+//                    $0.clientKey = "Pr4BESsGeUtweM7x2wuqLTTIeACn8b2apAQ9Fsm9"
+//                    $0.server = "https://parseapi.back4app.com"
+            
+            //Second Parse version
+            $0.applicationId = "UaaRPhLAGfj4G9ppcYQL6p8eTv9xubnTJH9HFyTL"
+            $0.clientKey = "lCcxW8Y00Bx7sVVV7d6tQT33abVGO41wGQPh4Dbo"
+            $0.server = "https://parseapi.back4app.com/"
             }
             Parse.initialize(with: parseConfig)
         
