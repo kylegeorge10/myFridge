@@ -37,6 +37,7 @@
 		C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8642613B18300577E13 /* HomeViewController.swift */; };
 		C2BED86A2613B1E400577E13 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED8692613B1E400577E13 /* HomeViewCell.swift */; };
 		C2BED86F2613B31B00577E13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BED86E2613B31B00577E13 /* DetailViewController.swift */; };
+		C2C2973C2664560B00D02806 /* finalPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C2973B2664560B00D02806 /* finalPostViewController.swift */; };
 		C2CB0DFE26518C920074D1B4 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CB0DFD26518C920074D1B4 /* InstructionsViewController.swift */; };
 		C2D15F8E2612D1B000169C2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D15F8D2612D1B000169C2A /* LoginViewController.swift */; };
 		F038B69FBA62FF75791C2257 /* Pods_myFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9E8034CC1D6014ED017A22 /* Pods_myFridgeTests.framework */; };
@@ -99,6 +100,7 @@
 		C2BED8642613B18300577E13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2BED8692613B1E400577E13 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		C2BED86E2613B31B00577E13 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C2C2973B2664560B00D02806 /* finalPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalPostViewController.swift; sourceTree = "<group>"; };
 		C2CB0DFD26518C920074D1B4 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		C2D15F8D2612D1B000169C2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C57DF8AFEC423CAB8F9B41CA /* Pods-myFridge-myFridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myFridge-myFridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-myFridge-myFridgeUITests/Pods-myFridge-myFridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				C28C5122264EFA100078AC86 /* NewPostViewController.swift */,
 				C28C5126264EFBDC0078AC86 /* IngredientPostViewController.swift */,
 				C2CB0DFD26518C920074D1B4 /* InstructionsViewController.swift */,
+				C2C2973B2664560B00D02806 /* finalPostViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				C2A7E59F26295C1C00131D56 /* UsernameProfileViewController.swift in Sources */,
 				C28702912612CCBA00FC28A0 /* SceneDelegate.swift in Sources */,
 				51EFF49026342B6500136199 /* userPostCell.swift in Sources */,
+				C2C2973C2664560B00D02806 /* finalPostViewController.swift in Sources */,
 				C2BED8652613B18300577E13 /* HomeViewController.swift in Sources */,
 				51C0F5B4261304A5008BAB6C /* ProfileNavigationController.swift in Sources */,
 			);

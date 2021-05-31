@@ -14,8 +14,6 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var recipeNameTextView: UITextView!
     @IBOutlet weak var recipeDescriptionLabel: UILabel!
     @IBOutlet weak var recipeDescriptionTextView: UITextView!
-    @IBOutlet weak var cookingInstructionsButton: UIButton!
-    @IBOutlet weak var instructionsCheckImage: UIImageView!
     @IBOutlet weak var glutenFreeSwitch: UISwitch!
     @IBOutlet weak var glutenFreeLabel: UILabel!
     @IBOutlet weak var veganSwitch: UISwitch!
@@ -24,97 +22,186 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var nutFreeLabel: UILabel!
     @IBOutlet weak var difficultyTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
-    @IBOutlet weak var ingredientsListButton: UIButton!
-    @IBOutlet weak var ingredientsCheckImage: UIImageView!
-    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
-    var directionsList: Array<String> = Array()
-    var ingredientsList: Array<String> = Array()
-    var instructionsAdded = false
-    var ingredientsAdded = false
+//    var directionsList: Array<String> = Array()
+//    var measurementsList: Array<String> = Array()
+//    var ingredientsList: Array<String> = Array()
+//    var instructionsAdded = false
+//    var ingredientsAdded = false
+    
+    //var instructionsViewController: InstructionsViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("HERE", ingredientsAdded)
-        print("HERE", instructionsAdded)
+//        print("HERE ingredientsAdded", ingredientsAdded)
+//        print("HERE instructionsAdded", instructionsAdded)
         
-        if instructionsAdded == true{
-            instructionsCheckImage.tintColor = UIColor.green
-        }
-        
-        if ingredientsAdded == true{
-            ingredientsCheckImage.tintColor = UIColor.green
-        }
+//        if instructionsAdded == true{
+//            instructionsCheckImage.tintColor = UIColor.green
+//        }
+//
+//        if ingredientsAdded == true{
+//            ingredientsCheckImage.tintColor = UIColor.green
+//        }
 
         // Do any additional setup after loading the view.
+        
+//        let vc = InstructionsViewController(nibName: "InstructionsViewController", bundle: nil)
+//        vc.newPostViewController = self
+        
+//        let vc = SecondaryViewController(nibName: "SecondaryViewController", bundle: nil)
+//        vc.mainViewController = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //print("GETTER", instructionsViewController?.directionsList)
+        
+        //print("HERE HERE HERE HERE", instructionsViewController?.getDirectionsList() ?? [])
+//        print("HERE HERE HERE HERE", getDirectionsList())
+//        print("HERE HERE HERE HERE", getMeasurementsList())
+//        print("HERE HERE HERE HERE", getIngredientsList())
+//
+//        if getDirectionsList().count != 0{
+//            instructionsCheckImage.tintColor = UIColor.green
+//        }
+//
+//        if getIngredientsList().count != 0{
+//            ingredientsCheckImage.tintColor = UIColor.green
+//        }
+    }
+    
+//    func setMeasurementList(list: Array<String>){
+//        measurementsList = list
+//    }
+//
+//    func getMeasurementsList() -> Array<String>{
+//        return measurementsList
+//    }
+//
+//    func setIngredientsList(list: Array<String>){
+//        ingredientsList = list
+//    }
+//
+//    func getIngredientsList() -> Array<String> {
+//        return ingredientsList
+//    }
+//
+//    func setDirectionsList(list: Array<String>){
+//        print("SETTING DIRECTIONS LIST")
+//        directionsList = list
+//    }
+//
+//    func getDirectionsList() -> Array<String> {
+//        return directionsList
+//    }
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onPostButton(_ sender: Any) {
-        let post = PFObject(className: "Posts")
-        let user = PFObject(className: "User")
-        
-        post["author"] = PFUser.current()
-        
-        post["recipeName"] = recipeNameTextView.text!
-        post["recipeDescription"] = recipeDescriptionTextView.text!
-        
-        //pull recipe instrcutions from the recipe storyboard
-        
-        if glutenFreeSwitch.isOn{
-            post["glutenFree"] = true as Bool
-        }else{
-            post["glutenFree"] = false as Bool
-        }
-        
-        if veganSwitch.isOn{
-            post["isVegan"] = true as Bool
-        }else{
-            post["isVegan"] = false as Bool
-        }
-        
-        if nutFreeSwitch.isOn{
-            post["nutFree"] = true as Bool
-        }else{
-            post["nutFree"] = false as Bool
-        }
-        
-        post["difficulty"] = difficultyTextField.text!
-        post["duration"] = durationTextField.text!
-        
-        //pull ingredients list from ingredients storyboard
-        
-        user.add(post, forKey: "postsByUser")
-        
-        post.saveInBackground { (success, error) in
-            if success{
-                self.dismiss(animated: true, completion: nil)
-                print("post saved")
-            }else{
-                print(error!)
+    @IBAction func onNextButton(_ sender: Any) {
+        if recipeNameTextView.text != nil{
+            if recipeDescriptionTextView.text != nil{
+                if difficultyTextField.text != nil{
+                    if durationTextField.text != nil{
+                        performSegue(withIdentifier: "instructionsSegue", sender: nextButton)
+                    }
+                }
             }
         }
     }
     
-    func prepare(for segue: UIStoryboardSegue, sender: UIButton) {
-        if sender == cookingInstructionsButton{
-            let instructionsViewController = segue.destination as! InstructionsViewController
-            instructionsViewController.ingredientsAdded = ingredientsAdded
-            instructionsViewController.ingredientsList = ingredientsList
-            instructionsViewController.directionsList = directionsList
-            instructionsViewController.ingredientsAdded = instructionsAdded
-        }else if sender == ingredientsListButton{
-            let ingredientsViewController = segue.destination as! IngredientPostViewController
-            ingredientsViewController.instructionsAdded = instructionsAdded
-            ingredientsViewController.directionsList = directionsList
-            ingredientsViewController.ingredientsList = ingredientsList
-            ingredientsViewController.ingredientsAdded = ingredientsAdded
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let navigation = segue.destination as? UINavigationController
+        let instructionsViewController = navigation?.topViewController as? InstructionsViewController
+        
+        instructionsViewController?.recipeName = recipeNameTextView.text!
+        instructionsViewController?.recipeDescription = recipeDescriptionTextView.text!
+        if glutenFreeSwitch.isOn{
+            instructionsViewController?.glutenFree = true
+        }else{
+            instructionsViewController?.glutenFree = false
         }
+        if veganSwitch.isOn{
+            instructionsViewController?.vegan = true
+        }else{
+            instructionsViewController?.vegan = false
+        }
+        if nutFreeSwitch.isOn{
+            instructionsViewController?.nutFree = true
+        }else{
+            instructionsViewController?.nutFree = false
+        }
+        instructionsViewController?.difficulty = difficultyTextField.text!
+        instructionsViewController?.duration = durationTextField.text!
+        
     }
+    
+//    @IBAction func onPostButton(_ sender: Any) {
+//        let post = PFObject(className: "Posts")
+//        let user = PFObject(className: "User")
+//        
+//        post["author"] = PFUser.current()
+//        
+//        post["recipeName"] = recipeNameTextView.text!
+//        post["recipeDescription"] = recipeDescriptionTextView.text!
+//        
+//        //pull recipe instrcutions from the recipe storyboard
+//        
+//        if glutenFreeSwitch.isOn{
+//            post["glutenFree"] = true as Bool
+//        }else{
+//            post["glutenFree"] = false as Bool
+//        }
+//        
+//        if veganSwitch.isOn{
+//            post["isVegan"] = true as Bool
+//        }else{
+//            post["isVegan"] = false as Bool
+//        }
+//        
+//        if nutFreeSwitch.isOn{
+//            post["nutFree"] = true as Bool
+//        }else{
+//            post["nutFree"] = false as Bool
+//        }
+//        
+//        post["difficulty"] = difficultyTextField.text!
+//        post["duration"] = durationTextField.text!
+//        
+//        //pull ingredients list from ingredients storyboard
+//        
+//        user.add(post, forKey: "postsByUser")
+//        
+//        post.saveInBackground { (success, error) in
+//            if success{
+//                self.dismiss(animated: true, completion: nil)
+//                print("post saved")
+//            }else{
+//                print(error!)
+//            }
+//        }
+//    }
+    
+//    func prepare(for segue: UIStoryboardSegue, sender: UIButton) {
+//        if sender == cookingInstructionsButton{
+//            let instructionsViewController = segue.destination as! InstructionsViewController
+//            instructionsViewController.ingredientsAdded = ingredientsAdded
+//            instructionsViewController.ingredientsList = ingredientsList
+//            instructionsViewController.directionsList = directionsList
+//            instructionsViewController.ingredientsAdded = instructionsAdded
+//        }else if sender == ingredientsListButton{
+//            let ingredientsViewController = segue.destination as! IngredientPostViewController
+//            ingredientsViewController.instructionsAdded = instructionsAdded
+//            ingredientsViewController.directionsList = directionsList
+//            ingredientsViewController.ingredientsList = ingredientsList
+//            ingredientsViewController.ingredientsAdded = ingredientsAdded
+//        }
+//    }
 
     /*
     // MARK: - Navigation

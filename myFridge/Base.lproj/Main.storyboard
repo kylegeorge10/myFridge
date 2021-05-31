@@ -150,7 +150,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegan_white" translatesAutoresizingMaskIntoConstraints="NO" id="vaC-fC-ox5">
-                                                    <rect key="frame" x="337" y="80" width="34" height="22"/>
+                                                    <rect key="frame" x="335" y="80" width="36" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="vaC-fC-ox5" secondAttribute="height" multiplier="25:22" id="54l-H6-OtX"/>
                                                         <constraint firstAttribute="width" constant="25" id="WvC-1u-AI1"/>
@@ -182,7 +182,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="gluten_white" translatesAutoresizingMaskIntoConstraints="NO" id="hqR-UE-SCQ">
-                                                    <rect key="frame" x="336" y="48" width="34" height="22"/>
+                                                    <rect key="frame" x="334" y="48" width="36" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hqR-UE-SCQ" secondAttribute="height" multiplier="25:22" id="6hP-Tj-aHU"/>
                                                         <constraint firstAttribute="width" constant="25" id="G6t-5v-Xk9"/>
@@ -201,7 +201,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short summary of recipe (restaurant style)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J3Z-uh-qz3">
-                                                    <rect key="frame" x="136" y="64" width="193" height="107"/>
+                                                    <rect key="frame" x="136" y="64" width="191" height="107"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="202" id="cBA-rp-PXN"/>
@@ -211,7 +211,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nut_white" translatesAutoresizingMaskIntoConstraints="NO" id="EVF-cA-xNg">
-                                                    <rect key="frame" x="337" y="115" width="34" height="33"/>
+                                                    <rect key="frame" x="335" y="115" width="36" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="EVF-cA-xNg" secondAttribute="height" multiplier="25:33" id="7ro-of-CCi"/>
                                                         <constraint firstAttribute="width" constant="25" id="8mU-aV-aiw"/>
@@ -219,7 +219,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timeLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLa-je-rQW">
-                                                    <rect key="frame" x="256.33333333333331" y="5" width="72.666666666666686" height="20"/>
+                                                    <rect key="frame" x="254.33333333333334" y="5" width="72.666666666666657" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="0GW-b2-e3V"/>
                                                         <constraint firstAttribute="width" secondItem="xLa-je-rQW" secondAttribute="height" multiplier="69:19" id="ZIE-Su-Hlk"/>
@@ -1246,7 +1246,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2643.0769230769229" y="2713.507109004739"/>
+            <point key="canvasLocation" x="3572.3076923076924" y="2713.507109004739"/>
         </scene>
         <!--FollowingViewController-->
         <scene sceneID="w1u-qf-cSm">
@@ -1292,7 +1292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N71-CQ-YDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4583" y="2733"/>
+            <point key="canvasLocation" x="5510.7692307692305" y="2732.7014218009476"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CvO-Kn-vRz">
@@ -1507,7 +1507,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMi-BG-4Lq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3580" y="2733"/>
+            <point key="canvasLocation" x="4509.2307692307695" y="2732.7014218009476"/>
         </scene>
         <!--Settings-->
         <scene sceneID="g8l-zW-z9l">
@@ -1586,7 +1586,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA8-We-L3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rfJ-yW-Yqe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7296.9230769230762" y="3499.7630331753553"/>
+            <point key="canvasLocation" x="8226.1538461538457" y="3499.7630331753553"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nfl-r3-KNr">
@@ -1744,7 +1744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCA-Rr-okE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8327.6923076923067" y="3499.7630331753553"/>
+            <point key="canvasLocation" x="9256.9230769230762" y="3499.7630331753553"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wzJ-I1-B3E">
@@ -1766,7 +1766,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijv-zm-H0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6356.9230769230771" y="3500.4739336492889"/>
+            <point key="canvasLocation" x="7286.1538461538457" y="3500.4739336492889"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BIp-uz-jh6">
@@ -1862,134 +1862,103 @@
         <!--NewPostViewController-->
         <scene sceneID="4WH-K1-Dih">
             <objects>
-                <viewController title="NewPostViewController" id="4nK-53-TVx" customClass="NewPostViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostViewController" title="NewPostViewController" id="4nK-53-TVx" customClass="NewPostViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pKI-EI-qwQ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-Bt-7x1">
-                                <rect key="frame" x="0.0" y="88" width="128" height="128"/>
+                                <rect key="frame" x="0.0" y="88" width="165" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL4-eB-Puf">
-                                <rect key="frame" x="16" y="241" width="100" height="28"/>
+                                <rect key="frame" x="16" y="277" width="100" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Recipe name..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2AG-DF-ahp">
-                                <rect key="frame" x="16" y="270" width="358" height="45"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2AG-DF-ahp">
+                                <rect key="frame" x="16" y="313" width="358" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCh-kY-3HO">
-                                <rect key="frame" x="16" y="323" width="140" height="28"/>
+                                <rect key="frame" x="16" y="366" width="140" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Recipe description..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hxi-6u-4ib">
-                                <rect key="frame" x="16" y="352" width="358" height="59"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hxi-6u-4ib">
+                                <rect key="frame" x="16" y="402" width="358" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvC-nB-Mko">
-                                <rect key="frame" x="12" y="409" width="218" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Click To Add Cooking Instructions">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Xer-Sz-0Ge" kind="presentation" identifier="instructionsSegue" modalPresentationStyle="fullScreen" id="d4L-0f-ECh"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7e6-dC-Gdx">
-                                <rect key="frame" x="16" y="457" width="49" height="31"/>
+                                <rect key="frame" x="16" y="507" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xVJ-iE-UA2">
-                                <rect key="frame" x="16" y="496" width="49" height="31"/>
+                                <rect key="frame" x="16" y="546" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p9a-dT-ddY">
-                                <rect key="frame" x="16" y="535" width="49" height="31"/>
+                                <rect key="frame" x="16" y="585" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Difficulty out of 5..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOJ-pH-P7A">
-                                <rect key="frame" x="16" y="574" width="350" height="34"/>
+                                <rect key="frame" x="16" y="645" width="358" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRw-AM-N5I">
-                                <rect key="frame" x="16" y="658" width="183" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Click To Add Ingredients List">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xlm-OQ-HgY" kind="presentation" modalPresentationStyle="fullScreen" id="Y0H-U0-WjQ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total cooking duration..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-MW-7Aj">
-                                <rect key="frame" x="16" y="616" width="350" height="34"/>
+                                <rect key="frame" x="16" y="687" width="358" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gluten Free?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb3-Wu-RDj">
-                                <rect key="frame" x="71" y="458" width="83" height="28"/>
+                                <rect key="frame" x="71" y="508" width="83" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegan?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdK-Ge-GUm">
-                                <rect key="frame" x="71" y="497" width="51" height="28"/>
+                                <rect key="frame" x="71" y="547" width="51" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nut Free?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnX-bP-U1u">
-                                <rect key="frame" x="71" y="536" width="66" height="28"/>
+                                <rect key="frame" x="71" y="586" width="66" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9z-Jx-fVP">
-                                <rect key="frame" x="170" y="740" width="45" height="52"/>
+                                <rect key="frame" x="174" y="745" width="43" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
-                                <state key="normal" title="Post">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="onPostButton:" destination="4nK-53-TVx" eventType="touchUpInside" id="bkB-DK-7P8"/>
+                                    <action selector="onNextButton:" destination="4nK-53-TVx" eventType="touchUpInside" id="PRq-gr-RGI"/>
+                                    <segue destination="Xer-Sz-0Ge" kind="presentation" identifier="instructionsSegue" modalPresentationStyle="fullScreen" id="KlU-Ui-WSv"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="02F-UT-bHU">
-                                <rect key="frame" x="238" y="418.33333333333394" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TAu-wD-B6P">
-                                <rect key="frame" x="207" y="667.33333333333394" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4e1-hX-W4X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2003,17 +1972,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cookingInstructionsButton" destination="kvC-nB-Mko" id="X6S-h4-ZMj"/>
                         <outlet property="difficultyTextField" destination="eOJ-pH-P7A" id="GNU-EZ-A5O"/>
                         <outlet property="durationTextField" destination="kHm-MW-7Aj" id="XKt-rd-cO8"/>
                         <outlet property="glutenFreeLabel" destination="Tb3-Wu-RDj" id="lfN-v6-M0U"/>
                         <outlet property="glutenFreeSwitch" destination="7e6-dC-Gdx" id="Z1T-fs-U5F"/>
-                        <outlet property="ingredientsCheckImage" destination="TAu-wD-B6P" id="D7L-bB-8eb"/>
-                        <outlet property="ingredientsListButton" destination="mRw-AM-N5I" id="4kJ-NE-WeR"/>
-                        <outlet property="instructionsCheckImage" destination="02F-UT-bHU" id="5q5-6V-KuQ"/>
+                        <outlet property="nextButton" destination="F9z-Jx-fVP" id="QCR-Su-9fh"/>
                         <outlet property="nutFreeLabel" destination="XnX-bP-U1u" id="QaQ-20-Ncq"/>
                         <outlet property="nutFreeSwitch" destination="p9a-dT-ddY" id="Qrm-Zp-C5a"/>
-                        <outlet property="postButton" destination="F9z-Jx-fVP" id="T8i-JS-XZu"/>
                         <outlet property="postImage" destination="aaM-Bt-7x1" id="dKd-ta-FSK"/>
                         <outlet property="recipeDescriptionLabel" destination="FCh-kY-3HO" id="5Yg-OR-MtI"/>
                         <outlet property="recipeDescriptionTextView" destination="Hxi-6u-4ib" id="2Sn-uW-dBW"/>
@@ -2030,7 +1995,7 @@
         <!--Instructions-->
         <scene sceneID="TA9-tW-fNb">
             <objects>
-                <viewController id="1XM-am-gOE" customClass="InstructionsViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InstructionsViewController" id="1XM-am-gOE" customClass="InstructionsViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o8k-Qg-jxT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2049,18 +2014,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezE-9u-eLM">
-                                <rect key="frame" x="175" y="775" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                <state key="normal" title="Finish">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="onFinishButton:" destination="1XM-am-gOE" eventType="touchUpInside" id="6vn-pB-Jnz"/>
-                                    <segue destination="6DJ-fT-rXx" kind="presentation" identifier="instructionsSegue" modalPresentationStyle="fullScreen" id="SCj-Tn-QFQ"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXX-wA-oLe">
                                 <rect key="frame" x="16" y="179" width="358" height="588"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2093,6 +2046,18 @@
                                     <action selector="onAddButton:" destination="1XM-am-gOE" eventType="touchUpInside" id="frg-TY-MeK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezE-9u-eLM">
+                                <rect key="frame" x="178" y="775" width="35" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNextButton:" destination="1XM-am-gOE" eventType="touchUpInside" id="PUP-18-RFw"/>
+                                    <segue destination="xlm-OQ-HgY" kind="presentation" identifier="ingredientsSegue" modalPresentationStyle="fullScreen" id="1sv-zK-L0p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y6O-Sl-jpu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2108,7 +2073,7 @@
                     <connections>
                         <outlet property="addButton" destination="76D-g7-Kp0" id="tWn-VT-TcI"/>
                         <outlet property="clearAllButton" destination="8WC-7Q-XZr" id="bTc-p8-WrK"/>
-                        <outlet property="finishButton" destination="ezE-9u-eLM" id="GzW-Cj-7gf"/>
+                        <outlet property="nextButton" destination="ezE-9u-eLM" id="Ed9-33-iMD"/>
                         <outlet property="nextStepTextField" destination="5IF-Cg-ziy" id="Nwi-ES-W4E"/>
                         <outlet property="stepLabel" destination="y1q-L2-FwN" id="Vjd-sp-rzW"/>
                         <outlet property="stepTextView" destination="DXX-wA-oLe" id="cUD-9u-5b3"/>
@@ -2117,7 +2082,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBp-me-RIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-669.23076923076917" y="2597.6303317535544"/>
+            <point key="canvasLocation" x="-874" y="2972"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="Km7-sA-no6">
@@ -2127,18 +2092,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-6i-oit">
-                                <rect key="frame" x="174" y="773" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                <state key="normal" title="Finish">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="onFinishButton:" destination="Fg7-cv-6Ze" eventType="touchUpInside" id="8Fr-fr-JrQ"/>
-                                    <segue destination="6DJ-fT-rXx" kind="presentation" identifier="ingredientsSegue" modalPresentationStyle="fullScreen" id="hMh-ky-3Cd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Measurement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K44-8v-S0z">
                                 <rect key="frame" x="16" y="98" width="64" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2198,6 +2151,18 @@
                                     <action selector="onAddButton:" destination="Fg7-cv-6Ze" eventType="touchUpInside" id="891-QI-9jn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-6i-oit">
+                                <rect key="frame" x="178" y="773" width="35" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNextButton:" destination="Fg7-cv-6Ze" eventType="touchUpInside" id="6Qp-dn-1hS"/>
+                                    <segue destination="MGK-Td-05T" kind="presentation" identifier="postSegue" modalPresentationStyle="fullScreen" id="TVq-2u-bfN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f5q-9D-JOR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2213,18 +2178,207 @@
                     <connections>
                         <outlet property="addButton" destination="10A-cp-Syh" id="TUF-E8-6Vh"/>
                         <outlet property="clearAllButton" destination="6gr-OG-UcS" id="LLF-Sl-4UO"/>
-                        <outlet property="finishButton" destination="Trv-6i-oit" id="At0-Xk-0G9"/>
                         <outlet property="ingredientLabel" destination="fOz-IL-Ciz" id="nRN-N0-bUW"/>
                         <outlet property="ingredientListTextView" destination="oOb-xI-qc0" id="MVM-AT-jct"/>
                         <outlet property="ingredientTextField" destination="Y3d-uh-7KF" id="wqV-z6-EJu"/>
                         <outlet property="measurementLabel" destination="K44-8v-S0z" id="ema-q9-41j"/>
                         <outlet property="measurementTextField" destination="4ha-ZG-CDD" id="cIl-hC-KTy"/>
+                        <outlet property="nextButton" destination="Trv-6i-oit" id="rXO-7c-4iK"/>
                         <outlet property="undoLastButton" destination="DWk-3b-hOY" id="vYp-eg-n9K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAi-Bn-0cL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-669.23076923076917" y="3283.649289099526"/>
+            <point key="canvasLocation" x="522" y="2972"/>
+        </scene>
+        <!--FinalPostViewController-->
+        <scene sceneID="yei-Pi-EOn">
+            <objects>
+                <viewController title="FinalPostViewController" id="Scj-kT-wRQ" customClass="finalPostViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E3G-dK-sxF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exclamationmark.triangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="98A-rc-rEP">
+                                <rect key="frame" x="0.0" y="88" width="165" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qun-KI-YWW">
+                                <rect key="frame" x="16" y="277" width="100" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9yk-9x-poa">
+                                <rect key="frame" x="16" y="313" width="358" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPy-Iq-8zZ">
+                                <rect key="frame" x="16" y="366" width="140" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MsC-6a-OkZ">
+                                <rect key="frame" x="16" y="402" width="358" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ile-iA-yNa">
+                                <rect key="frame" x="16" y="455" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gluten Free?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7I-KJ-o3X">
+                                <rect key="frame" x="71" y="456" width="83" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nl4-aC-njj">
+                                <rect key="frame" x="16" y="494" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegan?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-KS-bz8">
+                                <rect key="frame" x="71" y="495" width="51" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OMX-XJ-vEt">
+                                <rect key="frame" x="16" y="533" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nut Free?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7C-uV-JKw">
+                                <rect key="frame" x="71" y="534" width="66" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4V-kV-lxO">
+                                <rect key="frame" x="16" y="580" width="68" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmF-qb-pHy">
+                                <rect key="frame" x="81" y="584" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Difficulty" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBE-8F-Tqb">
+                                <rect key="frame" x="92" y="577" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d8-a4-5cd">
+                                <rect key="frame" x="16" y="616" width="66" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B10-KE-GYg">
+                                <rect key="frame" x="90" y="613" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ4-FB-vlr">
+                                <rect key="frame" x="16" y="652" width="90" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ikj-i0-bHb">
+                                <rect key="frame" x="114" y="655" width="260" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOg-jJ-ubX">
+                                <rect key="frame" x="16" y="707" width="83" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nB2-H4-5Me">
+                                <rect key="frame" x="114" y="707" width="240" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-RS-ecC">
+                                <rect key="frame" x="177" y="766" width="36" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPostButton:" destination="Scj-kT-wRQ" eventType="touchUpInside" id="j7u-gz-jKy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e3v-9g-04C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post" id="Wqw-rP-WdE">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left" catalog="system" id="QNb-wD-7Q3">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancel:" destination="Scj-kT-wRQ" id="RpT-wh-lVC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="difficultyLabel" destination="l4V-kV-lxO" id="eLm-gm-HL6"/>
+                        <outlet property="difficultyTextField" destination="iBE-8F-Tqb" id="eHx-fB-qg3"/>
+                        <outlet property="durationLabel" destination="6d8-a4-5cd" id="c4W-pH-d4v"/>
+                        <outlet property="durationTextField" destination="B10-KE-GYg" id="YF1-P8-xoW"/>
+                        <outlet property="glutenFreeLabel" destination="T7I-KJ-o3X" id="YwK-82-YT5"/>
+                        <outlet property="glutenFreeSwitch" destination="Ile-iA-yNa" id="Gge-FB-hfc"/>
+                        <outlet property="ingredientsLabel" destination="WOg-jJ-ubX" id="9ZD-Fi-5SL"/>
+                        <outlet property="ingredientsTextView" destination="nB2-H4-5Me" id="KI9-fT-joq"/>
+                        <outlet property="instructionsLabel" destination="bQ4-FB-vlr" id="Tvf-kl-3o4"/>
+                        <outlet property="instructionsTextView" destination="ikj-i0-bHb" id="EP7-Gn-stB"/>
+                        <outlet property="nutFreeLabel" destination="J7C-uV-JKw" id="6D0-WX-ZtH"/>
+                        <outlet property="nutFreeSwitch" destination="OMX-XJ-vEt" id="aZ7-mZ-LZj"/>
+                        <outlet property="postButton" destination="Aex-RS-ecC" id="6R5-Tr-8v4"/>
+                        <outlet property="postImage" destination="98A-rc-rEP" id="AXJ-zW-845"/>
+                        <outlet property="recipeDescriptionLabel" destination="XPy-Iq-8zZ" id="2Ng-Jz-kKi"/>
+                        <outlet property="recipeDescriptionTextView" destination="MsC-6a-OkZ" id="Hzp-ff-qaJ"/>
+                        <outlet property="recipeNameLabel" destination="Qun-KI-YWW" id="EM3-Eh-xIx"/>
+                        <outlet property="recipeNameTextView" destination="9yk-9x-poa" id="7OF-S4-fYj"/>
+                        <outlet property="veganLabel" destination="4VX-KS-bz8" id="Aok-SM-8f2"/>
+                        <outlet property="veganSwitch" destination="Nl4-aC-njj" id="Xe9-tG-xeL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7TJ-2L-kST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904.6153846153845" y="2971.5639810426537"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YwU-r9-lLj">
@@ -2253,6 +2407,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xer-Sz-0Ge" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="onx-dX-BzB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X6R-uD-yda">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2268,7 +2423,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3v-cr-cAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1369" y="2598"/>
+            <point key="canvasLocation" x="-1586" y="2972"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LL7-Ff-zfT">
@@ -2290,11 +2445,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbF-De-Dy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1369" y="3284"/>
+            <point key="canvasLocation" x="-215" y="2972"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fzQ-ED-B4t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MGK-Td-05T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TqC-lX-sja">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
+                            <color key="textColor" systemColor="systemOrangeColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Scj-kT-wRQ" kind="relationship" relationship="rootViewController" id="7lo-Ds-bAB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTT-qC-xK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211" y="2972"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SCj-Tn-QFQ"/>
         <segue reference="Bsy-Vn-bKJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGreenColor"/>
@@ -2303,9 +2479,9 @@
         <image name="arrow.2.squarepath" catalog="system" width="128" height="89"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="cooker" width="512" height="512"/>
         <image name="exclamationmark.bubble" catalog="system" width="128" height="110"/>
+        <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
         <image name="fridge 1" width="100" height="100"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="gluten_white" width="512" height="512"/>
@@ -2341,6 +2517,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
