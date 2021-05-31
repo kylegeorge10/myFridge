@@ -12,25 +12,70 @@ class InstructionsViewController: UIViewController {
     @IBOutlet weak var nextStepTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var stepTextView: UITextView!
-    @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var clearAllButton: UIButton!
     @IBOutlet weak var undoLastButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var postImage: UIImage?
+    var recipeName: String = ""
+    var recipeDescription: String = ""
+    var glutenFree: Bool?
+    var vegan: Bool?
+    var nutFree: Bool?
+    var difficulty: String = ""
+    var duration: String = ""
     
     var stepNumber = 1
     var directionsList: Array<String> = Array()
-    var instructionsAdded = false
-    var ingredientsList: Array<String> = Array()
-    var ingredientsAdded = false
+//    var instructionsAdded = false
+//    var ingredientsList: Array<String> = Array()
+//    var ingredientsAdded = false
+    
+    //var newPostViewController: NewPostViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("HERE", ingredientsList)
+        print("HEREE name", recipeName)
+        
+        //print("HERE ingredientsList", ingredientsList)
+        
+        //print(directionsList)
+        
+        if directionsList.count != 0{
+            var i = 1
+            for step in directionsList{
+                if i == 1{
+                    stepTextView.insertText(String(i) + ". " + step)
+                }else{
+                    stepTextView.insertText("\n")
+                    stepTextView.insertText(String(i) + ". " + step)
+                }
+                i += 1
+            }
+        }
         
         stepNumber = 1
 
         // Do any additional setup after loading the view.
+        
+        //print(getDirectionsList())
+        
+//        let vc = NewPostViewController(nibName: "NewPostViewController", bundle: nil)
+//        vc.instructionsViewController = self
     }
+    
+//    func setDirectionsList(list: Array<String>){
+//        print("SET")
+//        directionsList = list
+//        print(directionsList)
+//    }
+//
+//    func getDirectionsList() -> Array<String>{
+//        print("GET")
+//        print(directionsList)
+//        return directionsList
+//    }
     
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -76,23 +121,69 @@ class InstructionsViewController: UIViewController {
         nextStepTextField.placeholder = "Add Step " + String(stepNumber)
     }
     
-    @IBAction func onFinishButton(_ sender: Any) {
-        //push the directionsList to the main post view controller
-        
-        performSegue(withIdentifier: "instructionsSegue", sender: finishButton)
+    @IBAction func onNextButton(_ sender: Any) {
+        if directionsList.count != 0{
+            performSegue(withIdentifier: "ingredientsSegue", sender: nextButton)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigation = segue.destination as? UINavigationController
+        let ingredientsViewController = navigation?.topViewController as? IngredientPostViewController
         
-        let navigation = segue.destination as! UINavigationController
-        let newPostViewController = navigation.topViewController as! NewPostViewController
-        newPostViewController.instructionsAdded = true
-        newPostViewController.directionsList = directionsList
-        if ingredientsList.count != 0{
-            newPostViewController.ingredientsAdded = true
-            newPostViewController.ingredientsList = ingredientsList
-        }
+        ingredientsViewController?.postImage = self.postImage
+        ingredientsViewController?.recipeName = self.recipeName
+        ingredientsViewController?.recipeDescription = self.recipeDescription
+        ingredientsViewController?.glutenFree = self.glutenFree
+        ingredientsViewController?.vegan = self.vegan
+        ingredientsViewController?.nutFree = self.nutFree
+        ingredientsViewController?.difficulty = self.difficulty
+        ingredientsViewController?.duration = self.duration
+        ingredientsViewController?.directionsList = self.directionsList
     }
+    
+//    @IBAction func onFinishButton(_ sender: Any) {
+//        //push the directionsList to the main post view controller
+//        
+//        //print("DIRECTIONS LIST", directionsList)
+//        
+//        //setDirectionsList(list: directionsList)
+//        
+//        //newPostViewController?.setDirectionsList(list: directionsList)
+//        
+////        _ = navigationController?.popToRootViewController(animated: true)
+////        _ = navigationController?.popViewController(animated: true)
+////        dismiss(animated: true) {
+////            self.newPostViewController?.setDirectionsList(list: self.directionsList)
+////        }
+//        
+////        func prepare(for segue: UIStoryboardSegue, sender: UIButton){
+////            let newPostViewController = segue.destination as! NewPostViewController
+////            newPostViewController.directionsList = self.directionsList
+////        }
+//        
+//        //performSegue(withIdentifier: "instructionsSegue", sender: finishButton)
+//    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//
+//
+////        let newPostViewController = segue.destination as! NewPostViewController
+////        newPostViewController.directionsList = directionsList
+////        newPostViewController.instructionsAdded = true
+////        newPostViewController.ingredientsAdded = ingredientsAdded
+////        newPostViewController.ingredientsList = ingredientsList
+//
+////        let navigation = segue.destination as! UINavigationController
+////        let newPostViewController = navigation.topViewController as! NewPostViewController
+////        newPostViewController.instructionsAdded = true
+////        newPostViewController.directionsList = directionsList
+////        if ingredientsList.count != 0{
+////            newPostViewController.ingredientsAdded = true
+////            newPostViewController.ingredientsList = ingredientsList
+////        }
+//    }
     
     /*
     // MARK: - Navigation
