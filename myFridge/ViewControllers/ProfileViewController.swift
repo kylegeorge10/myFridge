@@ -15,10 +15,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var userTableView: UITableView!
     
     @IBOutlet weak var usernameLabel: UILabel!
-        
+    @IBOutlet weak var postNumLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var fullnameLabel: UILabel!
+    
     var currentUser = PFUser.current()
+    
     var posts = [PFObject]()
-
+    
+    var userPosts = [PFObject]()
+    
     
     override func viewDidLoad() {
           super.viewDidLoad()
@@ -32,7 +38,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         userTableView.delegate = self
         userTableView.dataSource = self
         
-        
       }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +45,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
         if currentUser != nil {
           // Do stuff with the user
-            print(currentUser as Any)
+            
             usernameLabel.text = currentUser!["username"] as? String
             if currentUser?["profileImage"] != nil{
                 let imageFile = currentUser?["profileImage"] as! PFFileObject
@@ -60,51 +65,61 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         query.includeKey("author")
         
         query.limit = 20
-        query.findObjectsInBackground { (posts, error) in
+        query.findObjectsInBackground { [self] (posts, error) in
             if posts != nil{
                 
+                userPosts.removeAll()
                 self.posts = posts!
-                
+                for allPosts in self.posts{
+                    if (allPosts["author"] as AnyObject).username == currentUser?.username{
+                        //print("true")
+                        userPosts.append(allPosts)
+                    }else{
+                        print("not the current users post")
+                    }
+                }
+                //print(userPosts)
                 self.userTableView.reloadData()
+                postNumLabel.text = String(userPosts.count)
             }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return posts.count
+        return userPosts.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = userTableView.dequeueReusableCell(withIdentifier: "userPostCell") as! userPostCell
+        
+        
         if (posts[indexPath.row]["author"] as AnyObject).username! == currentUser?.username{
-            let post = posts[indexPath.row]
-            //print(post)
-            
+            let post = userPosts[indexPath.row]
             cell.recipeNameLabel.text = post["recipeName"] as? String
             cell.summaryLabel.text = post["recipeSummary"] as? String
             
+            let theDate = post.createdAt
+            //print(theDate as Any)
+            let formatter = DateFormatter()
+            formatter.locale = Locale(identifier: "en_US")
+            formatter.dateStyle = .long
+
+            let fDate = formatter.string(from: theDate!)
+            cell.dateLabel.text = fDate
+
             let imageFile = post["image"] as! PFFileObject
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
-            
-            cell.userPostImageView.af_setImage(withURL: url)
 
+            cell.userPostImageView.af_setImage(withURL: url)
+            
         }
         return cell
     }
     
+    
     @IBAction func onCameraButton(_ sender: Any) {
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.allowsEditing = true
-//
-//        if UIImagePickerController.isSourceTypeAvailable(.camera){
-//            picker.sourceType = .camera
-//        }else{
-//            picker.sourceType = .photoLibrary
-//        }
-//        present(picker, animated: true, completion: nil)
         let picker = UIImagePickerController()
             picker.delegate = self
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
