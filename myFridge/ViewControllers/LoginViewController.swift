@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         signInButton.layer.cornerRadius = signInButton.frame.size.width/5
-        signUpButton.layer.cornerRadius = signUpButton.frame.size.width/5
+        signUpButton.layer.cornerRadius = signUpButton.frame.size.width/9
         
 //        self.usernameField.delegate = self
 //        self.passwordField.delegate = self

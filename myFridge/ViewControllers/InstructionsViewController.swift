@@ -36,6 +36,7 @@ class InstructionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         print("HEREE name", recipeName)
         
         //print("HERE ingredientsList", ingredientsList)
@@ -63,6 +64,11 @@ class InstructionsViewController: UIViewController {
         
 //        let vc = NewPostViewController(nibName: "NewPostViewController", bundle: nil)
 //        vc.instructionsViewController = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Dismiss the keyboard
+        stepTextView.resignFirstResponder()
     }
     
 //    func setDirectionsList(list: Array<String>){

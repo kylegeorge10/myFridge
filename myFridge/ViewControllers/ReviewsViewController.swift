@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addReviewButton: UIButton!
     @IBOutlet weak var reviewTextView: UITextView!
@@ -20,7 +20,11 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
 
         tableView.dataSource = self
         tableView.delegate = self
+        
+        //keyboard: adjustment
+        self.addKeyboardObserver()
         // Do any additional setup after loading the view.
+        reviewTextView.layer.cornerRadius = reviewTextView.frame.size.width/19
         
 //        let currPost = post
 //        func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -106,5 +110,7 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
+

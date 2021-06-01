@@ -46,6 +46,13 @@ class IngredientPostViewController: UIViewController {
         ingredientNumber = 1
 
         // Do any additional setup after loading the view.
+        self.addKeyboardObserver()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Dismiss the keyboard
+        measurementTextField.resignFirstResponder()
+        ingredientTextField.resignFirstResponder()
     }
     
     func getMeasurementList() -> Array<String>{

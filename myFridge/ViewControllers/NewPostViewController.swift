@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class NewPostViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class NewPostViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var recipeNameTextView: UITextView!
@@ -34,6 +34,19 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate &
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recipeNameTextView.layer.cornerRadius = recipeNameLabel.frame.size.width/7.5
+        recipeDescriptionTextView.layer.cornerRadius = recipeDescriptionTextView.frame.size.width/20
+        nextButton.layer.cornerRadius = nextButton.frame.size.width/6.5
+        nextButton.layer.borderColor = UIColor.systemOrange.cgColor
+        nextButton.layer.borderWidth = 2.5
+        //customization of the image
+        postImage.layer.cornerRadius = postImage.frame.size.width/15
+        postImage.layer.borderColor = UIColor.systemGreen.cgColor
+        postImage.layer.borderWidth = 2
+        
+        //keyboard: adjustment.
+        self.addKeyboardObserver()
+        
         
 //        print("HERE ingredientsAdded", ingredientsAdded)
 //        print("HERE instructionsAdded", instructionsAdded)
@@ -53,6 +66,14 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate &
         
 //        let vc = SecondaryViewController(nibName: "SecondaryViewController", bundle: nil)
 //        vc.mainViewController = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Dismiss the keyboard
+        recipeNameTextView.resignFirstResponder()
+        recipeDescriptionTextView.resignFirstResponder()
+        durationTextField.resignFirstResponder()
+        difficultyTextField.resignFirstResponder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
