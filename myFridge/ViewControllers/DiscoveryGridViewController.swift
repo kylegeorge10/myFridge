@@ -206,7 +206,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 
                 cell.recipeNameLabel.text = post["recipeName"] as? String
                 
-                let imageFile = post["image"] as! PFFileObject
+                let imageFile = post["postImage"] as! PFFileObject
                 let urlString = imageFile.url!
                 let url = URL(string: urlString)!
                 
