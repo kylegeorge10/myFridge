@@ -30,7 +30,7 @@ class PostingCompleteViewController: UIViewController {
         animationViewBottom.play()
         
         
-        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(timeaction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(timeaction), userInfo: nil, repeats: true)
     }
     
     @objc func timeaction(){

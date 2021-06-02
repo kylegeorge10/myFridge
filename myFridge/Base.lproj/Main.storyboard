@@ -2871,46 +2871,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank You For Sharing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-Kp-LPg">
-                                <rect key="frame" x="5" y="88" width="380" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You For Sharing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-Kp-LPg">
+                                <rect key="frame" x="5" y="88" width="380" height="57.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="36"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please wait, you are being redirected..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2R-Hq-Imp">
-                                <rect key="frame" x="5" y="764" width="380" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait, you are being redirected..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2R-Hq-Imp">
+                                <rect key="frame" x="5" y="444" width="380" height="21"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Recipe Is Now Online!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnp-2S-NIQ">
-                                <rect key="frame" x="5" y="160" width="380" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
-                                <color key="textColor" systemColor="systemGreenColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-o9-4YY" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="16" y="213" width="358" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-o9-4YY" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="16" y="154" width="358" height="217"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="postcomplete1"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XLE-e0-PAd" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="16" y="440" width="358" height="298"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLE-e0-PAd" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="14" y="473" width="360" height="288"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="postcomplete2"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Recipe Is Now Online!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnp-2S-NIQ">
+                                <rect key="frame" x="5" y="379" width="380" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VNK-EQ-Yfo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="08f-3j-FFh"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Dsm-o9-4YY" secondAttribute="bottom" constant="473" id="2yD-yI-kgx"/>
+                            <constraint firstItem="08f-3j-FFh" firstAttribute="trailing" secondItem="XLE-e0-PAd" secondAttribute="trailing" constant="16" id="40R-jg-H1E"/>
+                            <constraint firstItem="s2R-Hq-Imp" firstAttribute="top" secondItem="XLE-e0-PAd" secondAttribute="bottom" constant="-317" id="93b-4M-OHY"/>
+                            <constraint firstItem="Cnp-2S-NIQ" firstAttribute="top" secondItem="Dsm-o9-4YY" secondAttribute="bottom" constant="8" symbolic="YES" id="Bhz-gL-nfp"/>
+                            <constraint firstItem="XLE-e0-PAd" firstAttribute="top" secondItem="Dsm-o9-4YY" secondAttribute="bottom" constant="102" id="HVD-Ek-u3q"/>
+                            <constraint firstItem="Cnp-2S-NIQ" firstAttribute="leading" secondItem="s2R-Hq-Imp" secondAttribute="leading" id="Jld-Z4-CdA"/>
+                            <constraint firstItem="08f-3j-FFh" firstAttribute="trailing" secondItem="Dsm-o9-4YY" secondAttribute="trailing" constant="16" id="Pe8-Lt-DCV"/>
+                            <constraint firstItem="s2R-Hq-Imp" firstAttribute="leading" secondItem="08f-3j-FFh" secondAttribute="leading" constant="5" id="U83-h4-LXo"/>
+                            <constraint firstItem="Cnp-2S-NIQ" firstAttribute="trailing" secondItem="s2R-Hq-Imp" secondAttribute="trailing" id="YXu-NJ-1eT"/>
+                            <constraint firstItem="XLE-e0-PAd" firstAttribute="leading" secondItem="08f-3j-FFh" secondAttribute="leading" constant="14" id="bS2-nW-lCE"/>
+                            <constraint firstItem="08f-3j-FFh" firstAttribute="bottom" secondItem="s2R-Hq-Imp" secondAttribute="bottom" constant="345" id="dto-vs-5Sh"/>
+                            <constraint firstItem="gJ2-Kp-LPg" firstAttribute="leading" secondItem="08f-3j-FFh" secondAttribute="leading" constant="5" id="fVc-aC-9T6"/>
+                            <constraint firstItem="Dsm-o9-4YY" firstAttribute="leading" secondItem="08f-3j-FFh" secondAttribute="leading" constant="16" id="ghQ-6A-NMX"/>
+                            <constraint firstItem="Dsm-o9-4YY" firstAttribute="top" secondItem="08f-3j-FFh" secondAttribute="top" constant="66" id="ibB-ZO-a91"/>
+                            <constraint firstItem="gJ2-Kp-LPg" firstAttribute="top" secondItem="08f-3j-FFh" secondAttribute="top" id="knD-4E-AHo"/>
+                            <constraint firstItem="08f-3j-FFh" firstAttribute="trailing" secondItem="gJ2-Kp-LPg" secondAttribute="trailing" constant="5" id="rvE-Wq-dLB"/>
+                            <constraint firstItem="08f-3j-FFh" firstAttribute="trailing" secondItem="s2R-Hq-Imp" secondAttribute="trailing" constant="5" id="trP-5f-pSD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9DG-7K-VSU"/>
                     <connections>
