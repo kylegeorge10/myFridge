@@ -47,6 +47,23 @@ class IngredientPostViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.addKeyboardObserver()
+        ingredientListTextView.layer.cornerRadius = ingredientListTextView.frame.size.width/9.5
+        
+        nextButton.layer.cornerRadius = nextButton.frame.size.width/6.5
+        nextButton.layer.borderColor = UIColor.systemOrange.cgColor
+        nextButton.layer.borderWidth = 2.5
+        
+        clearAllButton.layer.cornerRadius = clearAllButton.frame.size.width/6.5
+        clearAllButton.layer.borderColor = UIColor.systemGreen.cgColor
+        clearAllButton.layer.borderWidth = 1
+        
+        undoLastButton.layer.cornerRadius = undoLastButton.frame.size.width/6.5
+        undoLastButton.layer.borderColor = UIColor.systemGreen.cgColor
+        undoLastButton.layer.borderWidth = 1
+        
+        addButton.layer.cornerRadius = addButton.frame.size.width/6.5
+        addButton.layer.borderColor = UIColor.systemGreen.cgColor
+        addButton.layer.borderWidth = 1.5
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

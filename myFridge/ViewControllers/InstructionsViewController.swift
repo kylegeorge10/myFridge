@@ -38,6 +38,23 @@ class InstructionsViewController: UIViewController {
         
         
         print("HEREE name", recipeName)
+        stepTextView.layer.cornerRadius = stepTextView.frame.size.width/15
+        
+        nextButton.layer.cornerRadius = nextButton.frame.size.width/6.5
+        nextButton.layer.borderColor = UIColor.systemOrange.cgColor
+        nextButton.layer.borderWidth = 2.5
+        
+        clearAllButton.layer.cornerRadius = clearAllButton.frame.size.width/6.5
+        clearAllButton.layer.borderColor = UIColor.systemGreen.cgColor
+        clearAllButton.layer.borderWidth = 1
+        
+        undoLastButton.layer.cornerRadius = undoLastButton.frame.size.width/6.5
+        undoLastButton.layer.borderColor = UIColor.systemGreen.cgColor
+        undoLastButton.layer.borderWidth = 1
+        
+        addButton.layer.cornerRadius = addButton.frame.size.width/6.5
+        addButton.layer.borderColor = UIColor.systemGreen.cgColor
+        addButton.layer.borderWidth = 1.5
         
         //print("HERE ingredientsList", ingredientsList)
         
@@ -68,7 +85,7 @@ class InstructionsViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Dismiss the keyboard
-        stepTextView.resignFirstResponder()
+        nextStepTextField.resignFirstResponder()
     }
     
 //    func setDirectionsList(list: Array<String>){

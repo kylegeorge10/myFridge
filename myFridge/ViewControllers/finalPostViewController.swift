@@ -50,6 +50,12 @@ class finalPostViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.addKeyboardObserver()
+        
+        postButton.layer.cornerRadius = postButton.frame.size.width/6.5
+        postButton.layer.borderColor = UIColor.systemOrange.cgColor
+        postButton.layer.borderWidth = 2.5
+        
         if newPostImage == nil{
             postImage.image = UIImage(systemName: "exclamationmark.triangle")
         }else{
@@ -95,6 +101,14 @@ class finalPostViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Dismiss the keyboard
+        ingredientsTextView.resignFirstResponder()
+        instructionsTextView.resignFirstResponder()
+        difficultyTextField.resignFirstResponder()
+        durationTextField.resignFirstResponder()
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -178,7 +192,7 @@ class finalPostViewController: UIViewController {
         
         post.saveInBackground { (success, error) in
             if success{
-                self.dismiss(animated: true, completion: nil)
+                self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
                 print("saved!")
             }
         }
