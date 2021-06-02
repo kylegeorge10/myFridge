@@ -92,8 +92,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
                 self.posts = posts!
                 for allPosts in self.posts{
                     if (allPosts["author"] as AnyObject).username == currentUser?.username{
-                        //print("true")
+                        print("true")
                         userPosts.append(allPosts)
+                        print(userPosts)
                     }else{
                         print("not the current users post")
                     }
@@ -113,32 +114,71 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         
         let cell = userTableView.dequeueReusableCell(withIdentifier: "userPostCell") as! userPostCell
         
+        print((posts[indexPath.row]["author"] as AnyObject).username! as Any)
+        print(currentUser?.username as Any)
         
-        if (posts[indexPath.row]["author"] as AnyObject).username! == currentUser?.username{
-            let post = userPosts[indexPath.row]
-            cell.recipeNameLabel.text = post["recipeName"] as? String
-            cell.summaryLabel.text = post["recipeSummary"] as? String
-            
-            let theDate = post.createdAt
-            //print(theDate as Any)
-            let formatter = DateFormatter()
-            formatter.locale = Locale(identifier: "en_US")
-            formatter.dateStyle = .long
+        for selectedPost in userPosts{
+            if ((selectedPost["author"] as AnyObject).username! == currentUser?.username) {
+                print("true")
+                cell.recipeNameLabel.text = selectedPost["recipeName"] as? String
+                cell.summaryLabel.text = selectedPost["recipeDescription"] as? String
+                
+                let theDate = selectedPost.createdAt
+                //print(theDate as Any)
+                let formatter = DateFormatter()
+                formatter.locale = Locale(identifier: "en_US")
+                formatter.dateStyle = .long
 
-            let fDate = formatter.string(from: theDate!)
-            cell.dateLabel.text = fDate
+                let fDate = formatter.string(from: theDate!)
+                cell.dateLabel.text = fDate
+                
+                let imageFile = selectedPost["postImage"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
 
-            let imageFile = post["postImage"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-
-            cell.userPostImageView.af_setImage(withURL: url)
-            cell.userPostImageView.layer.cornerRadius = cell.userPostImageView.frame.size.height / 4.5
-            cell.userPostImageView.clipsToBounds = true
-            cell.userPostImageView.layer.borderColor = UIColor.systemGray.cgColor
-            cell.userPostImageView.layer.borderWidth = 2.5
-            
+                cell.userPostImageView.af_setImage(withURL: url)
+                
+                cell.userPostImageView.layer.cornerRadius = cell.userPostImageView.frame.size.height / 4.5
+                cell.userPostImageView.clipsToBounds = true
+                cell.userPostImageView.layer.borderColor = UIColor.systemGray.cgColor
+                cell.userPostImageView.layer.borderWidth = 2.5
+                
+            }else{
+                print("false")
+            }
         }
+        
+//        if (posts[indexPath.row]["author"] as AnyObject).username! == currentUser?.username{
+//            let post = userPosts[indexPath.row]
+//            cell.recipeNameLabel.text = post["recipeName"] as? String
+//            print(post["recipeName"] as Any)
+//            cell.summaryLabel.text = post["recipeSummary"] as? String
+//
+//            let theDate = post.createdAt
+//            //print(theDate as Any)
+//            let formatter = DateFormatter()
+//            formatter.locale = Locale(identifier: "en_US")
+//            formatter.dateStyle = .long
+//
+//            let fDate = formatter.string(from: theDate!)
+//            cell.dateLabel.text = fDate
+//
+//            let imageFile = post["postImage"] as! PFFileObject
+//            let urlString = imageFile.url!
+//            let url = URL(string: urlString)!
+//
+//
+//            cell.userPostImageView.af_setImage(withURL: url)
+//
+//
+//            cell.userPostImageView.layer.cornerRadius = cell.userPostImageView.frame.size.height / 4.5
+//            cell.userPostImageView.clipsToBounds = true
+//            cell.userPostImageView.layer.borderColor = UIColor.systemGray.cgColor
+//            cell.userPostImageView.layer.borderWidth = 2.5
+//
+//        }
+    
         return cell
     }
     

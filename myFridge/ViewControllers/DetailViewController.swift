@@ -44,6 +44,9 @@ class DetailViewController: UIViewController {
             profileImage.clipsToBounds = true
             profileImage.layer.borderColor = UIColor.systemOrange.cgColor
             profileImage.layer.borderWidth = 2
+            
+            fullRecipe.layer.cornerRadius = fullRecipe.frame.size.width / 20
+            ingredientsList.layer.cornerRadius = ingredientsList.frame.size.width / 20
         }
         
         recipeNameLabel.text = post["recipeName"] as? String
@@ -53,9 +56,15 @@ class DetailViewController: UIViewController {
         recipeSummary.sizeToFit()
         
         //fullRecipe.text = post["recipeFull"] as? String
+        for line in post["directions"] as! Array<Any>{
+            fullRecipe.text += "\n\(line as! String)\n"
+        }
         fullRecipe.sizeToFit()
         
         //ingredientsList.text = post["ingredients"] as? String
+        for line in post["ingredients"] as! Array<Any>{
+            ingredientsList.text += "\(line as! String),\t"
+        }
         ingredientsList.sizeToFit()
         
         let gluten = ((post["glutenFree"]) as? Bool)
