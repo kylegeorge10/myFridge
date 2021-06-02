@@ -192,7 +192,7 @@ class finalPostViewController: UIViewController {
         
         post.saveInBackground { (success, error) in
             if success{
-                self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "confirmationSegue", sender: nil)
                 print("saved!")
             }
         }

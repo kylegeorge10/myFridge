@@ -2012,7 +2012,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA8-We-L3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rfJ-yW-Yqe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8226.1538461538457" y="3499.7630331753553"/>
+            <point key="canvasLocation" x="9155.3846153846152" y="3499.7630331753553"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nfl-r3-KNr">
@@ -2170,7 +2170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCA-Rr-okE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9256.9230769230762" y="3499.7630331753553"/>
+            <point key="canvasLocation" x="10186.153846153846" y="3499.7630331753553"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wzJ-I1-B3E">
@@ -2192,7 +2192,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijv-zm-H0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7286.1538461538457" y="3500.4739336492889"/>
+            <point key="canvasLocation" x="8215.3846153846152" y="3500.4739336492889"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BIp-uz-jh6">
@@ -2821,6 +2821,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onPostButton:" destination="Scj-kT-wRQ" eventType="touchUpInside" id="j7u-gz-jKy"/>
+                                    <segue destination="m7B-Ei-lQY" kind="presentation" identifier="confirmationSegue" modalPresentationStyle="fullScreen" id="WeW-36-ush"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2861,6 +2862,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TJ-2L-kST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1904.6153846153845" y="2971.5639810426537"/>
+        </scene>
+        <!--Posting Complete View Controller-->
+        <scene sceneID="FTR-I7-zn3">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="GSh-pv-7N9" customClass="PostingCompleteViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Rb-UB-pjw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank You For Sharing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-Kp-LPg">
+                                <rect key="frame" x="5" y="88" width="380" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="36"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please wait, you are being redirected..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2R-Hq-Imp">
+                                <rect key="frame" x="5" y="764" width="380" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="13"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Recipe Is Now Online!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnp-2S-NIQ">
+                                <rect key="frame" x="5" y="160" width="380" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dsm-o9-4YY" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="16" y="213" width="358" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="postcomplete1"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XLE-e0-PAd" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="16" y="440" width="358" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="postcomplete2"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="08f-3j-FFh"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9DG-7K-VSU"/>
+                    <connections>
+                        <outlet property="animationViewBottom" destination="XLE-e0-PAd" id="yCC-Ou-zTd"/>
+                        <outlet property="animationViewTop" destination="Dsm-o9-4YY" id="xWh-fo-Oup"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wJ-1Z-xaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833.8461538461538" y="3695.9715639810424"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YwU-r9-lLj">
@@ -2987,13 +3047,33 @@
             </objects>
             <point key="canvasLocation" x="693.84615384615381" y="337.67772511848341"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C4a-pe-NCs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="m7B-Ei-lQY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P2N-ef-3Xl">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="barTintColor" systemColor="secondarySystemBackgroundColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GSh-pv-7N9" kind="relationship" relationship="rootViewController" id="FfG-Ou-cpS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mor-Sc-Gdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904.6153846153845" y="3695.9715639810424"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="keV-YE-8hi"/>
         <designable name="xDe-EI-50F"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="hGL-Mz-Upw"/>
+        <segue reference="MZy-n6-0P5"/>
         <segue reference="TkC-Ez-T7F"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGreenColor"/>
