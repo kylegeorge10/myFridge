@@ -51,6 +51,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         query.findObjectsInBackground { (posts, error) in
             if posts != nil{
                 self.posts = posts!
+                print("count", posts!.count)
                 self.collectionView.reloadData()
             }
         }
@@ -109,17 +110,25 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         postPosition = 0
         filteredPosts.removeAll()
         currPosts.removeAll()
+        
+        
         var position = 0
         while position <= (self.posts.count-1){
-            
+
+            //print(self.posts as Any)
             //move ingredients of the current post to a list and format it
-            let ingredients = self.posts[position]["ingredients"] as! String
-            let tempIngredientsList = ingredients.components(separatedBy: ",")
-            for item in tempIngredientsList{
-                ingredientsList.append((item.trimmingCharacters(in: .whitespaces)).lowercased())
+            //let ingredients = self.posts[position]["ingredients"] as? String
+            let ingredients = self.posts[position]["ingredients"] as! Array<Any>
+            //print(ingredients as Any)
+            //let tempIngredientsList = ingredients.components(separatedBy: ",")
+//            for item in tempIngredientsList{
+//                ingredientsList.append((item.trimmingCharacters(in: .whitespaces)).lowercased())
+//            }
+            for item in ingredients{
+                ingredientsList.append(((item as AnyObject).trimmingCharacters(in: .whitespaces)).lowercased())
             }
-            //print(ingredientsList)
-            
+            print(ingredientsList)
+
             //check if ingredients are in posts ingredient list
             for item in itemList{
                 if ingredientsList.contains(item.lowercased()){
@@ -128,7 +137,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                     isGood = false
                 }
             }
-            
+
             //if ingredients are in posts ingredients list then add that recipe to the recipe collection
             if isGood{
                 //add post to a list of posts that match our ingredients
@@ -140,6 +149,11 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
             ingredientsList.removeAll()
             position += 1
         }
+        
+        
+        
+        
+        
         print(filteredPosts.count)
         //print(filteredPosts[0]["recipeName"] as! String)
         
@@ -188,7 +202,7 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 
                 cell.recipeNameLabel.text = post["recipeName"] as? String
                 
-                let imageFile = post["image"] as! PFFileObject
+                let imageFile = post["postImage"] as! PFFileObject
                 let urlString = imageFile.url!
                 let url = URL(string: urlString)!
                 
