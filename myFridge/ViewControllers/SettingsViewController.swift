@@ -10,11 +10,17 @@ import Parse
 import AlamofireImage
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        logoutButton.layer.cornerRadius = logoutButton.frame.size.width / 15
+        logoutButton.layer.borderWidth = 3
+        logoutButton.layer.borderColor = UIColor.systemOrange.cgColor
+        
     }
     
     @IBAction func cancelButton(_ sender: Any) {

@@ -1983,8 +1983,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSy-hs-hsI">
-                                <rect key="frame" x="120" y="618" width="150" height="52"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <rect key="frame" x="120" y="599" width="150" height="93"/>
+                                <color key="backgroundColor" red="1" green="0.87776441959999996" blue="0.71558049869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
@@ -2024,19 +2025,19 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k48-TG-Wow"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Apn-W7-peq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k48-TG-Wow" secondAttribute="leading" symbolic="YES" id="4hP-Bc-hVb"/>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="tCX-b6-DA9" secondAttribute="trailing" constant="16" id="AvF-Bf-mWq"/>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="Apn-W7-peq" secondAttribute="trailing" constant="42" id="CCN-aT-MIc"/>
-                            <constraint firstItem="k48-TG-Wow" firstAttribute="bottom" secondItem="jSy-hs-hsI" secondAttribute="bottom" constant="140" id="R6F-Ye-ZLD"/>
+                            <constraint firstItem="k48-TG-Wow" firstAttribute="bottom" secondItem="jSy-hs-hsI" secondAttribute="bottom" constant="118" id="R6F-Ye-ZLD"/>
                             <constraint firstItem="jSy-hs-hsI" firstAttribute="leading" secondItem="k48-TG-Wow" secondAttribute="leading" constant="120" id="dmu-Pg-Usv"/>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="UCa-ML-ngy" secondAttribute="trailing" constant="20" id="fFR-o8-5Ob"/>
                             <constraint firstItem="tCX-b6-DA9" firstAttribute="top" secondItem="k48-TG-Wow" secondAttribute="top" constant="30" id="ocL-U5-pGb"/>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="bottom" secondItem="UCa-ML-ngy" secondAttribute="bottom" constant="54" id="q6b-tf-VNC"/>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="trailing" secondItem="jSy-hs-hsI" secondAttribute="trailing" constant="120" id="rSh-SR-3bV"/>
                             <constraint firstItem="k48-TG-Wow" firstAttribute="bottom" secondItem="Apn-W7-peq" secondAttribute="bottom" constant="50" id="s3U-TQ-wEJ"/>
-                            <constraint firstItem="jSy-hs-hsI" firstAttribute="top" secondItem="tCX-b6-DA9" secondAttribute="bottom" constant="50" id="tvT-Lx-fKV"/>
+                            <constraint firstItem="jSy-hs-hsI" firstAttribute="top" secondItem="tCX-b6-DA9" secondAttribute="bottom" constant="31" id="tvT-Lx-fKV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="6uO-zX-Uio">
@@ -2047,6 +2048,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="logoutButton" destination="jSy-hs-hsI" id="vdv-fg-Jnr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA8-We-L3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rfJ-yW-Yqe" userLabel="Exit" sceneMemberID="exit"/>
