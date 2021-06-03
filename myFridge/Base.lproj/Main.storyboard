@@ -1302,7 +1302,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzC-aZ-Ilz">
                                 <rect key="frame" x="330" y="161" width="30" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.87776441959999996" blue="0.71558049869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nmu-u0-H70"/>
                                 </constraints>
@@ -1332,17 +1332,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi4-4Z-7Vf">
-                                <rect key="frame" x="57" y="301.33333333333331" width="34" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.87776441959999996" blue="0.71558049869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Clear">
-                                    <color key="titleColor" systemColor="systemOrangeColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClearButton:" destination="ZNW-Tt-Dnx" eventType="touchUpInside" id="Say-P2-wwi"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uxE-kW-dxH">
                                 <rect key="frame" x="0.0" y="345.33333333333326" width="390" height="498.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1397,7 +1386,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvK-kO-dF5">
                                 <rect key="frame" x="309" y="301.33333333333331" width="51" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.87776441959999996" blue="0.71558049869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -1436,11 +1425,33 @@
                                 <rect key="frame" x="259" y="188" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhy-D2-Jm9">
+                                <rect key="frame" x="98" y="308" width="186" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="cfo-dX-gv3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi4-4Z-7Vf">
+                                <rect key="frame" x="39" y="301.33333333333331" width="34" height="40"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearButton:" destination="ZNW-Tt-Dnx" eventType="touchUpInside" id="Say-P2-wwi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gjP-eF-nzd"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uxE-kW-dxH" firstAttribute="top" secondItem="bhy-D2-Jm9" secondAttribute="bottom" constant="4.3333333333332575" id="2Fu-xs-mPj"/>
                             <constraint firstItem="gRz-hm-2Ma" firstAttribute="top" secondItem="gjP-eF-nzd" secondAttribute="top" constant="25" id="48w-2l-40D"/>
+                            <constraint firstItem="bhy-D2-Jm9" firstAttribute="top" secondItem="TXv-I1-fIV" secondAttribute="bottom" constant="66.666666666666657" id="9iX-v4-TpE"/>
                             <constraint firstItem="Yi4-4Z-7Vf" firstAttribute="top" secondItem="TXv-I1-fIV" secondAttribute="bottom" constant="60" id="CfU-X5-SUK"/>
                             <constraint firstItem="01T-ba-h6s" firstAttribute="top" secondItem="gjP-eF-nzd" secondAttribute="top" constant="24" id="K7n-D5-iDB"/>
                             <constraint firstItem="kMc-On-pcP" firstAttribute="leading" secondItem="gjP-eF-nzd" secondAttribute="leading" constant="3" id="Rg6-a4-Hcz"/>
@@ -1456,12 +1467,13 @@
                             <constraint firstItem="gRz-hm-2Ma" firstAttribute="leading" secondItem="01T-ba-h6s" secondAttribute="trailing" constant="8" symbolic="YES" id="gPn-AK-Yth"/>
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="leading" secondItem="gjP-eF-nzd" secondAttribute="leading" id="geR-wm-yIm"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="TXv-I1-fIV" secondAttribute="trailing" constant="53" id="iwf-nx-jAS"/>
-                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="299" id="o1m-Sf-Psd"/>
+                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="317" id="o1m-Sf-Psd"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="pvK-kO-dF5" secondAttribute="trailing" constant="30" id="oiY-N7-cwk"/>
                             <constraint firstItem="TXv-I1-fIV" firstAttribute="leading" secondItem="jZJ-u0-m2d" secondAttribute="leadingMargin" id="qEw-gX-uGd"/>
                             <constraint firstItem="vzC-aZ-Ilz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kMc-On-pcP" secondAttribute="trailing" constant="8" symbolic="YES" id="qIX-k0-rez"/>
                             <constraint firstItem="pvK-kO-dF5" firstAttribute="top" secondItem="TXv-I1-fIV" secondAttribute="bottom" constant="60" id="tx1-oY-FX7"/>
                             <constraint firstItem="01T-ba-h6s" firstAttribute="leading" secondItem="kMc-On-pcP" secondAttribute="trailing" constant="15" id="y94-9t-wv7"/>
+                            <constraint firstItem="bhy-D2-Jm9" firstAttribute="leading" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="25" id="yWO-Cz-hqf"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="vzC-aZ-Ilz" secondAttribute="trailing" constant="30" id="zq4-mQ-45m"/>
                         </constraints>
                     </view>
@@ -1478,6 +1490,7 @@
                         <outlet property="onClearButton" destination="Yi4-4Z-7Vf" id="jZ6-je-EEn"/>
                         <outlet property="onNextButton" destination="vzC-aZ-Ilz" id="h96-WS-J5t"/>
                         <outlet property="onSearchButton" destination="pvK-kO-dF5" id="vqF-uw-1KT"/>
+                        <outlet property="searchReturnLabel" destination="bhy-D2-Jm9" id="bGZ-AT-Eio"/>
                         <outlet property="showItemsLabel" destination="TXv-I1-fIV" id="oeN-lp-8Pz"/>
                     </connections>
                 </viewController>
@@ -3189,6 +3202,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

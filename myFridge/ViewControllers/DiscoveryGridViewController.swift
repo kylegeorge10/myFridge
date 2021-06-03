@@ -29,6 +29,8 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var onClearButton: UIButton!
     @IBOutlet weak var onSearchButton: UIButton!
     
+    @IBOutlet weak var searchReturnLabel: UILabel!
+    
     // declare a list to store the user's fridge inventory
     var itemList: Array<String> = Array()
     var ingredientsList: Array<String> = Array()
@@ -167,7 +169,9 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
             filteredPosts.removeAll()
             currPosts.removeAll()
         
-        collectionView.reloadData()
+            collectionView.reloadData()
+            onSearchButton.sendActions(for: .touchUpInside)
+        
             
             //also reload the collection view back to the random posts if the person removes their
             //inputted ingredients
@@ -291,6 +295,19 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
 
         
         //print(filteredPosts.count)
+        if filteredPosts.count == 0{
+            searchReturnLabel.textColor = UIColor.systemPink
+            searchReturnLabel.layer.borderColor = UIColor.secondarySystemBackground.cgColor
+            searchReturnLabel.layer.borderWidth = 0
+            searchReturnLabel.text = "Search Result"
+        }else{
+            searchReturnLabel.textColor = UIColor.systemGreen
+            searchReturnLabel.text = "Found \(filteredPosts.count) Recipes"
+            searchReturnLabel.layer.cornerRadius = searchReturnLabel.frame.size.width/10.5
+            searchReturnLabel.layer.borderWidth = 3
+            searchReturnLabel.layer.borderColor = UIColor.systemGreen.cgColor
+        }
+        
         //print(filteredPosts[0]["recipeName"] as! String)
         print("filteredPosts",filteredPosts)
         
