@@ -1301,7 +1301,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzC-aZ-Ilz">
-                                <rect key="frame" x="230" y="155" width="30" height="30"/>
+                                <rect key="frame" x="330" y="161" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.87776441959999996" blue="0.71558049869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nmu-u0-H70"/>
                                 </constraints>
@@ -1332,7 +1333,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi4-4Z-7Vf">
-                                <rect key="frame" x="20" y="301.33333333333331" width="34" height="40"/>
+                                <rect key="frame" x="57" y="301.33333333333331" width="34" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.87776441959999996" blue="0.71558049869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -1367,9 +1369,9 @@
                                                         <constraint firstAttribute="width" constant="180" id="m85-5n-o0b"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recpieName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-6d-gTo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recpieName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-6d-gTo">
                                                     <rect key="frame" x="8" y="208" width="164" height="34"/>
-                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
                                                     <color key="textColor" systemColor="systemOrangeColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1395,6 +1397,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvK-kO-dF5">
                                 <rect key="frame" x="309" y="301.33333333333331" width="51" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.87776441959999996" blue="0.71558049869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
@@ -1403,6 +1406,36 @@
                                     <action selector="onSearchButton:" destination="ZNW-Tt-Dnx" eventType="touchUpInside" id="e35-xm-Mt5"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gHg-gO-Vpa">
+                                <rect key="frame" x="117" y="156" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Avd-y6-nNH">
+                                <rect key="frame" x="182" y="156" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HLO-i0-jg7">
+                                <rect key="frame" x="248" y="156" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vegan_white" translatesAutoresizingMaskIntoConstraints="NO" id="C8Z-88-44E">
+                                <rect key="frame" x="128" y="188" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gluten_white" translatesAutoresizingMaskIntoConstraints="NO" id="OOS-lP-8FN">
+                                <rect key="frame" x="193" y="188" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nut_white" translatesAutoresizingMaskIntoConstraints="NO" id="WOt-nB-xJl">
+                                <rect key="frame" x="259" y="188" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gjP-eF-nzd"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -1412,7 +1445,7 @@
                             <constraint firstItem="01T-ba-h6s" firstAttribute="top" secondItem="gjP-eF-nzd" secondAttribute="top" constant="24" id="K7n-D5-iDB"/>
                             <constraint firstItem="kMc-On-pcP" firstAttribute="leading" secondItem="gjP-eF-nzd" secondAttribute="leading" constant="3" id="Rg6-a4-Hcz"/>
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="top" secondItem="Yi4-4Z-7Vf" secondAttribute="bottom" constant="4" id="TNq-Cv-2Dc"/>
-                            <constraint firstItem="vzC-aZ-Ilz" firstAttribute="top" secondItem="gRz-hm-2Ma" secondAttribute="bottom" constant="8" symbolic="YES" id="aX9-ZO-yXs"/>
+                            <constraint firstItem="vzC-aZ-Ilz" firstAttribute="top" secondItem="gRz-hm-2Ma" secondAttribute="bottom" constant="14" id="aX9-ZO-yXs"/>
                             <constraint firstItem="Yi4-4Z-7Vf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gjP-eF-nzd" secondAttribute="leading" id="amN-iY-x5C"/>
                             <constraint firstAttribute="bottom" secondItem="uxE-kW-dxH" secondAttribute="bottom" id="bJ7-vO-2re"/>
                             <constraint firstItem="TXv-I1-fIV" firstAttribute="top" secondItem="kMc-On-pcP" secondAttribute="bottom" constant="10" id="c5O-jp-iDv"/>
@@ -1423,25 +1456,34 @@
                             <constraint firstItem="gRz-hm-2Ma" firstAttribute="leading" secondItem="01T-ba-h6s" secondAttribute="trailing" constant="8" symbolic="YES" id="gPn-AK-Yth"/>
                             <constraint firstItem="uxE-kW-dxH" firstAttribute="leading" secondItem="gjP-eF-nzd" secondAttribute="leading" id="geR-wm-yIm"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="TXv-I1-fIV" secondAttribute="trailing" constant="53" id="iwf-nx-jAS"/>
-                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="336" id="o1m-Sf-Psd"/>
+                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="Yi4-4Z-7Vf" secondAttribute="trailing" constant="299" id="o1m-Sf-Psd"/>
                             <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="pvK-kO-dF5" secondAttribute="trailing" constant="30" id="oiY-N7-cwk"/>
                             <constraint firstItem="TXv-I1-fIV" firstAttribute="leading" secondItem="jZJ-u0-m2d" secondAttribute="leadingMargin" id="qEw-gX-uGd"/>
                             <constraint firstItem="vzC-aZ-Ilz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kMc-On-pcP" secondAttribute="trailing" constant="8" symbolic="YES" id="qIX-k0-rez"/>
                             <constraint firstItem="pvK-kO-dF5" firstAttribute="top" secondItem="TXv-I1-fIV" secondAttribute="bottom" constant="60" id="tx1-oY-FX7"/>
                             <constraint firstItem="01T-ba-h6s" firstAttribute="leading" secondItem="kMc-On-pcP" secondAttribute="trailing" constant="15" id="y94-9t-wv7"/>
-                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="vzC-aZ-Ilz" secondAttribute="trailing" constant="130" id="zq4-mQ-45m"/>
+                            <constraint firstItem="gjP-eF-nzd" firstAttribute="trailing" secondItem="vzC-aZ-Ilz" secondAttribute="trailing" constant="30" id="zq4-mQ-45m"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Discovery" id="g6u-6r-cgk"/>
                     <connections>
                         <outlet property="addItemsTextField" destination="gRz-hm-2Ma" id="dU8-D9-B6g"/>
                         <outlet property="collectionView" destination="uxE-kW-dxH" id="dmq-mP-nXv"/>
+                        <outlet property="isGlutenImage" destination="OOS-lP-8FN" id="8UY-59-CPv"/>
+                        <outlet property="isGlutenSwitch" destination="Avd-y6-nNH" id="iNO-V0-1Ub"/>
+                        <outlet property="isNutImage" destination="WOt-nB-xJl" id="Wud-hu-4LK"/>
+                        <outlet property="isNutSwitch" destination="HLO-i0-jg7" id="58X-Ap-6lY"/>
+                        <outlet property="isVeganImage" destination="C8Z-88-44E" id="Aek-yz-6GG"/>
+                        <outlet property="isVeganSwitch" destination="gHg-gO-Vpa" id="kfc-hs-crt"/>
+                        <outlet property="onClearButton" destination="Yi4-4Z-7Vf" id="jZ6-je-EEn"/>
+                        <outlet property="onNextButton" destination="vzC-aZ-Ilz" id="h96-WS-J5t"/>
+                        <outlet property="onSearchButton" destination="pvK-kO-dF5" id="vqF-uw-1KT"/>
                         <outlet property="showItemsLabel" destination="TXv-I1-fIV" id="oeN-lp-8Pz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-qS-Jkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="522" y="1865"/>
+            <point key="canvasLocation" x="521.53846153846155" y="1864.6919431279621"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="Fyy-jr-5qo">
@@ -3083,6 +3125,8 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="Dsm-o9-4YY"/>
+        <designable name="XLE-e0-PAd"/>
         <designable name="keV-YE-8hi"/>
         <designable name="xDe-EI-50F"/>
     </designables>

@@ -16,6 +16,19 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var showItemsLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var isVeganSwitch: UISwitch!
+    @IBOutlet weak var isVeganImage: UIImageView!
+    
+    @IBOutlet weak var isGlutenSwitch: UISwitch!
+    @IBOutlet weak var isGlutenImage: UIImageView!
+    
+    @IBOutlet weak var isNutSwitch: UISwitch!
+    @IBOutlet weak var isNutImage: UIImageView!
+    
+    @IBOutlet weak var onNextButton: UIButton!
+    @IBOutlet weak var onClearButton: UIButton!
+    @IBOutlet weak var onSearchButton: UIButton!
+    
     // declare a list to store the user's fridge inventory
     var itemList: Array<String> = Array()
     var ingredientsList: Array<String> = Array()
@@ -26,18 +39,39 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
     var postPosition = 0
     var currPosts = [PFObject]()
     
+    var isVegan = false
+    var isGluten = false
+    var isNut = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //button desgin
+        onNextButton.layer.cornerRadius = onNextButton.frame.size.width/7.5
+        onNextButton.layer.borderWidth = 0.5
+        onNextButton.layer.borderColor = UIColor.systemOrange.cgColor
+        
+        onClearButton.layer.cornerRadius = onClearButton.frame.size.width/7.5
+        onClearButton.layer.borderWidth = 0.5
+        onClearButton.layer.borderColor = UIColor.systemOrange.cgColor
+        
+        onSearchButton.layer.cornerRadius = onSearchButton.frame.size.width/7.5
+        onSearchButton.layer.borderWidth = 0.5
+        onSearchButton.layer.borderColor = UIColor.systemOrange.cgColor
         
         postPosition = 0
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        
+        
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
         layout.minimumLineSpacing = 2
         layout.minimumInteritemSpacing = 2
+        
+
         
         let width = (view.frame.size.width - layout.minimumInteritemSpacing * 1) / 2
         layout.itemSize = CGSize(width: width, height: width * 3 / 2)
@@ -55,8 +89,13 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 self.collectionView.reloadData()
             }
         }
+        
+        
 
     }
+    
+    
+    
     
     @IBAction func onNextItemButton(_ sender: Any) {
         itemList.append(addItemsTextField.text!)
@@ -70,6 +109,26 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         if itemList.count != 0{
             addItemsTextField.placeholder = "Add another item"
         }
+        
+        //checking the filters
+        if isVeganSwitch.isOn{
+            isVegan = true
+            let vaganImage = UIImage(named: "vegan_black")
+            isVeganImage.image = vaganImage
+        }
+        
+        if isGlutenSwitch.isOn{
+            isGluten = true
+            let glutenImage = UIImage(named: "gluten_black")
+            isGlutenImage.image = glutenImage
+        }
+        
+        if isNutSwitch.isOn{
+            isNut = true
+            let nutImage = UIImage(named: "nut_black")
+            isNutImage.image = nutImage
+        }
+        
     }
     
     @IBAction func onClearButton(_ sender: UIButton) {
@@ -82,6 +141,29 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
         if itemList.count == 0{
             showItemsLabel.text = "List of Items I have"
             addItemsTextField.placeholder = "Add the items you have"
+            //resetting the filters
+            if isVeganSwitch.isOn{
+                isVegan = false
+                let vaganImage = UIImage(named: "vegan_white")
+                isVeganImage.image = vaganImage
+                isVeganSwitch.setOn(false, animated: true)
+            }
+            
+            if isGlutenSwitch.isOn{
+                isGluten = false
+                let glutenImage = UIImage(named: "gluten_white")
+                isGlutenImage.image = glutenImage
+                isGlutenSwitch.setOn(false, animated: true)
+            }
+            
+            if isNutSwitch.isOn{
+                isNut = false
+                let nutImage = UIImage(named: "nut_white")
+                isNutImage.image = nutImage
+                isNutSwitch.setOn(false, animated: true)
+            }
+            
+            
             filteredPosts.removeAll()
             currPosts.removeAll()
         
@@ -150,13 +232,67 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
             position += 1
         }
         
+        print("filteredPosts",filteredPosts)
+        //add the switch filtered posts
         
+        //checking for vegan foods
+        print("vegan toggle",isVegan)
+        if isVegan == true{
+            //print("yes isVegan toggle on")
+            for allPosts in self.posts{
+                if allPosts["isVegan"] as! Int != 0{
+                    if filteredPosts.contains(allPosts){
+                        print("found the same recipe, skip")
+                    }else{
+                        filteredPosts.append(allPosts)
+                    }
+                    
+                }else{
+                    print("Not Vegan")
+                }
+            }
+        }
         
+        //checking for gluten free foods
+        print("gulten toggle",isGluten)
+        if isGluten == true{
+            //print("yes isGluten toggle on")
+            for allPosts in self.posts{
+                if allPosts["glutenFree"] as! Int != 0{
+                    if filteredPosts.contains(allPosts){
+                        print("found the same recipe, skip")
+                    }else{
+                        filteredPosts.append(allPosts)
+                    }
+                    
+                }else{
+                    print("Not Glutan Free")
+                }
+            }
+        }
         
+        //checking for nut free foods
+        print("nut toggle", isNut)
+        if isNut == true{
+            //print("yes isNut toggle on")
+            for allPosts in self.posts{
+                if allPosts["nutFree"] as! Int != 0{
+                    if filteredPosts.contains(allPosts){
+                        print("found the same recipe, skip")
+                    }else{
+                        filteredPosts.append(allPosts)
+                    }
+                    
+                }else{
+                    print("Not Nut Free")
+                }
+            }
+        }
+
         
-        print(filteredPosts.count)
+        //print(filteredPosts.count)
         //print(filteredPosts[0]["recipeName"] as! String)
-        
+        print("filteredPosts",filteredPosts)
         
         //reload the collection view to show only the filtered posts
         self.collectionView.reloadData()
@@ -209,6 +345,10 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
                 cell.recipeImageView.af_setImage(withURL: url)
                 
                 currPosts.append(filteredPosts[position])
+                cell.recipeImageView.layer.cornerRadius = cell.recipeImageView.frame.size.width / 9.5
+                cell.recipeImageView.layer.borderWidth = 2.5
+                cell.recipeImageView.layer.borderColor = UIColor.systemGreen.cgColor
+                
             }
             
         }
