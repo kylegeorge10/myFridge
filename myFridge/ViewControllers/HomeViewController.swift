@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // refresh control note attribute
         let attributes = [NSAttributedString.Key.font: UIFont(name: "Noteworthy Bold", size: 15), NSAttributedString.Key.foregroundColor: UIColor.systemGreen]
-        let attributedTitle = NSAttributedString(string: "Fetching More Yummy Recipies!", attributes: attributes as [NSAttributedString.Key : Any])
+        let attributedTitle = NSAttributedString(string: "Fetching More Yummy Recipes!", attributes: attributes as [NSAttributedString.Key : Any])
         feedRefresh.attributedTitle = attributedTitle
         
         
