@@ -276,7 +276,9 @@
                                 <state key="normal" title="Ready to Discover!"/>
                                 <connections>
                                     <action selector="onComplete:" destination="V4Q-FY-ygA" eventType="touchUpInside" id="VID-JM-kws"/>
-                                    <segue destination="AsB-l0-ssW" kind="presentation" identifier="confirmationSegue" id="7PN-6P-77P"/>
+                                    <segue destination="AsB-l0-ssW" kind="popoverPresentation" identifier="confirmationSegue" popoverAnchorView="pt1-61-3p4" id="7PN-6P-77P">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your First Name Here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-Ab-hh6">
@@ -398,14 +400,14 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="AsB-l0-ssW" customClass="SignUpSuccessViewController" customModule="myFridge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hjK-9D-wMc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="kitchen-guy-001-512" translatesAutoresizingMaskIntoConstraints="NO" id="USg-7o-VVx">
-                                <rect key="frame" x="67" y="488" width="256" height="327"/>
+                                <rect key="frame" x="67" y="434" width="256" height="327"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="xDe-EI-50F" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="191" width="390" height="271"/>
+                                <rect key="frame" x="0.0" y="191" width="390" height="217"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -413,7 +415,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yey! You Are All Set" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-ep-iJS">
-                                <rect key="frame" x="5" y="49" width="380" height="64"/>
+                                <rect key="frame" x="5" y="5" width="380" height="64"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
@@ -444,6 +446,7 @@
                             <constraint firstAttribute="bottom" secondItem="xDe-EI-50F" secondAttribute="bottom" constant="382" id="tQ4-Aa-krg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QkO-tb-04c"/>
                     <connections>
                         <outlet property="animationView" destination="xDe-EI-50F" id="Mx6-Cg-Fyt"/>
                         <segue destination="Kbh-tm-0ji" kind="presentation" identifier="signupSegue" id="MZy-n6-0P5"/>
