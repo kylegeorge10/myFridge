@@ -167,6 +167,10 @@ class DiscoveryGridViewController: UIViewController, UICollectionViewDataSource,
             
             
             filteredPosts.removeAll()
+            searchReturnLabel.textColor = UIColor.systemPink
+            searchReturnLabel.layer.borderColor = UIColor.secondarySystemBackground.cgColor
+            searchReturnLabel.layer.borderWidth = 0
+            searchReturnLabel.text = "Search Result"
             currPosts.removeAll()
         
             collectionView.reloadData()
