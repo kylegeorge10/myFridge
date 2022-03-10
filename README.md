@@ -79,10 +79,6 @@ myFridge takes the idea of "easy to cook" to a reality. With the idea in mind th
 [Add picture of your hand sketched wireframes in this section]
 <img width="600" alt="Screen Shot 2021-03-21 at 11 37 18 PM" src="https://user-images.githubusercontent.com/69189423/111915914-85d92b00-8a9e-11eb-8ae4-f442d8c9f0f5.png">
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Schema 
 
 ### Models
